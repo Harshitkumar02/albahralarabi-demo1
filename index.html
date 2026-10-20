@@ -1,11 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        window.FontAwesomeConfig = {
+          autoReplaceSvg: 'nest'
+        };
+      </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home</title>
+    <title>Home - Al Bahr Al Arabi Group</title>
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts: Inter & Cairo -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
     <script>
         tailwind.config = {
             theme: {
@@ -18,730 +30,1473 @@
                     },
                     fontFamily: {
                         'sans': ['Inter', 'sans-serif'],
-                    }
+                        'arabic': ['Cairo', 'sans-serif'],
+                    },
                 }
             }
         }
     </script>
-    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest'};</script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
-        ::-webkit-scrollbar { display: none;}
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-overlay {
-            background: linear-gradient(135deg, rgba(10, 38, 71, 0.95) 0%, rgba(25, 118, 210, 0.85) 100%);
+        [dir="rtl"] .font-sans { font-family: 'Cairo', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(10,38,71,0.95) 0%, rgba(25,118,210,0.85) 100%);
         }
+        .transition-all { transition: all 0.3s ease; }
     </style>
 </head>
-<body class="bg-white text-gray-800">
+<body class="font-sans text-steel-grey bg-white overflow-x-hidden">
 
-<header id="header" class="bg-white shadow-md sticky top-0 z-50">
-    <div class="max-w-7xl mx-auto px-8 py-4">
-        <div class="flex items-center justify-between">
-            <div class="flex items-center space-x-3">
-                <div class="w-12 h-12 bg-corporate-blue rounded flex items-center justify-center">
-                    <i class="fa-solid fa-oil-well text-white text-xl"></i>
-                </div>
-                <div>
-                    <h1 class="text-lg font-bold text-corporate-blue leading-tight">Al Bahr Al Arabi</h1>
-                    <p class="text-xs text-steel-grey">Engineering Excellence</p>
+    <!-- Top Bar -->
+    <div id="top-bar" class="bg-white border-b border-gray-100 py-2">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center space-y-2 md:space-y-0">
+            <!-- Contact Info -->
+            <div class="flex flex-wrap justify-center md:justify-start items-center gap-4 md:gap-6 text-[10px] font-medium text-steel-grey">
+                <a href="mailto:info@albahralarabi.com" class="flex items-center hover:text-accent-blue transition-all">
+                    <i class="fa-solid fa-envelope text-accent-blue mr-1.5"></i>
+                    <span data-i18n="top_email">info@albahralarabi.com</span>
+                </a>
+                <a href="tel:+97165260602" class="flex items-center hover:text-accent-blue transition-all">
+                    <i class="fa-solid fa-phone text-accent-blue mr-1.5"></i>
+                    <span data-i18n="top_phone">+971 65260602</span>
+                </a>
+                <div class="flex items-center">
+                    <i class="fa-solid fa-location-dot text-accent-blue mr-1.5"></i>
+                    <span data-i18n="top_address">FF3P+WFG Al Hamriyah Free Zone - Sharjah - UAE</span>
                 </div>
             </div>
-            
-            <nav class="hidden lg:flex items-center space-x-8">
-                <a href="#" class="text-sm font-medium text-corporate-blue hover:text-accent-blue transition">Home</a>
-                <a href="#" class="text-sm font-medium text-steel-grey hover:text-accent-blue transition">Who We Are</a>
-                <a href="#" class="text-sm font-medium text-steel-grey hover:text-accent-blue transition">Group Companies</a>
-                <a href="#" class="text-sm font-medium text-steel-grey hover:text-accent-blue transition">Projects</a>
-                <a href="#" class="text-sm font-medium text-steel-grey hover:text-accent-blue transition">Gallery</a>
-                <div class="relative group">
-                    <button class="flex items-center space-x-1 text-sm font-medium text-steel-grey hover:text-accent-blue transition">
-                        <span>Pages</span>
-                        <i class="fa-solid fa-chevron-down text-xs"></i>
-                    </button>
-                    <div class="absolute top-full left-0 mt-2 w-56 bg-white shadow-xl rounded-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                        <a href="#" class="block px-4 py-3 text-sm text-steel-grey hover:bg-blue-50 hover:text-accent-blue transition">Blog</a>
-                        <a href="#" class="block px-4 py-3 text-sm text-steel-grey hover:bg-blue-50 hover:text-accent-blue transition">Catalogues & Downloads</a>
-                        <a href="#" class="block px-4 py-3 text-sm text-steel-grey hover:bg-blue-50 hover:text-accent-blue transition">FAQs</a>
-                        <a href="#" class="block px-4 py-3 text-sm text-steel-grey hover:bg-blue-50 hover:text-accent-blue transition">Careers</a>
-                        <a href="#" class="block px-4 py-3 text-sm text-steel-grey hover:bg-blue-50 hover:text-accent-blue transition">Contact Us</a>
-                    </div>
-                </div>
-            </nav>
-            
-            <button class="bg-accent-blue text-white text-sm font-semibold py-3 px-6 rounded hover:bg-corporate-blue transition shadow-md">
-                Request a Quote
+
+            <!-- Language Toggle -->
+            <button id="lang-toggle" class="flex items-center space-x-2 text-xs font-semibold px-3 py-1.5 rounded-full border border-gray-200 transition-all hover:border-accent-blue">
+                <i class="fa-solid fa-globe text-accent-blue"></i>
+                <span id="lang-text">EN | عربي</span>
             </button>
         </div>
     </div>
-</header>
 
-<section id="hero-section" class="relative h-[700px] overflow-hidden">
-    <div class="absolute inset-0">
-        <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/886a2a55ac-9f6087a081bc31c98974.png" alt="industrial oil refinery plant with storage tanks at sunset, aerial view, professional photography, industrial blue tones" />
-        <div class="absolute inset-0 gradient-overlay"></div>
-    </div>
-    <div class="relative max-w-7xl mx-auto px-8 h-full flex items-center">
-        <div class="max-w-3xl">
-            <h2 class="text-5xl font-bold text-white leading-tight mb-6">
-                Engineering Excellence in Oil & Gas Infrastructure
-            </h2>
-            <p class="text-lg text-gray-100 mb-8 leading-relaxed">
-                Delivering turnkey EPC solutions with 25+ years of industry expertise and 500+ successful projects across UAE and MENA region.
-            </p>
-            <div class="flex space-x-4">
-                <button class="bg-white text-corporate-blue font-semibold py-4 px-8 rounded shadow-lg hover:shadow-xl transition">
-                    View Projects
-                </button>
-                <button class="bg-transparent border-2 border-white text-white font-semibold py-4 px-8 rounded hover:bg-white hover:text-corporate-blue transition">
-                    Contact Us
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
+    <!-- Header -->
+    <header id="header" class="sticky top-0 z-50 bg-white shadow-md">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Logo -->
+                <a href="index.html" class="flex items-center group">
+                    <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_745f0de433_ae400837bc0fe4a4.png" alt="Al Bahr Al Arabi Group" class="h-14 md:h-16 w-auto object-contain transition-all group-hover:scale-105">
+                </a>
 
-<section id="company-intro" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="max-w-4xl mx-auto text-center">
-            <div class="inline-block mb-4">
-                <span class="text-sm font-semibold text-accent-blue uppercase tracking-wider bg-blue-50 px-4 py-2 rounded-full">About Al Bahr Al Arabi Group</span>
-            </div>
-            <h3 class="text-4xl font-bold text-corporate-blue mb-6">
-                Leading EPC Contractor in UAE
-            </h3>
-            <p class="text-base text-steel-grey leading-relaxed mb-5">
-                Al Bahr Al Arabi Group stands as a premier Engineering, Procurement, and Construction contractor with over 25 years of distinguished service in the Oil & Gas sector. Operating from our state-of-the-art 20,000 sqm fabrication facility in Hamriyah Free Zone, Sharjah, we deliver comprehensive solutions across the UAE and MENA region.
-            </p>
-            <p class="text-base text-steel-grey leading-relaxed">
-                Our commitment to safety, quality, and adherence to international standards including API and ASME certifications ensures that every project meets the highest industry benchmarks. We specialize in tank farms, refinery plants, civil works, and steel fabrication, providing end-to-end solutions that drive operational excellence.
-            </p>
-        </div>
-    </div>
-</section>
-
-<section id="statistics-section" class="py-16 bg-corporate-blue">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="grid grid-cols-4 gap-8">
-            <div class="text-center" id="stat-1">
-                <div class="w-20 h-20 bg-accent-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fa-solid fa-calendar-days text-white text-3xl"></i>
-                </div>
-                <h4 class="text-5xl font-bold text-white mb-2">25+</h4>
-                <p class="text-sm text-gray-300">Years of Experience</p>
-            </div>
-            <div class="text-center" id="stat-2">
-                <div class="w-20 h-20 bg-accent-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fa-solid fa-clipboard-check text-white text-3xl"></i>
-                </div>
-                <h4 class="text-5xl font-bold text-white mb-2">500+</h4>
-                <p class="text-sm text-gray-300">Completed Projects</p>
-            </div>
-            <div class="text-center" id="stat-3">
-                <div class="w-20 h-20 bg-accent-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fa-solid fa-industry text-white text-3xl"></i>
-                </div>
-                <h4 class="text-5xl font-bold text-white mb-2">20,000</h4>
-                <p class="text-sm text-gray-300">sqm Fabrication Facility</p>
-            </div>
-            <div class="text-center" id="stat-4">
-                <div class="w-20 h-20 bg-accent-blue rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fa-solid fa-handshake text-white text-3xl"></i>
-                </div>
-                <h4 class="text-5xl font-bold text-white mb-2">100+</h4>
-                <p class="text-sm text-gray-300">Supplier Partnerships</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="services-section" class="py-20 bg-light-grey">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="text-center mb-12">
-            <div class="inline-block mb-4">
-                <span class="text-sm font-semibold text-accent-blue uppercase tracking-wider bg-white px-4 py-2 rounded-full">Our Services</span>
-            </div>
-            <h3 class="text-4xl font-bold text-corporate-blue mb-4">
-                Comprehensive EPC Solutions
-            </h3>
-            <p class="text-base text-steel-grey max-w-3xl mx-auto">
-                From concept to completion, we deliver integrated engineering, procurement, and construction services tailored to the Oil & Gas industry.
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-3 gap-6">
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-1">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-diagram-project text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Turnkey EPC Projects</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Complete project management from design to commissioning with integrated engineering and construction excellence.</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-2">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-oil-can text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Tank Farm Construction</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Specialized design and construction of large-scale tank farms meeting international safety and quality standards.</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-3">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-gas-pump text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Oil & Gas Terminal Works</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Comprehensive terminal infrastructure development including loading facilities and distribution systems.</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-4">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-tank-water text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Storage Tank Design & Fabrication</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Custom-engineered storage solutions with API compliance for various petroleum products and chemicals.</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-5">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-flask text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Distillation & Refinery Plants</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Advanced refinery construction and distillation unit installation with process optimization capabilities.</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-6">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-droplet text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Lubricant Blending Plants</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Turnkey lubricant blending facilities with automated systems for precision mixing and quality control.</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-7">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-bolt text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Mechanical, Electrical & Plumbing (MEP) Works</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Integrated MEP solutions for industrial facilities ensuring operational efficiency and safety compliance.</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-8">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-building text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Civil & Building Construction</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Heavy civil works and industrial building construction with structural integrity and durability focus.</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-9">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-cubes text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Steel Structure Fabrication</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Precision steel fabrication services for industrial structures with ASME standard compliance.</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-10">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-pipe text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Piping Fabrication & Installation</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Complete piping solutions including fabrication, installation, and pressure testing for process systems.</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-11">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-fire-extinguisher text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Firefighting Systems Installation</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Advanced fire protection systems designed and installed to meet NFPA standards and local regulations.</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-6 shadow hover:shadow-xl transition" id="service-12">
-                <div class="w-14 h-14 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
-                    <i class="fa-solid fa-hammer text-accent-blue text-2xl"></i>
-                </div>
-                <h4 class="text-lg font-bold text-corporate-blue mb-3">Storage Tank Foundation Construction</h4>
-                <p class="text-sm text-steel-grey leading-relaxed">Specialized foundation engineering for storage tanks ensuring stability and long-term structural integrity.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="why-choose-us" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="text-center mb-12">
-            <div class="inline-block mb-4">
-                <span class="text-sm font-semibold text-accent-blue uppercase tracking-wider bg-blue-50 px-4 py-2 rounded-full">Why Choose Us</span>
-            </div>
-            <h3 class="text-4xl font-bold text-corporate-blue mb-4">
-                Your Trusted EPC Partner
-            </h3>
-            <p class="text-base text-steel-grey max-w-3xl mx-auto">
-                We combine technical excellence with unwavering commitment to safety, quality, and client satisfaction.
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-2 gap-6">
-            <div class="bg-gradient-to-r from-blue-50 to-white rounded-lg p-6 border-l-4 border-accent-blue" id="reason-1">
-                <div class="flex items-start space-x-5">
-                    <div class="w-12 h-12 bg-accent-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-certificate text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-corporate-blue mb-3">API & ASME Standards Compliance</h4>
-                        <p class="text-sm text-steel-grey leading-relaxed">All our projects strictly adhere to API and ASME international standards, ensuring the highest quality and safety benchmarks in every delivery.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bg-gradient-to-r from-blue-50 to-white rounded-lg p-6 border-l-4 border-accent-blue" id="reason-2">
-                <div class="flex items-start space-x-5">
-                    <div class="w-12 h-12 bg-accent-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-shield-halved text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-corporate-blue mb-3">Strong Safety Culture</h4>
-                        <p class="text-sm text-steel-grey leading-relaxed">Safety is our top priority with comprehensive HSE programs, regular training, and zero-tolerance policy towards safety violations across all project sites.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bg-gradient-to-r from-blue-50 to-white rounded-lg p-6 border-l-4 border-accent-blue" id="reason-3">
-                <div class="flex items-start space-x-5">
-                    <div class="w-12 h-12 bg-accent-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-users-gear text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-corporate-blue mb-3">Skilled Engineering Team</h4>
-                        <p class="text-sm text-steel-grey leading-relaxed">Our multidisciplinary team of experienced engineers and technicians brings decades of combined expertise in Oil & Gas infrastructure development.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bg-gradient-to-r from-blue-50 to-white rounded-lg p-6 border-l-4 border-accent-blue" id="reason-4">
-                <div class="flex items-start space-x-5">
-                    <div class="w-12 h-12 bg-accent-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-leaf text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-corporate-blue mb-3">Sustainable Construction Practices</h4>
-                        <p class="text-sm text-steel-grey leading-relaxed">We implement environmentally responsible construction methods, minimizing waste and optimizing resource utilization for sustainable operations.</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="bg-gradient-to-r from-blue-50 to-white rounded-lg p-6 border-l-4 border-accent-blue col-span-2" id="reason-5">
-                <div class="flex items-start space-x-5">
-                    <div class="w-12 h-12 bg-accent-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-clock text-white text-xl"></i>
-                    </div>
-                    <div>
-                        <h4 class="text-lg font-bold text-corporate-blue mb-3">On-time Project Delivery</h4>
-                        <p class="text-sm text-steel-grey leading-relaxed">With proven project management methodologies and efficient execution strategies, we consistently deliver projects on schedule and within budget.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="featured-projects" class="py-20 bg-light-grey">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="text-center mb-12">
-            <div class="inline-block mb-4">
-                <span class="text-sm font-semibold text-accent-blue uppercase tracking-wider bg-white px-4 py-2 rounded-full">Our Portfolio</span>
-            </div>
-            <h3 class="text-4xl font-bold text-corporate-blue mb-4">
-                Featured Projects
-            </h3>
-            <p class="text-base text-steel-grey max-w-3xl mx-auto">
-                Explore our successful project deliveries across various sectors of the Oil & Gas industry.
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-2 gap-6 mb-8">
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition" id="project-1">
-                <div class="h-64 overflow-hidden">
-                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/360feced3b-5ab6f797cdb7de3588ec.png" alt="large oil storage tank farm with multiple white cylindrical tanks, industrial photography, professional" />
-                </div>
-                <div class="p-6">
-                    <span class="inline-block text-xs font-semibold text-accent-blue bg-blue-50 px-3 py-1 rounded mb-3">Tank Farms</span>
-                    <h4 class="text-xl font-bold text-corporate-blue mb-3">Sharjah Tank Terminal Expansion</h4>
-                    <p class="text-sm text-steel-grey mb-4">Construction of 12 storage tanks with 150,000 cubic meter capacity including foundation works and piping systems.</p>
-                    <button class="text-sm font-semibold text-accent-blue flex items-center hover:text-corporate-blue transition">
-                        View Details <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition" id="project-2">
-                <div class="h-64 overflow-hidden">
-                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/eb1835e8c3-8b703506694e59090a77.png" alt="oil refinery plant with distillation towers and industrial piping, sunset view, professional industrial photography" />
-                </div>
-                <div class="p-6">
-                    <span class="inline-block text-xs font-semibold text-accent-blue bg-blue-50 px-3 py-1 rounded mb-3">Refineries</span>
-                    <h4 class="text-xl font-bold text-corporate-blue mb-3">Abu Dhabi Refinery Upgrade</h4>
-                    <p class="text-sm text-steel-grey mb-4">Complete mechanical installation and commissioning of distillation units with advanced process control systems.</p>
-                    <button class="text-sm font-semibold text-accent-blue flex items-center hover:text-corporate-blue transition">
-                        View Details <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition" id="project-3">
-                <div class="h-64 overflow-hidden">
-                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/b5b866772f-8082775b3e8e8796e743.png" alt="industrial pipeline construction site with large diameter pipes, construction workers, professional photography" />
-                </div>
-                <div class="p-6">
-                    <span class="inline-block text-xs font-semibold text-accent-blue bg-blue-50 px-3 py-1 rounded mb-3">Pipelines</span>
-                    <h4 class="text-xl font-bold text-corporate-blue mb-3">Dubai-Sharjah Pipeline Project</h4>
-                    <p class="text-sm text-steel-grey mb-4">Installation of 25km petroleum transfer pipeline with pumping stations and monitoring systems.</p>
-                    <button class="text-sm font-semibold text-accent-blue flex items-center hover:text-corporate-blue transition">
-                        View Details <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </button>
-                </div>
-            </div>
-            
-            <div class="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition" id="project-4">
-                <div class="h-64 overflow-hidden">
-                    <img class="w-full h-full object-cover" src="https://storage.googleapis.com/uxpilot-auth.appspot.com/c8d0841443-d375ba72dcc23a813af1.png" alt="modern industrial building with steel structure, oil and gas facility, professional architecture photography" />
-                </div>
-                <div class="p-6">
-                    <span class="inline-block text-xs font-semibold text-accent-blue bg-blue-50 px-3 py-1 rounded mb-3">Industrial Buildings</span>
-                    <h4 class="text-xl font-bold text-corporate-blue mb-3">Lubricant Blending Facility</h4>
-                    <p class="text-sm text-steel-grey mb-4">Turnkey construction of 5,000 sqm blending plant including civil works, MEP systems, and process equipment.</p>
-                    <button class="text-sm font-semibold text-accent-blue flex items-center hover:text-corporate-blue transition">
-                        View Details <i class="fa-solid fa-arrow-right ml-2"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-        
-        <div class="text-center">
-            <button class="bg-accent-blue text-white font-semibold text-base py-4 px-10 rounded shadow-lg hover:bg-corporate-blue transition">
-                View All Projects
-            </button>
-        </div>
-    </div>
-</section>
-
-<section id="group-companies" class="py-20 bg-white">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="text-center mb-12">
-            <div class="inline-block mb-4">
-                <span class="text-sm font-semibold text-accent-blue uppercase tracking-wider bg-blue-50 px-4 py-2 rounded-full">Our Network</span>
-            </div>
-            <h3 class="text-4xl font-bold text-corporate-blue mb-4">
-                Group Companies
-            </h3>
-            <p class="text-base text-steel-grey max-w-3xl mx-auto mb-8">
-                Al Bahr Al Arabi Group comprises specialized subsidiary companies, each bringing unique expertise to deliver comprehensive solutions across the Oil & Gas value chain.
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-2 gap-6">
-            <div class="bg-gradient-to-r from-blue-50 to-white rounded-lg p-6 border border-gray-200 hover:shadow-lg transition" id="company-1">
-                <div class="flex items-center space-x-5 mb-4">
-                    <div class="w-14 h-14 bg-corporate-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-industry text-white text-2xl"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-corporate-blue">Al Bahr Engineering & Construction</h4>
-                </div>
-                <p class="text-sm text-steel-grey leading-relaxed">Specialized in EPC projects, civil works, and industrial construction with focus on Oil & Gas infrastructure development.</p>
-            </div>
-            
-            <div class="bg-gradient-to-r from-blue-50 to-white rounded-lg p-6 border border-gray-200 hover:shadow-lg transition" id="company-2">
-                <div class="flex items-center space-x-5 mb-4">
-                    <div class="w-14 h-14 bg-corporate-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-gears text-white text-2xl"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-corporate-blue">Al Arabi Steel Fabrication</h4>
-                </div>
-                <p class="text-sm text-steel-grey leading-relaxed">State-of-the-art fabrication facility providing precision steel structures, tanks, and piping systems for industrial applications.</p>
-            </div>
-            
-            <div class="bg-gradient-to-r from-blue-50 to-white rounded-lg p-6 border border-gray-200 hover:shadow-lg transition" id="company-3">
-                <div class="flex items-center space-x-5 mb-4">
-                    <div class="w-14 h-14 bg-corporate-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-wrench text-white text-2xl"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-corporate-blue">Al Bahr Mechanical Services</h4>
-                </div>
-                <p class="text-sm text-steel-grey leading-relaxed">Comprehensive mechanical, electrical, and plumbing services including maintenance and installation for industrial facilities.</p>
-            </div>
-            
-            <div class="bg-gradient-to-r from-blue-50 to-white rounded-lg p-6 border border-gray-200 hover:shadow-lg transition" id="company-4">
-                <div class="flex items-center space-x-5 mb-4">
-                    <div class="w-14 h-14 bg-corporate-blue rounded-lg flex items-center justify-center flex-shrink-0">
-                        <i class="fa-solid fa-truck text-white text-2xl"></i>
-                    </div>
-                    <h4 class="text-lg font-bold text-corporate-blue">Al Arabi Trading & Supplies</h4>
-                </div>
-                <p class="text-sm text-steel-grey leading-relaxed">Procurement and supply chain management for industrial equipment, materials, and specialized Oil & Gas components.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="certifications" class="py-20 bg-corporate-blue">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="text-center mb-12">
-            <div class="inline-block mb-4">
-                <span class="text-sm font-semibold text-white uppercase tracking-wider bg-accent-blue px-4 py-2 rounded-full">Quality Assurance</span>
-            </div>
-            <h3 class="text-4xl font-bold text-white mb-4">
-                Certifications & Compliance
-            </h3>
-            <p class="text-base text-gray-300 max-w-3xl mx-auto">
-                Our commitment to excellence is validated through international certifications and adherence to industry standards.
-            </p>
-        </div>
-        
-        <div class="grid grid-cols-4 gap-6 mb-10">
-            <div class="bg-white rounded-lg p-8 text-center hover:shadow-xl transition" id="cert-1">
-                <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fa-solid fa-award text-accent-blue text-3xl"></i>
-                </div>
-                <h4 class="text-base font-bold text-corporate-blue mb-2">API Certified</h4>
-                <p class="text-sm text-steel-grey">American Petroleum Institute Standards</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-8 text-center hover:shadow-xl transition" id="cert-2">
-                <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fa-solid fa-certificate text-accent-blue text-3xl"></i>
-                </div>
-                <h4 class="text-base font-bold text-corporate-blue mb-2">ASME Compliant</h4>
-                <p class="text-sm text-steel-grey">American Society of Mechanical Engineers</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-8 text-center hover:shadow-xl transition" id="cert-3">
-                <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fa-solid fa-circle-check text-accent-blue text-3xl"></i>
-                </div>
-                <h4 class="text-base font-bold text-corporate-blue mb-2">ISO 9001:2015</h4>
-                <p class="text-sm text-steel-grey">Quality Management System</p>
-            </div>
-            
-            <div class="bg-white rounded-lg p-8 text-center hover:shadow-xl transition" id="cert-4">
-                <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4">
-                    <i class="fa-solid fa-shield-halved text-accent-blue text-3xl"></i>
-                </div>
-                <h4 class="text-base font-bold text-corporate-blue mb-2">ISO 45001</h4>
-                <p class="text-sm text-steel-grey">Occupational Health & Safety</p>
-            </div>
-        </div>
-        
-        <div class="bg-white/10 rounded-lg p-8">
-            <h4 class="text-lg font-bold text-white mb-6 text-center">Additional Compliance Standards</h4>
-            <div class="grid grid-cols-4 gap-4 text-center">
-                <div>
-                    <p class="text-sm text-gray-300">NFPA Fire Safety</p>
-                </div>
-                <div>
-                    <p class="text-sm text-gray-300">UAE Civil Defense</p>
-                </div>
-                <div>
-                    <p class="text-sm text-gray-300">ADNOC Standards</p>
-                </div>
-                <div>
-                    <p class="text-sm text-gray-300">NEBOSH HSE</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="cta-section" class="py-20 bg-gradient-to-br from-accent-blue to-corporate-blue relative overflow-hidden">
-    <div class="absolute inset-0 opacity-10">
-        <div class="absolute top-0 left-0 w-96 h-96 bg-white rounded-full -translate-x-1/2 -translate-y-1/2"></div>
-        <div class="absolute bottom-0 right-0 w-[600px] h-[600px] bg-white rounded-full translate-x-1/3 translate-y-1/3"></div>
-    </div>
-    <div class="max-w-7xl mx-auto px-8 relative z-10">
-        <div class="text-center max-w-3xl mx-auto">
-            <h3 class="text-4xl font-bold text-white mb-6 leading-tight">
-                Let's Build the Future of Energy Infrastructure Together
-            </h3>
-            <p class="text-lg text-gray-100 mb-8 leading-relaxed">
-                Partner with Al Bahr Al Arabi Group for your next Oil & Gas project. Our team of experts is ready to deliver world-class EPC solutions tailored to your requirements.
-            </p>
-            <button class="bg-white text-corporate-blue font-semibold text-base py-4 px-10 rounded shadow-lg hover:shadow-xl transition mb-8">
-                Request a Consultation
-            </button>
-            <div class="flex items-center justify-center space-x-10 text-white">
-                <div class="flex items-center space-x-3">
-                    <i class="fa-solid fa-phone text-lg"></i>
-                    <span class="text-sm">+971 65260602</span>
-                </div>
-                <div class="flex items-center space-x-3">
-                    <i class="fa-solid fa-envelope text-lg"></i>
-                    <span class="text-sm">info@albahralarabi.com</span>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="contact-info" class="py-20 bg-light-grey">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="grid grid-cols-3 gap-8">
-            <div class="col-span-1 space-y-6">
-                <div class="bg-white rounded-lg shadow-lg p-6">
-                    <h3 class="text-2xl font-bold text-corporate-blue mb-6">Get In Touch</h3>
-                    
-                    <div class="space-y-5">
-                        <div class="flex items-start space-x-4" id="contact-address">
-                            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-location-dot text-accent-blue text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-base font-bold text-corporate-blue mb-1">Head Office</h4>
-                                <p class="text-sm text-steel-grey">Hamriyah Free Zone<br>Sharjah, United Arab Emirates</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4" id="contact-phone">
-                            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-phone text-accent-blue text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-base font-bold text-corporate-blue mb-1">Phone</h4>
-                                <p class="text-sm text-steel-grey">+971 65260602</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4" id="contact-email">
-                            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-envelope text-accent-blue text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-base font-bold text-corporate-blue mb-1">Email</h4>
-                                <p class="text-sm text-steel-grey">info@albahralarabi.com</p>
-                            </div>
-                        </div>
-                        
-                        <div class="flex items-start space-x-4" id="contact-hours">
-                            <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center flex-shrink-0">
-                                <i class="fa-solid fa-clock text-accent-blue text-xl"></i>
-                            </div>
-                            <div>
-                                <h4 class="text-base font-bold text-corporate-blue mb-1">Business Hours</h4>
-                                <p class="text-sm text-steel-grey">Sunday - Thursday: 8:00 AM - 5:00 PM<br>Friday - Saturday: Closed</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-span-2">
-                <div class="bg-white rounded-lg shadow-lg p-8">
-                    <h4 class="text-2xl font-bold text-corporate-blue mb-6">Send Us a Message</h4>
-                    <form class="space-y-5">
-                        <div class="grid grid-cols-2 gap-5">
-                            <input type="text" placeholder="Your Name" class="w-full px-4 py-3 text-sm border border-gray-300 rounded focus:outline-none focus:border-accent-blue">
-                            <input type="email" placeholder="Your Email" class="w-full px-4 py-3 text-sm border border-gray-300 rounded focus:outline-none focus:border-accent-blue">
-                        </div>
-                        <input type="tel" placeholder="Phone Number" class="w-full px-4 py-3 text-sm border border-gray-300 rounded focus:outline-none focus:border-accent-blue">
-                        <textarea placeholder="Your Message" rows="6" class="w-full px-4 py-3 text-sm border border-gray-300 rounded focus:outline-none focus:border-accent-blue"></textarea>
-                        <button type="submit" class="w-full bg-accent-blue text-white font-semibold text-base py-4 rounded hover:bg-corporate-blue transition shadow-md">
-                            Send Message
+                <!-- Desktop Menu -->
+                <nav class="hidden xl:flex items-center space-x-8">
+                    <a href="index.html" class="text-corporate-blue font-semibold border-b-2 border-corporate-blue py-1 whitespace-nowrap" data-i18n="menu_home">Home</a>
+                    <a href="about.html" class="hover:text-accent-blue transition-all py-1 whitespace-nowrap" data-i18n="menu_about">About Us</a>
+                    <div class="relative group">
+                        <button class="flex items-center hover:text-accent-blue transition-all py-1 text-center leading-tight">
+                            <span data-i18n="menu_group" class="">Group<br>Companies</span>
+                            <i class="fa-solid fa-chevron-down ml-1.5 text-[10px]"></i>
                         </button>
-                    </form>
+                        <!-- Dropdown -->
+                        <div class="absolute left-0 mt-2 w-72 bg-white shadow-xl rounded-lg py-2 invisible group-hover:visible opacity-0 group-hover:opacity-100 transition-all transform origin-top scale-95 group-hover:scale-100 border border-gray-100">
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-blue-50 hover:text-accent-blue" data-i18n="company_1">Al Bahr Al Arabi Marine Engineering-UAE</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-blue-50 hover:text-accent-blue" data-i18n="company_2">Al Bahr Al Arabi Technical Industries FZC-UAE</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-blue-50 hover:text-accent-blue" data-i18n="company_3">Gulf Tech Energy Contracting LLC-UAE</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-blue-50 hover:text-accent-blue" data-i18n="company_4">Crystal Petroleum FZE-UAE</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-blue-50 hover:text-accent-blue" data-i18n="company_5">Crystal Petrochemicals FZCO-UAE</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-blue-50 hover:text-accent-blue" data-i18n="company_6">Crystal Petrokimya-Turkey</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-blue-50 hover:text-accent-blue" data-i18n="company_7">Crystal Care Ltd-KSA</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-blue-50 hover:text-accent-blue" data-i18n="company_8">Meecon LTD-UK</a>
+                            <a href="#" class="block px-4 py-2 text-xs hover:bg-blue-50 hover:text-accent-blue" data-i18n="company_9">Crystal Oilfield Constr & Cont. LLC-Qatar</a>
+                        </div>
+                    </div>
+                    <a href="services.html" class="hover:text-accent-blue transition-all py-1 whitespace-nowrap" data-i18n="menu_services">Services</a>
+                    <a href="projects.html" class="hover:text-accent-blue transition-all py-1 whitespace-nowrap" data-i18n="menu_projects">Projects</a>
+                    <a href="media-center.html" class="hover:text-accent-blue transition-all py-1 whitespace-nowrap" data-i18n="menu_media">Media Center</a>
+                    <a href="careers.html" class="hover:text-accent-blue transition-all py-1 whitespace-nowrap" data-i18n="menu_careers">Careers</a>
+                    <a href="contact.html" class="hover:text-accent-blue transition-all py-1 whitespace-nowrap" data-i18n="menu_contact">Contact Us</a>
+                </nav>
+
+                <!-- Action Button -->
+                <div class="hidden xl:block">
+                    <a href="#" class="bg-accent-blue text-white px-5 py-2 rounded font-bold hover:bg-corporate-blue transition-all text-center leading-none flex items-center justify-center text-[11px] uppercase tracking-wider min-w-[110px]" data-i18n="btn_quote">Request<br>a Quote</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="mobile-menu-btn" class="xl:hidden text-corporate-blue text-2xl focus:outline-none">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden xl:hidden bg-white border-t border-gray-100 pb-6 pt-4 px-4 shadow-xl max-h-[80vh] overflow-y-auto">
+            <div class="flex flex-col space-y-4">
+                <a href="index.html" class="text-corporate-blue font-bold text-lg border-l-4 border-corporate-blue pl-4" data-i18n="menu_home">Home</a>
+                <a href="about.html" class="text-steel-grey font-medium pl-4" data-i18n="menu_about">About Us</a>
+                <div class="pl-4">
+                    <button class="flex items-center justify-between w-full text-steel-grey font-medium" id="mobile-dropdown-btn">
+                        <span data-i18n="menu_group">Group Companies</span>
+                        <i class="fa-solid fa-chevron-down text-[12px]"></i>
+                    </button>
+                    <div id="mobile-dropdown-content" class="hidden flex flex-col space-y-3 mt-3 pl-4 border-l border-gray-100">
+                        <a href="#" class="text-xs text-steel-grey" data-i18n="company_1">Al Bahr Al Arabi Marine Engineering-UAE</a>
+                        <a href="#" class="text-xs text-steel-grey" data-i18n="company_2">Al Bahr Al Arabi Technical Industries FZC-UAE</a>
+                        <a href="#" class="text-xs text-steel-grey" data-i18n="company_3">Gulf Tech Energy Contracting LLC-UAE</a>
+                        <a href="#" class="text-xs text-steel-grey" data-i18n="company_4">Crystal Petroleum FZE-UAE</a>
+                        <a href="#" class="text-xs text-steel-grey" data-i18n="company_5">Crystal Petrochemicals FZCO-UAE</a>
+                        <a href="#" class="text-xs text-steel-grey" data-i18n="company_6">Crystal Petrokimya-Turkey</a>
+                        <a href="#" class="text-xs text-steel-grey" data-i18n="company_7">Crystal Care Ltd-KSA</a>
+                        <a href="#" class="text-xs text-steel-grey" data-i18n="company_8">Meecon LTD-UK</a>
+                        <a href="#" class="text-xs text-steel-grey" data-i18n="company_9">Crystal Oilfield Constr & Cont. LLC-Qatar</a>
+                    </div>
+                </div>
+                <a href="services.html" class="text-steel-grey font-medium pl-4" data-i18n="menu_services">Services</a>
+                <a href="projects.html" class="text-steel-grey font-medium pl-4" data-i18n="menu_projects">Projects</a>
+                <a href="media-center.html" class="text-steel-grey font-medium pl-4" data-i18n="menu_media">Media Center</a>
+                <a href="careers.html" class="text-steel-grey font-medium pl-4" data-i18n="menu_careers">Careers</a>
+                <a href="contact.html" class="text-steel-grey font-medium pl-4" data-i18n="menu_contact">Contact Us</a>
+                <div class="pt-4 border-t border-gray-100 flex flex-col space-y-4">
+                    <a href="#" class="bg-accent-blue text-white text-center py-3 rounded font-semibold" data-i18n="btn_quote">Request a Quote</a>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </header>
 
-<footer id="footer" class="bg-corporate-blue text-gray-300 py-16">
-    <div class="max-w-7xl mx-auto px-8">
-        <div class="grid grid-cols-4 gap-12 mb-12">
-            <div class="col-span-2">
-                <div class="flex items-center space-x-3 mb-6">
-                    <div class="w-14 h-14 bg-accent-blue rounded flex items-center justify-center">
-                        <i class="fa-solid fa-oil-well text-white text-2xl"></i>
+    <!-- Hero Section -->
+    <section id="hero" class="relative h-[700px] overflow-hidden flex items-center">
+        <div class="absolute inset-0 z-0">
+            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_2a02f5d05c_7e786b84810f2990.png" alt="Oil Refinery" class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="max-w-3xl">
+                <h2 class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6" data-i18n="hero_title">Engineering Excellence in Oil & Gas Infrastructure</h2>
+                <p class="text-blue-50 text-lg sm:text-xl mb-10 leading-relaxed" data-i18n="hero_subtitle">Delivering turnkey EPC solutions with 25+ years of industry expertise and 500+ successful projects across UAE and MENA region.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#" class="bg-white text-corporate-blue px-8 py-4 rounded font-bold text-center transition-all hover:bg-blue-50" data-i18n="btn_projects">View Projects</a>
+                    <a href="#" class="border-2 border-white text-white px-8 py-4 rounded font-bold text-center transition-all hover:bg-white/10" data-i18n="btn_contact">Contact Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Company Introduction + Stats -->
+    <section id="intro" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-20">
+                <div>
+                    <span class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block" data-i18n="intro_pill">About Al Bahr Al Arabi Group</span>
+                    <h3 class="text-4xl font-bold text-corporate-blue mb-8" data-i18n="intro_title">Leading EPC Contractor in UAE</h3>
+                    <div class="space-y-6 text-steel-grey leading-relaxed text-lg">
+                        <p data-i18n="intro_p1">Al Bahr Al Arabi Group stands as a premier Engineering, Procurement, and Construction contractor with over 25 years of distinguished service in the Oil & Gas sector. Operating from our state-of-the-art 20,000 sqm fabrication facility in Hamriyah Free Zone, Sharjah, we deliver comprehensive solutions across the UAE and MENA region.</p>
+                        <p data-i18n="intro_p2">Our commitment to safety, quality, and adherence to international standards including API and ASME certifications ensures that every project meets the highest industry benchmarks. We specialize in tank farms, refinery plants, civil works, and steel fabrication, providing end-to-end solutions that drive operational excellence.</p>
+                    </div>
+                    <div class="mt-10">
+                        <a href="about.html" class="inline-flex items-center text-accent-blue font-bold hover:translate-x-2 transition-all group">
+                            <span data-i18n="btn_learn_more">Learn More About Us</span>
+                            <i class="fa-solid fa-arrow-right ml-2 group-hover:ml-4 transition-all"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="relative">
+                    <div class="bg-corporate-blue p-1 rounded-2xl shadow-2xl overflow-hidden group">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/115977284574045559731%2F8fd9e096-c3f7-4a58-916a-c6138c259c1f.png" alt="Al Bahr Al Arabi Office" class="w-full h-[500px] object-cover rounded-xl transition-all duration-700 group-hover:scale-105">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stats Band -->
+            <div class="bg-corporate-blue rounded-2xl p-12 shadow-xl">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white mb-2" data-i18n="stat_1_val">25+</p>
+                        <p class="text-blue-300 text-sm font-semibold uppercase tracking-widest" data-i18n="stat_1_label">Years of Experience</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white mb-2" data-i18n="stat_2_val">500+</p>
+                        <p class="text-blue-300 text-sm font-semibold uppercase tracking-widest" data-i18n="stat_2_label">Completed Projects</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white mb-2" data-i18n="stat_3_val">20,000</p>
+                        <p class="text-blue-300 text-sm font-semibold uppercase tracking-widest" data-i18n="stat_3_label">Sqm Fabrication Facility</p>
+                    </div>
+                    <div class="text-center">
+                        <p class="text-4xl font-bold text-white mb-2" data-i18n="stat_4_val">100+</p>
+                        <p class="text-blue-300 text-sm font-semibold uppercase tracking-widest" data-i18n="stat_4_label">Supplier Partnerships</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Group Companies Overview -->
+    <section id="group-companies" class="py-20 bg-light-grey">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block" data-i18n="group_pill">Our Network</span>
+                <h3 class="text-4xl font-bold text-corporate-blue mb-4" data-i18n="group_title">Group Companies</h3>
+                <p class="text-steel-grey max-w-2xl mx-auto" data-i18n="group_text">Al Bahr Al Arabi Group comprises specialized subsidiary companies, each bringing unique expertise to deliver comprehensive solutions across the Oil & Gas value chain.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Company Card 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-all">
+                        <i class="fa-solid fa-ship"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-corporate-blue mb-4 leading-tight min-h-[3rem]" data-i18n="company_1">Al Bahr Al Arabi Marine Engineering-UAE</h4>
+                    <p class="text-sm text-steel-grey mb-6" data-i18n="company_1_desc">Marine and offshore engineering services specializing in vessel maintenance and offshore structures.</p>
+                    <a href="#" target="_blank" rel="noopener" class="text-accent-blue font-bold flex items-center hover:translate-x-1 transition-all">
+                        <span data-i18n="visit_website">Visit Website</span>
+                        <i class="fa-solid fa-external-link ml-2 text-xs"></i>
+                    </a>
+                </div>
+                <!-- Company Card 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-all">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-corporate-blue mb-4 leading-tight min-h-[3rem]" data-i18n="company_2">Al Bahr Al Arabi Technical Industries FZC-UAE</h4>
+                    <p class="text-sm text-steel-grey mb-6" data-i18n="company_2_desc">Steel fabrication, tanks, and piping systems with advanced manufacturing capabilities.</p>
+                    <a href="#" target="_blank" rel="noopener" class="text-accent-blue font-bold flex items-center hover:translate-x-1 transition-all">
+                        <span data-i18n="visit_website">Visit Website</span>
+                        <i class="fa-solid fa-external-link ml-2 text-xs"></i>
+                    </a>
+                </div>
+                <!-- Company Card 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-all">
+                        <i class="fa-solid fa-bolt"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-corporate-blue mb-4 leading-tight min-h-[3rem]" data-i18n="company_3">Gulf Tech Energy Contracting LLC-UAE</h4>
+                    <p class="text-sm text-steel-grey mb-6" data-i18n="company_3_desc">Energy and Oil & Gas contracting specializing in MEP and electrical infrastructure.</p>
+                    <a href="#" target="_blank" rel="noopener" class="text-accent-blue font-bold flex items-center hover:translate-x-1 transition-all">
+                        <span data-i18n="visit_website">Visit Website</span>
+                        <i class="fa-solid fa-external-link ml-2 text-xs"></i>
+                    </a>
+                </div>
+                <!-- Company Card 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-all">
+                        <i class="fa-solid fa-gas-pump"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-corporate-blue mb-4 leading-tight min-h-[3rem]" data-i18n="company_4">Crystal Petroleum FZE-UAE</h4>
+                    <p class="text-sm text-steel-grey mb-6">Specialized petroleum services and logistics support in the UAE region.</p>
+                    <a href="#" target="_blank" rel="noopener" class="text-accent-blue font-bold flex items-center hover:translate-x-1 transition-all">
+                        <span data-i18n="visit_website">Visit Website</span>
+                        <i class="fa-solid fa-external-link ml-2 text-xs"></i>
+                    </a>
+                </div>
+                <!-- Company Card 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-all">
+                        <i class="fa-solid fa-flask-vial"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-corporate-blue mb-4 leading-tight min-h-[3rem]" data-i18n="company_5">Crystal Petrochemicals FZCO-UAE</h4>
+                    <p class="text-sm text-steel-grey mb-6">Advanced petrochemical processing and distribution services.</p>
+                    <a href="#" target="_blank" rel="noopener" class="text-accent-blue font-bold flex items-center hover:translate-x-1 transition-all">
+                        <span data-i18n="visit_website">Visit Website</span>
+                        <i class="fa-solid fa-external-link ml-2 text-xs"></i>
+                    </a>
+                </div>
+                <!-- Company Card 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-all">
+                        <i class="fa-solid fa-earth-europe"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-corporate-blue mb-4 leading-tight min-h-[3rem]" data-i18n="company_6">Crystal Petrokimya-Turkey</h4>
+                    <p class="text-sm text-steel-grey mb-6">Strategic petrochemical operations serving the European and Turkish markets.</p>
+                    <a href="#" target="_blank" rel="noopener" class="text-accent-blue font-bold flex items-center hover:translate-x-1 transition-all">
+                        <span data-i18n="visit_website">Visit Website</span>
+                        <i class="fa-solid fa-external-link ml-2 text-xs"></i>
+                    </a>
+                </div>
+                <!-- Company Card 7 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-all">
+                        <i class="fa-solid fa-hand-holding-heart"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-corporate-blue mb-4 leading-tight min-h-[3rem]" data-i18n="company_7">Crystal Care Ltd-KSA</h4>
+                    <p class="text-sm text-steel-grey mb-6">Operational care and maintenance services for infrastructure in Saudi Arabia.</p>
+                    <a href="#" target="_blank" rel="noopener" class="text-accent-blue font-bold flex items-center hover:translate-x-1 transition-all">
+                        <span data-i18n="visit_website">Visit Website</span>
+                        <i class="fa-solid fa-external-link ml-2 text-xs"></i>
+                    </a>
+                </div>
+                <!-- Company Card 8 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-all">
+                        <i class="fa-solid fa-tower-observation"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-corporate-blue mb-4 leading-tight min-h-[3rem]" data-i18n="company_8">Meecon LTD-UK</h4>
+                    <p class="text-sm text-steel-grey mb-6">Engineering consultancy and construction management services based in the UK.</p>
+                    <a href="#" target="_blank" rel="noopener" class="text-accent-blue font-bold flex items-center hover:translate-x-1 transition-all">
+                        <span data-i18n="visit_website">Visit Website</span>
+                        <i class="fa-solid fa-external-link ml-2 text-xs"></i>
+                    </a>
+                </div>
+                <!-- Company Card 9 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 group">
+                    <div class="w-14 h-14 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl mb-6 group-hover:scale-110 transition-all">
+                        <i class="fa-solid fa-trowel-bricks"></i>
+                    </div>
+                    <h4 class="text-lg font-bold text-corporate-blue mb-4 leading-tight min-h-[3rem]" data-i18n="company_9">Crystal Oilfield Constr & Cont. LLC-Qatar</h4>
+                    <p class="text-sm text-steel-grey mb-6">Full-scale oilfield construction and operational contracting in Qatar.</p>
+                    <a href="#" target="_blank" rel="noopener" class="text-accent-blue font-bold flex items-center hover:translate-x-1 transition-all">
+                        <span data-i18n="visit_website">Visit Website</span>
+                        <i class="fa-solid fa-external-link ml-2 text-xs"></i>
+                    </a>
+                </div>
+            </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Key Services -->
+    <section id="services" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block" data-i18n="services_pill">Our Services</span>
+                <h3 class="text-4xl font-bold text-corporate-blue mb-4" data-i18n="services_title">Comprehensive EPC Solutions</h3>
+                <p class="text-steel-grey max-w-2xl mx-auto" data-i18n="services_subtitle">From concept to completion, we deliver integrated engineering, procurement, and construction services tailored to the Oil & Gas industry.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+                <!-- Service 1 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-2xl mb-6 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-hard-hat"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-corporate-blue mb-4" data-i18n="service_1_title">Turnkey EPC Projects</h4>
+                    <p class="text-steel-grey text-sm" data-i18n="service_1_desc">Complete lifecycle management from initial design to final commissioning.</p>
+                </div>
+                <!-- Service 2 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-2xl mb-6 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-oil-can"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-corporate-blue mb-4" data-i18n="service_2_title">Tank Farm Construction</h4>
+                    <p class="text-steel-grey text-sm" data-i18n="service_2_desc">Expert construction of large-scale oil and chemical storage facilities.</p>
+                </div>
+                <!-- Service 3 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-2xl mb-6 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-anchor"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-corporate-blue mb-4" data-i18n="service_3_title">Oil & Gas Terminal Works</h4>
+                    <p class="text-steel-grey text-sm" data-i18n="service_3_desc">Specialized marine terminal infrastructure and loading systems.</p>
+                </div>
+                <!-- Service 4 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-2xl mb-6 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-compass-drafting"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-corporate-blue mb-4" data-i18n="service_4_title">Storage Tank Design & Fab</h4>
+                    <p class="text-steel-grey text-sm" data-i18n="service_4_desc">Precision engineering and fabrication of custom storage solutions.</p>
+                </div>
+                <!-- Service 5 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-2xl mb-6 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-industry"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-corporate-blue mb-4" data-i18n="service_5_title">Distillation & Refinery Plants</h4>
+                    <p class="text-steel-grey text-sm" data-i18n="service_5_desc">Advanced process facility construction and maintenance.</p>
+                </div>
+                <!-- Service 6 -->
+                <div class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 flex flex-col items-center text-center group">
+                    <div class="w-14 h-14 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-2xl mb-6 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                        <i class="fa-solid fa-flask"></i>
+                    </div>
+                    <h4 class="text-xl font-bold text-corporate-blue mb-4" data-i18n="service_6_title">Lubricant Blending Plants</h4>
+                    <p class="text-steel-grey text-sm" data-i18n="service_6_desc">Turnkey solutions for industrial lubricant production facilities.</p>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="services.html" class="inline-flex items-center text-accent-blue font-bold border-2 border-accent-blue px-8 py-3.5 rounded transition-all hover:bg-accent-blue hover:text-white" data-i18n="btn_all_services">View All Services</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section id="why-choose-us" class="py-20 bg-corporate-blue text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="bg-white/10 text-blue-200 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block" data-i18n="why_pill">Why Choose Us</span>
+                <h3 class="text-4xl font-bold mb-4" data-i18n="why_title">Our Commitment to Excellence</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+                <!-- Reason 1 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 text-center hover:bg-white/10 transition-all">
+                    <div class="text-accent-blue text-3xl mb-4">
+                        <i class="fa-solid fa-certificate"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-sm uppercase tracking-wide" data-i18n="why_1_title">API & ASME Standards</h4>
+                    <p class="text-xs text-blue-100 opacity-70" data-i18n="why_1_desc">Strict compliance with global industry benchmarks.</p>
+                </div>
+                <!-- Reason 2 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 text-center hover:bg-white/10 transition-all">
+                    <div class="text-accent-blue text-3xl mb-4">
+                        <i class="fa-solid fa-shield-halved"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-sm uppercase tracking-wide" data-i18n="why_2_title">Strong Safety Culture</h4>
+                    <p class="text-xs text-blue-100 opacity-70" data-i18n="why_2_desc">Zero-incident goal in all operations.</p>
+                </div>
+                <!-- Reason 3 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 text-center hover:bg-white/10 transition-all">
+                    <div class="text-accent-blue text-3xl mb-4">
+                        <i class="fa-solid fa-users-gear"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-sm uppercase tracking-wide" data-i18n="why_3_title">Skilled Engineering Team</h4>
+                    <p class="text-xs text-blue-100 opacity-70" data-i18n="why_3_desc">Expertise in complex EPC challenges.</p>
+                </div>
+                <!-- Reason 4 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 text-center hover:bg-white/10 transition-all">
+                    <div class="text-accent-blue text-3xl mb-4">
+                        <i class="fa-solid fa-leaf"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-sm uppercase tracking-wide" data-i18n="why_4_title">Sustainable Practices</h4>
+                    <p class="text-xs text-blue-100 opacity-70" data-i18n="why_4_desc">Committed to environmental responsibility.</p>
+                </div>
+                <!-- Reason 5 -->
+                <div class="bg-white/5 p-6 rounded-xl border border-white/10 text-center hover:bg-white/10 transition-all">
+                    <div class="text-accent-blue text-3xl mb-4">
+                        <i class="fa-solid fa-clock-check"></i>
+                    </div>
+                    <h4 class="font-bold mb-2 text-sm uppercase tracking-wide" data-i18n="why_5_title">On-time Delivery</h4>
+                    <p class="text-xs text-blue-100 opacity-70" data-i18n="why_5_desc">Efficient project management and logistics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Projects -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block" data-i18n="projects_pill">Portfolio</span>
+                <h3 class="text-4xl font-bold text-corporate-blue mb-4" data-i18n="projects_title">Featured Projects</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+                <!-- Project 1 -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_0199eed31c_0816e4a56ac12880.png" alt="Project 1" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-bold text-accent-blue uppercase" data-i18n="proj_1_cat">Tank Farms</span>
+                            <div class="flex items-center text-steel-grey text-xs">
+                                <i class="fa-solid fa-map-pin mr-1.5 text-accent-blue"></i>
+                                <span data-i18n="proj_1_loc">Sharjah, UAE</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-corporate-blue mb-3" data-i18n="proj_1_title">Sharjah Tank Terminal Expansion</h4>
+                        <p class="text-sm text-steel-grey mb-6 line-clamp-2" data-i18n="proj_1_desc">Complete EPC for a new multi-product storage facility including pipelines and pumping stations.</p>
+                        <a href="#" class="inline-flex items-center text-accent-blue font-bold group-hover:translate-x-2 transition-all">
+                            <span data-i18n="view_details">View Details</span>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 2 -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_d9c1d7b6bb_8429b0b322c6e701.png" alt="Project 2" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-bold text-accent-blue uppercase" data-i18n="proj_2_cat">Refineries</span>
+                            <div class="flex items-center text-steel-grey text-xs">
+                                <i class="fa-solid fa-map-pin mr-1.5 text-accent-blue"></i>
+                                <span data-i18n="proj_2_loc">Abu Dhabi, UAE</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-corporate-blue mb-3" data-i18n="proj_2_title">Abu Dhabi Refinery Upgrade</h4>
+                        <p class="text-sm text-steel-grey mb-6 line-clamp-2" data-i18n="proj_2_desc">Integration of high-pressure process units and upgraded control systems for existing refinery.</p>
+                        <a href="#" class="inline-flex items-center text-accent-blue font-bold group-hover:translate-x-2 transition-all">
+                            <span data-i18n="view_details">View Details</span>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 3 -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_8e27235f22_b848067c6cd5f723.png" alt="Project 3" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-bold text-accent-blue uppercase" data-i18n="proj_3_cat">Pipelines</span>
+                            <div class="flex items-center text-steel-grey text-xs">
+                                <i class="fa-solid fa-map-pin mr-1.5 text-accent-blue"></i>
+                                <span data-i18n="proj_3_loc">Dubai, UAE</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-corporate-blue mb-3" data-i18n="proj_3_title">Dubai-Sharjah Pipeline Project</h4>
+                        <p class="text-sm text-steel-grey mb-6 line-clamp-2" data-i18n="proj_3_desc">Design and construction of cross-emirate fuel transport pipeline with SCADA integration.</p>
+                        <a href="#" class="inline-flex items-center text-accent-blue font-bold group-hover:translate-x-2 transition-all">
+                            <span data-i18n="view_details">View Details</span>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- Project 4 -->
+                <div class="group relative bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100">
+                    <div class="h-64 overflow-hidden">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_7b345c8d69_efed120636a06c33.png" alt="Project 4" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <span class="text-xs font-bold text-accent-blue uppercase" data-i18n="proj_4_cat">Industrial Buildings</span>
+                            <div class="flex items-center text-steel-grey text-xs">
+                                <i class="fa-solid fa-map-pin mr-1.5 text-accent-blue"></i>
+                                <span data-i18n="proj_4_loc">Sharjah, UAE</span>
+                            </div>
+                        </div>
+                        <h4 class="text-xl font-bold text-corporate-blue mb-3" data-i18n="proj_4_title">Lubricant Blending Facility</h4>
+                        <p class="text-sm text-steel-grey mb-6 line-clamp-2" data-i18n="proj_4_desc">Turnkey industrial facility including blending tanks, filling lines, and storage warehouses.</p>
+                        <a href="#" class="inline-flex items-center text-accent-blue font-bold group-hover:translate-x-2 transition-all">
+                            <span data-i18n="view_details">View Details</span>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="projects.html" class="inline-flex items-center bg-accent-blue text-white px-8 py-3.5 rounded-full font-bold shadow-lg hover:bg-corporate-blue transition-all" data-i18n="btn_all_projects">View All Projects</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Highlights -->
+    <section id="certifications" class="py-16 bg-corporate-blue text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-14">
+                <span class="bg-white/10 text-blue-200 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block" data-i18n="qa_pill">Quality Assurance</span>
+                <h3 class="text-4xl font-bold mb-4" data-i18n="qa_title">Certifications & Compliance</h3>
+                <p class="text-blue-100 opacity-80 max-w-2xl mx-auto" data-i18n="qa_subtitle">Our companies are independently audited and certified to international management system standards.</p>
+            </div>
+
+            <!-- Summary row -->
+            <div id="cert-summary" class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+                <div class="bg-white rounded-lg shadow hover:shadow-xl transition-all p-6 text-center">
+                    <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-accent-blue text-3xl"><i class="fa-solid fa-award"></i></div>
+                    <h4 class="text-corporate-blue font-bold text-lg">ISO 9001:2015</h4>
+                    <p class="text-steel-grey text-sm" data-i18n="qa_s1">Quality Management System</p>
+                    <p class="text-xs text-accent-blue font-semibold mt-3" data-i18n="qa_across">Certified across 3 group companies</p>
+                </div>
+                <div class="bg-white rounded-lg shadow hover:shadow-xl transition-all p-6 text-center">
+                    <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-accent-blue text-3xl"><i class="fa-solid fa-leaf"></i></div>
+                    <h4 class="text-corporate-blue font-bold text-lg">ISO 14001:2015</h4>
+                    <p class="text-steel-grey text-sm" data-i18n="qa_s2">Environmental Management System</p>
+                    <p class="text-xs text-accent-blue font-semibold mt-3" data-i18n="qa_across">Certified across 3 group companies</p>
+                </div>
+                <div class="bg-white rounded-lg shadow hover:shadow-xl transition-all p-6 text-center">
+                    <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-accent-blue text-3xl"><i class="fa-solid fa-shield-halved"></i></div>
+                    <h4 class="text-corporate-blue font-bold text-lg">ISO 45001:2018</h4>
+                    <p class="text-steel-grey text-sm" data-i18n="qa_s3">Occupational Health & Safety</p>
+                    <p class="text-xs text-accent-blue font-semibold mt-3" data-i18n="qa_across">Certified across 3 group companies</p>
+                </div>
+                <div class="bg-white rounded-lg shadow hover:shadow-xl transition-all p-6 text-center">
+                    <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-accent-blue text-3xl"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+                    <h4 class="text-corporate-blue font-bold text-lg">Bureau Veritas</h4>
+                    <p class="text-steel-grey text-sm" data-i18n="qa_s4">Third-Party Design Appraisal</p>
+                    <p class="text-xs mt-3 invisible">&nbsp;</p>
+                </div>
+            </div>
+
+            <!-- Tabs -->
+            <div id="cert-tabs" class="flex gap-2 overflow-x-auto snap-x pb-2 mb-8 lg:justify-center" role="tablist"></div>
+
+            <!-- Cards -->
+            <div id="cert-grid" class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6"></div>
+        </div>
+    </section>
+
+    <!-- Catalogues & Downloads -->
+    <section id="downloads" class="py-24 bg-light-grey">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+            <div class="max-w-3xl mx-auto mb-16">
+                <span class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block" data-i18n="res_pill">COMPANY OVERVIEW</span>
+                <h3 class="text-4xl font-bold text-corporate-blue mb-4">
+                    <span data-i18n="res_title_prefix">Download Our</span>
+                    <span class="text-accent-blue" data-i18n="res_title_highlight">Company Brochure</span>
+                </h3>
+                <p class="text-steel-grey text-lg leading-relaxed" data-i18n="res_subtitle">Get comprehensive information about our services, capabilities, and successful projects. Fill out the form below to receive our detailed company brochure.</p>
+            </div>
+
+            <!-- Brochure Card -->
+            <div class="max-w-xl mx-auto">
+                <div class="bg-white rounded-2xl p-10 shadow-sm border border-gray-100 transition-all hover:shadow-xl duration-500">
+                    <div class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center text-accent-blue text-3xl mx-auto mb-8">
+                        <i class="fa-solid fa-file-pdf"></i>
+                    </div>
+
+                    <h4 class="text-2xl font-bold text-corporate-blue mb-3" data-i18n="brochure_title">Company Brochure</h4>
+                    <p class="text-steel-grey mb-10 text-sm" data-i18n="brochure_desc">Complete overview of our services and capabilities</p>
+
+                    <button id="trigger-download" class="w-full bg-accent-blue text-white py-4 rounded-xl font-bold text-lg hover:bg-corporate-blue transition-all flex items-center justify-center space-x-3 group">
+                        <i class="fa-solid fa-download text-xl"></i>
+                        <span data-i18n="btn_download_brochure">Download Brochure (PDF)</span>
+                    </button>
+
+                    <div class="flex flex-wrap justify-center gap-6 mt-8 text-xs font-semibold text-steel-grey/60">
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-file-invoice text-accent-blue mr-2"></i>
+                            <span data-i18n="metadata_format">PDF Format</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-weight-hanging text-accent-blue mr-2"></i>
+                            <span data-i18n="metadata_size">4.2 MB</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fa-solid fa-layer-group text-accent-blue mr-2"></i>
+                            <span data-i18n="metadata_pages">24 Pages</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Lead Modal -->
+    <div id="download-modal" class="fixed inset-0 z-[100] hidden items-center justify-center p-4">
+        <div class="absolute inset-0 bg-[#0A2647]/80 backdrop-blur-sm" id="modal-overlay"></div>
+        <div class="relative bg-white rounded-3xl shadow-2xl w-full max-w-lg overflow-hidden transform transition-all scale-95 opacity-0 duration-300" id="modal-content">
+            <div class="p-8 sm:p-10">
+                <div class="flex justify-between items-start mb-6">
+                    <div>
+                        <h4 class="text-2xl font-bold text-corporate-blue mb-2" data-i18n="modal_title">Access Company Brochure</h4>
+                        <p class="text-steel-grey text-sm" data-i18n="modal_subtitle">Please provide your details to begin the download.</p>
+                    </div>
+                    <button id="close-modal" class="text-steel-grey hover:text-accent-blue transition-all">
+                        <i class="fa-solid fa-xmark text-2xl"></i>
+                    </button>
+                </div>
+
+                <form id="brochure-form" class="space-y-5">
+                    <div>
+                        <label class="block text-xs font-bold text-corporate-blue uppercase tracking-wider mb-2" data-i18n="name_label">Full Name *</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#f39c12] bg-gray-50" data-i18n-placeholder="name_placeholder" placeholder="Enter your full name">
                     </div>
                     <div>
-                        <h3 class="text-xl font-bold text-white">Al Bahr Al Arabi Group</h3>
-                        <p class="text-sm text-gray-400">Engineering Excellence Since 1998</p>
+                        <label class="block text-xs font-bold text-corporate-blue uppercase tracking-wider mb-2" data-i18n="email_field_label">Email Address *</label>
+                        <input type="email" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#f39c12] bg-gray-50" data-i18n-placeholder="email_placeholder" placeholder="your.email@example.com">
                     </div>
+                    <div>
+                        <label class="block text-xs font-bold text-corporate-blue uppercase tracking-wider mb-2" data-i18n="phone_field_label">Phone Number *</label>
+                        <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#f39c12] bg-gray-50" data-i18n-placeholder="phone_placeholder_alt" placeholder="+974 XXXX XXXX">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-corporate-blue uppercase tracking-wider mb-2" data-i18n="company_field_label">Company Name *</label>
+                        <input type="text" required class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#f39c12] bg-gray-50" data-i18n-placeholder="company_placeholder" placeholder="Enter your company name">
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-corporate-blue uppercase tracking-wider mb-2" data-i18n="message_label">Message (Optional)</label>
+                        <textarea rows="2" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-[#f39c12] bg-gray-50" data-i18n-placeholder="message_placeholder_alt" placeholder="Any specific requirements or questions?"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-corporate-blue text-white py-4 rounded-xl font-bold hover:bg-accent-blue transition-all flex items-center justify-center" data-i18n="btn_submit_download">
+                        <span data-i18n="btn_submit_text">Submit & Download</span>
+                        <i class="fa-solid fa-arrow-down ml-2"></i>
+                    </button>
+                </form>
+
+                <!-- Success State (Hidden) -->
+                <div id="form-success" class="hidden text-center py-10">
+                    <div class="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center text-3xl mx-auto mb-6">
+                        <i class="fa-solid fa-check"></i>
+                    </div>
+                    <h4 class="text-2xl font-bold text-corporate-blue mb-2" data-i18n="success_title">Thank You!</h4>
+                    <p class="text-steel-grey mb-8" data-i18n="success_msg">Your download has started. If it doesn't begin automatically, click the link below.</p>
+                    <a href="#" class="text-accent-blue font-bold border-b-2 border-accent-blue" data-i18n="direct_link">Direct Download Link</a>
                 </div>
-                <p class="text-sm leading-relaxed mb-6">
-                    Leading EPC contractor specializing in Oil & Gas infrastructure, tank farms, refinery plants, and industrial construction across UAE and MENA region.
-                </p>
-                <div class="space-y-3 text-sm">
-                    <p class="flex items-start">
-                        <i class="fa-solid fa-location-dot mt-1 mr-3 text-accent-blue"></i>
-                        <span>Hamriyah Free Zone, Sharjah, UAE</span>
-                    </p>
-                    <p class="flex items-center">
-                        <i class="fa-solid fa-phone mr-3 text-accent-blue"></i>
-                        <span>+971 65260602</span>
-                    </p>
-                    <p class="flex items-center">
-                        <i class="fa-solid fa-envelope mr-3 text-accent-blue"></i>
-                        <span>info@albahralarabi.com</span>
-                    </p>
-                </div>
-            </div>
-            
-            <div id="footer-quick-links">
-                <h4 class="text-base font-bold text-white mb-5">Quick Links</h4>
-                <ul class="space-y-3 text-sm">
-                    <li><a href="#" class="hover:text-white transition">Who We Are</a></li>
-                    <li><a href="#" class="hover:text-white transition">Our Services</a></li>
-                    <li><a href="#" class="hover:text-white transition">Projects</a></li>
-                    <li><a href="#" class="hover:text-white transition">Careers</a></li>
-                    <li><a href="#" class="hover:text-white transition">Contact Us</a></li>
-                </ul>
-            </div>
-            
-            <div id="footer-services">
-                <h4 class="text-base font-bold text-white mb-5">Services</h4>
-                <ul class="space-y-3 text-sm">
-                    <li><a href="#" class="hover:text-white transition">EPC Projects</a></li>
-                    <li><a href="#" class="hover:text-white transition">Tank Farms</a></li>
-                    <li><a href="#" class="hover:text-white transition">Refinery Plants</a></li>
-                    <li><a href="#" class="hover:text-white transition">Steel Fabrication</a></li>
-                    <li><a href="#" class="hover:text-white transition">Civil Works</a></li>
-                </ul>
-            </div>
-        </div>
-        
-        <div class="border-t border-gray-700 pt-8 mb-8">
-            <h4 class="text-base font-bold text-white mb-5 text-center">Follow Us</h4>
-            <div class="flex justify-center space-x-4">
-                <a href="#" class="w-12 h-12 bg-steel-grey rounded-full flex items-center justify-center hover:bg-accent-blue transition">
-                    <i class="fa-brands fa-linkedin-in text-white text-lg"></i>
-                </a>
-                <a href="#" class="w-12 h-12 bg-steel-grey rounded-full flex items-center justify-center hover:bg-accent-blue transition">
-                    <i class="fa-brands fa-facebook-f text-white text-lg"></i>
-                </a>
-                <a href="#" class="w-12 h-12 bg-steel-grey rounded-full flex items-center justify-center hover:bg-accent-blue transition">
-                    <i class="fa-brands fa-instagram text-white text-lg"></i>
-                </a>
-                <a href="#" class="w-12 h-12 bg-steel-grey rounded-full flex items-center justify-center hover:bg-accent-blue transition">
-                    <i class="fa-brands fa-twitter text-white text-lg"></i>
-                </a>
-            </div>
-        </div>
-        
-        <div class="border-t border-gray-700 pt-8 text-center">
-            <p class="text-sm text-gray-400 mb-3">
-                © 2024 Al Bahr Al Arabi Group. All rights reserved.
-            </p>
-            <div class="flex justify-center space-x-6 text-sm">
-                <a href="#" class="hover:text-white transition">Privacy Policy</a>
-                <span>|</span>
-                <a href="#" class="hover:text-white transition">Terms of Service</a>
             </div>
         </div>
     </div>
-</footer>
 
+    <!-- Latest News -->
+    <section id="news" class="py-20 bg-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block" data-i18n="media_pill">Media Center</span>
+                <h3 class="text-4xl font-bold text-corporate-blue mb-4" data-i18n="media_title">Latest News & Updates</h3>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+                <!-- News 1 -->
+                <div class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div class="h-48 overflow-hidden bg-gray-100">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_0199eed31c_0816e4a56ac12880.png" alt="News 1" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500 opacity-80 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-xs text-accent-blue font-bold uppercase mb-3">
+                            <span data-i18n="news_1_cat">Corporate</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-steel-grey opacity-60" data-i18n="news_1_date">Oct 12, 2023</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-corporate-blue mb-3 line-clamp-2" data-i18n="news_1_title">Expansion of Sharjah Fabrication Facility to Double Capacity</h4>
+                        <p class="text-sm text-steel-grey mb-6 line-clamp-2" data-i18n="news_1_excerpt">We are pleased to announce the groundbreaking for our new 10,000 sqm extension to better serve regional demand.</p>
+                        <a href="#" class="text-accent-blue font-bold text-sm flex items-center group-hover:translate-x-1 transition-all">
+                            <span data-i18n="read_more">Read More</span>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- News 2 -->
+                <div class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div class="h-48 overflow-hidden bg-gray-100">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_d9c1d7b6bb_8429b0b322c6e701.png" alt="News 2" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500 opacity-80 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-xs text-accent-blue font-bold uppercase mb-3">
+                            <span data-i18n="news_2_cat">Projects</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-steel-grey opacity-60" data-i18n="news_2_date">Sep 28, 2023</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-corporate-blue mb-3 line-clamp-2" data-i18n="news_2_title">Successful Commissioning of the Abu Dhabi Tank Project</h4>
+                        <p class="text-sm text-steel-grey mb-6 line-clamp-2" data-i18n="news_2_excerpt">The team has successfully completed the testing and commissioning of 4 large-scale crude storage tanks.</p>
+                        <a href="#" class="text-accent-blue font-bold text-sm flex items-center group-hover:translate-x-1 transition-all">
+                            <span data-i18n="read_more">Read More</span>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+                <!-- News 3 -->
+                <div class="group bg-white rounded-xl shadow-sm border border-gray-100 overflow-hidden">
+                    <div class="h-48 overflow-hidden bg-gray-100">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_7b345c8d69_efed120636a06c33.png" alt="News 3" class="w-full h-full object-cover group-hover:scale-110 transition-all duration-500 opacity-80 group-hover:opacity-100">
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-xs text-accent-blue font-bold uppercase mb-3">
+                            <span data-i18n="news_3_cat">Safety</span>
+                            <span class="mx-2 text-gray-300">•</span>
+                            <span class="text-steel-grey opacity-60" data-i18n="news_3_date">Aug 15, 2023</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-corporate-blue mb-3 line-clamp-2" data-i18n="news_3_title">Celebrating 5 Million Safe Man-Hours Without LTI</h4>
+                        <p class="text-sm text-steel-grey mb-6 line-clamp-2" data-i18n="news_3_excerpt">A significant milestone in our commitment to health, safety, and environment at all our job sites.</p>
+                        <a href="#" class="text-accent-blue font-bold text-sm flex items-center group-hover:translate-x-1 transition-all">
+                            <span data-i18n="read_more">Read More</span>
+                            <i class="fa-solid fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="text-center">
+                <a href="media-center.html" class="inline-flex items-center text-accent-blue font-bold border-2 border-accent-blue px-8 py-3.5 rounded transition-all hover:bg-accent-blue hover:text-white" data-i18n="btn_all_news">View All News</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Call-to-Action -->
+    <section id="cta" class="py-20 relative overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_2a02f5d05c_7e786b84810f2990.png" alt="Industrial Background" class="w-full h-full object-cover opacity-20">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center text-white">
+            <h3 class="text-3xl sm:text-4xl font-bold mb-6 max-w-3xl mx-auto leading-tight" data-i18n="cta_title">Let's Build the Future of Energy Infrastructure Together</h3>
+            <p class="text-blue-50 text-lg mb-10 max-w-2xl mx-auto leading-relaxed" data-i18n="cta_text">Partner with Al Bahr Al Arabi Group for your next Oil & Gas project. Our team of experts is ready to deliver world-class EPC solutions tailored to your requirements.</p>
+            <div class="flex flex-col sm:flex-row justify-center items-center gap-6">
+                <a href="#" class="bg-white text-corporate-blue px-10 py-4 rounded font-bold transition-all hover:bg-blue-50 shadow-xl" data-i18n="btn_consultation">Request a Consultation</a>
+                <div class="flex items-center space-x-6">
+                    <div class="text-left">
+                        <p class="text-[10px] uppercase font-bold text-blue-200 tracking-widest mb-1" data-i18n="call_us">Call Us Directly</p>
+                        <p class="text-xl font-bold">+971 65260602</p>
+                    </div>
+                    <a href="https://wa.me/97165260602" target="_blank" class="w-14 h-14 bg-green-500 rounded-full flex items-center justify-center text-white text-2xl hover:scale-110 transition-all shadow-lg">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer" class="bg-corporate-blue pt-20 pb-10 text-white">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <!-- Brand Column -->
+                <div>
+                    <a href="index.html" class="flex items-center mb-6 group">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_745f0de433_ae400837bc0fe4a4.png" alt="Al Bahr Al Arabi Group" class="h-12 w-auto object-contain brightness-0 invert opacity-90 transition-all group-hover:opacity-100">
+                    </a>
+                    <p class="text-sm text-blue-100 opacity-70 mb-8 leading-relaxed" data-i18n="footer_desc">Engineering Excellence Since 1998. Leading EPC contractor specializing in Oil & Gas infrastructure solutions across the MENA region.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full border border-steel-grey flex items-center justify-center text-steel-grey hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-steel-grey flex items-center justify-center text-steel-grey hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-steel-grey flex items-center justify-center text-steel-grey hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" class="w-10 h-10 rounded-full border border-steel-grey flex items-center justify-center text-steel-grey hover:bg-accent-blue hover:text-white hover:border-accent-blue transition-all">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6" data-i18n="quick_links">Quick Links</h4>
+                    <ul class="space-y-4 text-sm text-blue-100 opacity-70">
+                        <li><a href="index.html" class="hover:text-accent-blue transition-all" data-i18n="menu_home">Home</a></li>
+                        <li><a href="about.html" class="hover:text-accent-blue transition-all" data-i18n="menu_about">About Us</a></li>
+                        <li><a href="group-companies.html" class="hover:text-accent-blue transition-all" data-i18n="menu_group">Group Companies</a></li>
+                        <li><a href="services.html" class="hover:text-accent-blue transition-all" data-i18n="menu_services">Services</a></li>
+                        <li><a href="projects.html" class="hover:text-accent-blue transition-all" data-i18n="menu_projects">Projects</a></li>
+                        <li><a href="media-center.html" class="hover:text-accent-blue transition-all" data-i18n="menu_media">Media Center</a></li>
+                        <li><a href="careers.html" class="hover:text-accent-blue transition-all" data-i18n="menu_careers">Careers</a></li>
+                        <li><a href="contact.html" class="hover:text-accent-blue transition-all" data-i18n="menu_contact">Contact Us</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6" data-i18n="services_col">Services</h4>
+                    <ul class="space-y-4 text-sm text-blue-100 opacity-70">
+                        <li><a href="#" class="hover:text-accent-blue transition-all" data-i18n="service_1_title">EPC Projects</a></li>
+                        <li><a href="#" class="hover:text-accent-blue transition-all" data-i18n="service_2_title">Tank Farms</a></li>
+                        <li><a href="#" class="hover:text-accent-blue transition-all" data-i18n="service_5_title">Refinery Plants</a></li>
+                        <li><a href="#" class="hover:text-accent-blue transition-all" data-i18n="service_9_title">Steel Fabrication</a></li>
+                        <li><a href="#" class="hover:text-accent-blue transition-all" data-i18n="service_8_title">Civil Works</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact -->
+                <div>
+                    <h4 class="text-lg font-bold mb-6" data-i18n="contact_col">Contact</h4>
+                    <ul class="space-y-6 text-sm text-blue-100 opacity-70">
+                        <li class="flex space-x-3">
+                            <i class="fa-solid fa-location-dot mt-1 text-accent-blue"></i>
+                            <span data-i18n="address">Hamriyah Free Zone, Sharjah, UAE</span>
+                        </li>
+                        <li class="flex space-x-3">
+                            <i class="fa-solid fa-phone mt-1 text-accent-blue"></i>
+                            <span>+971 65260602</span>
+                        </li>
+                        <li class="flex space-x-3">
+                            <i class="fa-solid fa-envelope mt-1 text-accent-blue"></i>
+                            <span>info@albahralarabi.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-white/10 pt-10 flex flex-col md:flex-row justify-between items-center text-xs text-blue-100 opacity-50 space-y-4 md:space-y-0">
+                <p data-i18n="copyright">© 2026 Al Bahr Al Arabi Group. All rights reserved.</p>
+                <div class="flex space-x-8">
+                    <a href="#" class="hover:text-white" data-i18n="privacy">Privacy Policy</a>
+                    <a href="#" class="hover:text-white" data-i18n="terms">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const i18n = {
+            en: {
+                top_email: "info@albahralarabi.com",
+                top_phone: "+971 65260602",
+                top_address: "FF3P+WFG Al Hamriyah Free Zone - Sharjah - UAE",
+                brand_name: "Al Bahr Al Arabi",
+                brand_slogan: "Engineering Excellence",
+                menu_home: "Home",
+                menu_about: "About Us",
+                menu_group: "Group<br>Companies",
+                menu_services: "Services",
+                menu_projects: "Projects",
+                menu_media: "Media Center",
+                menu_careers: "Careers",
+                menu_contact: "Contact Us",
+                btn_quote: "Request<br>a Quote",
+                hero_title: "Engineering Excellence in Oil & Gas Infrastructure",
+                hero_subtitle: "Delivering turnkey EPC solutions with 25+ years of industry expertise and 500+ successful projects across UAE and MENA region.",
+                btn_projects: "View Projects",
+                btn_contact: "Contact Us",
+                intro_pill: "About Al Bahr Al Arabi Group",
+                intro_title: "Leading EPC Contractor in UAE",
+                intro_p1: "Al Bahr Al Arabi Group stands as a premier Engineering, Procurement, and Construction contractor with over 25 years of distinguished service in the Oil & Gas sector. Operating from our state-of-the-art 20,000 sqm fabrication facility in Hamriyah Free Zone, Sharjah, we deliver comprehensive solutions across the UAE and MENA region.",
+                intro_p2: "Our commitment to safety, quality, and adherence to international standards including API and ASME certifications ensures that every project meets the highest industry benchmarks. We specialize in tank farms, refinery plants, civil works, and steel fabrication, providing end-to-end solutions that drive operational excellence.",
+                btn_learn_more: "Learn More About Us",
+                stat_1_val: "25+",
+                stat_1_label: "Years of Experience",
+                stat_2_val: "500+",
+                stat_2_label: "Completed Projects",
+                stat_3_val: "20,000",
+                stat_3_label: "Sqm Fabrication Facility",
+                stat_4_val: "100+",
+                stat_4_label: "Supplier Partnerships",
+                group_pill: "Our Network",
+                group_title: "Group Companies",
+                group_text: "Al Bahr Al Arabi Group comprises specialized subsidiary companies, each bringing unique expertise to deliver comprehensive solutions across the Oil & Gas value chain.",
+                company_1: "Al Bahr Al Arabi Marine Engineering-UAE",
+                company_2: "Al Bahr Al Arabi Technical Industries FZC-UAE",
+                company_3: "Gulf Tech Energy Contracting LLC-UAE",
+                company_4: "Crystal Petroleum FZE-UAE",
+                company_5: "Crystal Petrochemicals FZCO-UAE",
+                company_6: "Crystal Petrokimya-Turkey",
+                company_7: "Crystal Care Ltd-KSA",
+                company_8: "Meecon LTD-UK",
+                company_9: "Crystal Oilfield Constr & Cont. LLC-Qatar",
+                company_1_desc: "Marine and offshore engineering services specializing in vessel maintenance and offshore structures.",
+                company_2_desc: "Steel fabrication, tanks, and piping systems with advanced manufacturing capabilities.",
+                company_3_desc: "Energy and Oil & Gas contracting specializing in MEP and electrical infrastructure.",
+                company_4_desc: "Oilfield contracting and services providing on-site operational support.",
+                visit_website: "Visit Website",
+                btn_all_companies: "View All Group Companies",
+                services_pill: "Our Services",
+                services_title: "Comprehensive EPC Solutions",
+                services_subtitle: "From concept to completion, we deliver integrated engineering, procurement, and construction services tailored to the Oil & Gas industry.",
+                service_1_title: "Turnkey EPC Projects",
+                service_1_desc: "Complete lifecycle management from initial design to final commissioning.",
+                service_2_title: "Tank Farm Construction",
+                service_2_desc: "Expert construction of large-scale oil and chemical storage facilities.",
+                service_3_title: "Oil & Gas Terminal Works",
+                service_3_desc: "Specialized marine terminal infrastructure and loading systems.",
+                service_4_title: "Storage Tank Design & Fab",
+                service_4_desc: "Precision engineering and fabrication of custom storage solutions.",
+                service_5_title: "Distillation & Refinery Plants",
+                service_5_desc: "Advanced process facility construction and maintenance.",
+                service_6_title: "Lubricant Blending Plants",
+                service_6_desc: "Turnkey solutions for industrial lubricant production facilities.",
+                service_7_title: "MEP Works",
+                service_7_desc: "Mechanical, electrical, and plumbing infrastructure for industry.",
+                service_8_title: "Civil & Building Construction",
+                service_8_desc: "Comprehensive industrial building and structural concrete work.",
+                service_9_title: "Steel Structure Fabrication",
+                service_9_desc: "High-precision structural steel for complex industrial layouts.",
+                service_10_title: "Piping Fab & Installation",
+                service_10_desc: "ASME-compliant industrial piping for process facilities.",
+                service_11_title: "Firefighting Systems",
+                service_11_desc: "NFPA-compliant fire protection and suppression installation.",
+                service_12_title: "Tank Foundation",
+                service_12_desc: "Specialized civil works for large-scale storage foundations.",
+                btn_all_services: "View All Services",
+                why_pill: "Why Choose Us",
+                why_title: "Our Commitment to Excellence",
+                why_1_title: "API & ASME Standards",
+                why_1_desc: "Strict compliance with global industry benchmarks.",
+                why_2_title: "Strong Safety Culture",
+                why_2_desc: "Zero-incident goal in all operations.",
+                why_3_title: "Skilled Engineering Team",
+                why_3_desc: "Expertise in complex EPC challenges.",
+                why_4_title: "Sustainable Practices",
+                why_4_desc: "Committed to environmental responsibility.",
+                why_5_title: "On-time Delivery",
+                why_5_desc: "Efficient project management and logistics.",
+                projects_pill: "Portfolio",
+                projects_title: "Featured Projects",
+                proj_1_cat: "Tank Farms",
+                proj_1_loc: "Sharjah, UAE",
+                proj_1_title: "Sharjah Tank Terminal Expansion",
+                proj_1_desc: "Complete EPC for a new multi-product storage facility including pipelines and pumping stations.",
+                proj_2_cat: "Refineries",
+                proj_2_loc: "Abu Dhabi, UAE",
+                proj_2_title: "Abu Dhabi Refinery Upgrade",
+                proj_2_desc: "Integration of high-pressure process units and upgraded control systems for existing refinery.",
+                proj_3_cat: "Pipelines",
+                proj_3_loc: "Dubai, UAE",
+                proj_3_title: "Dubai-Sharjah Pipeline Project",
+                proj_3_desc: "Design and construction of cross-emirate fuel transport pipeline with SCADA integration.",
+                proj_4_cat: "Industrial Buildings",
+                proj_4_loc: "Sharjah, UAE",
+                proj_4_title: "Lubricant Blending Facility",
+                proj_4_desc: "Turnkey industrial facility including blending tanks, filling lines, and storage warehouses.",
+                view_details: "View Details",
+                btn_all_projects: "View All Projects",
+                cert_1: "API Certified",
+                cert_2: "ASME Compliant",
+                cert_3: "ISO 9001:2015",
+                cert_4: "ISO 45001",
+                strip_1: "NFPA Fire Safety",
+                strip_2: "UAE Civil Defense",
+                strip_3: "ADNOC Standards",
+                strip_4: "NEBOSH HSE",
+                btn_all_certs: "View All Certificates",
+                res_pill: "COMPANY OVERVIEW",
+                res_title_prefix: "Download Our",
+                res_title_highlight: "Company Brochure",
+                res_subtitle: "Get comprehensive information about our services, capabilities, and successful projects. Fill out the form below to receive our detailed company brochure.",
+                brochure_title: "Company Brochure",
+                brochure_desc: "Complete overview of our services and capabilities",
+                btn_download_brochure: "Download Brochure (PDF)",
+                metadata_format: "PDF Format",
+                metadata_size: "4.2 MB",
+                metadata_pages: "24 Pages",
+                modal_title: "Access Company Brochure",
+                modal_subtitle: "Please provide your details to begin the download.",
+                phone_placeholder_alt: "+974 XXXX XXXX",
+                message_placeholder_alt: "Any specific requirements or questions?",
+                btn_submit_text: "Submit & Download",
+                success_title: "Thank You!",
+                success_msg: "Your download has started. If it doesn't begin automatically, click the link below.",
+                direct_link: "Direct Download Link",
+                media_pill: "Media Center",
+                media_title: "Latest News & Updates",
+                news_1_cat: "Corporate",
+                news_1_date: "Oct 12, 2023",
+                news_1_title: "Expansion of Sharjah Fabrication Facility to Double Capacity",
+                news_1_excerpt: "We are pleased to announce the groundbreaking for our new 10,000 sqm extension to better serve regional demand.",
+                news_2_cat: "Projects",
+                news_2_date: "Sep 28, 2023",
+                news_2_title: "Successful Commissioning of the Abu Dhabi Tank Project",
+                news_2_excerpt: "The team has successfully completed the testing and commissioning of 4 large-scale crude storage tanks.",
+                news_3_cat: "Safety",
+                news_3_date: "Aug 15, 2023",
+                news_3_title: "Celebrating 5 Million Safe Man-Hours Without LTI",
+                news_3_excerpt: "A significant milestone in our commitment to health, safety, and environment at all our job sites.",
+                read_more: "Read More",
+                btn_all_news: "View All News",
+                cta_title: "Let's Build the Future of Energy Infrastructure Together",
+                cta_text: "Partner with Al Bahr Al Arabi Group for your next Oil & Gas project. Our team of experts is ready to deliver world-class EPC solutions tailored to your requirements.",
+                btn_consultation: "Request a Consultation",
+                call_us: "Call Us Directly",
+                get_in_touch: "Get In Touch",
+                head_office: "Head Office",
+                address: "Hamriyah Free Zone, Sharjah, United Arab Emirates",
+                phone_label: "Phone",
+                email_label: "Email",
+                hours_label: "Business Hours",
+                hours_text: "Sunday - Thursday 8:00 AM - 5:00 PM<br>Friday - Saturday Closed",
+                send_msg: "Send Us a Message",
+                name_label: "Name",
+                name_placeholder: "Your Name",
+                email_field_label: "Email",
+                email_placeholder: "Your Email",
+                phone_field_label: "Phone",
+                phone_placeholder: "Your Phone",
+                subject_label: "Subject",
+                subject_placeholder: "Project Inquiry",
+                message_label: "Message",
+                message_placeholder: "How can we help you?",
+                btn_send: "Send Message",
+                quick_links: "Quick Links",
+                services_col: "Services",
+                contact_col: "Contact",
+                copyright: "© 2026 Al Bahr Al Arabi Group. All rights reserved.",
+                privacy: "Privacy Policy",
+                terms: "Terms of Service"
+            },
+            ar: {
+                top_email: "info@albahralarabi.com",
+                top_phone: "+971 65260602",
+                top_address: "FF3P+WFG المنطقة الحرة بالحمرية - الشارقة - الإمارات العربية المتحدة",
+                brand_name: "البحر العربي",
+                brand_slogan: "التميز الهندسي",
+                menu_home: "الرئيسية",
+                menu_about: "من نحن",
+                menu_group: "شركات<br>المجموعة",
+                menu_services: "الخدمات",
+                menu_projects: "المشاريع",
+                menu_media: "المركز الإعلامي",
+                menu_careers: "الوظائف",
+                menu_contact: "اتصل بنا",
+                btn_quote: "طلب<br>عرض سعر",
+                hero_title: "التميز الهندسي في البنية التحتية للنفط والغاز",
+                hero_subtitle: "تقديم حلول هندسية وتوريد وإنشاء متكاملة مع أكثر من 25 عاماً من الخبرة في الصناعة و500+ مشروع ناجح في جميع أنحاء الإمارات ومنطقة الشرق الأوسط وشمال أفريقيا.",
+                btn_projects: "عرض المشاريع",
+                btn_contact: "اتصل بنا",
+                intro_pill: "حول مجموعة البحر العربي",
+                intro_title: "المقاول الرائد في الهندسة والتوريد والإنشاء في الإمارات",
+                intro_p1: "تقف مجموعة البحر العربي كمقاول رائد في مجال الهندسة والتوريد والإنشاء مع أكثر من 25 عاماً من الخدمة المتميزة في قطاع النفط والغاز. نعمل من مرافق التصنيع المتطورة لدينا بمساحة 20,000 متر مربع في المنطقة الحرة بالحمرية، الشارقة، ونقدم حلولاً شاملة في جميع أنحاء الإمارات ومنطقة الشرق الأوسط وشمال أفريقيا.",
+                intro_p2: "إن التزامنا بالسلامة والجودة والالتزام بالمعايير الدولية بما في ذلك شهادات API وASME يضمن أن كل مشروع يلبي أعلى معايير الصناعة. نحن متخصصون في محطات الخزانات ومحطات التكرير والأعمال المدنية وتصنيع الفولاذ، ونقدم حلولاً متكاملة تعزز التميز التشغيلي.",
+                btn_learn_more: "تعرف أكثر عنا",
+                stat_1_val: "+25",
+                stat_1_label: "سنة من الخبرة",
+                stat_2_val: "+500",
+                stat_2_label: "مشروع مكتمل",
+                stat_3_val: "20,000",
+                stat_3_label: "متر مربع من مرافق التصنيع",
+                stat_4_val: "+100",
+                stat_4_label: "شراكة مع الموردين",
+                group_pill: "شبكتنا",
+                group_title: "شركات المجموعة",
+                group_text: "تضم مجموعة البحر العربي شركات تابعة متخصصة، تجلب كل منها خبرة فريدة لتقديم حلول شاملة عبر سلسلة القيمة في قطاع النفط والغاز.",
+                company_1: "البحر العربي للهندسة البحرية - الإمارات",
+                company_2: "البحر العربي للصناعات الفنية (م.ح) - الإمارات",
+                company_3: "جلف تيك للمقاولات الطاقية ذ.م.م - الإمارات",
+                company_4: "كريستال للبترول (م.ح) - الإمارات",
+                company_5: "كريستال للبتروكيماويات (م.ح) - الإمارات",
+                company_6: "كريستال بتروكيميا - تركيا",
+                company_7: "كريستال كير المحدودة - السعودية",
+                company_8: "ميكون المحدودة - المملكة المتحدة",
+                company_9: "كريستال لمقاولات حقول النفط - قطر",
+                company_1_desc: "خدمات الهندسة البحرية والساحلية المتخصصة في صيانة السفن والمنشآت البحرية.",
+                company_2_desc: "تصنيع الفولاذ والخزانات وأنظمة الأنابيب مع قدرات تصنيع متقدمة.",
+                company_3_desc: "مقاولات الطاقة والنفط والغاز المتخصصة في البنية التحتية الميكانيكية والكهربائية والسباكة.",
+                company_4_desc: "مقاولات وخدمات حقول النفط التي تقدم الدعم التشغيلي في الموقع.",
+                visit_website: "زيارة الموقع",
+                btn_all_companies: "عرض جميع شركات المجموعة",
+                services_pill: "خدماتنا",
+                services_title: "حلول شاملة للهندسة والتوريد والإنشاء",
+                services_subtitle: "من المفهوم إلى الإنجاز، نقدم خدمات هندسية وتوريد وإنشاء متكاملة مصممة لصناعة النفط والغاز.",
+                service_1_title: "مشاريع الهندسة والتوريد والإنشاء المتكاملة",
+                service_1_desc: "إدارة دورة الحياة الكاملة من التصميم الأولي إلى التشغيل النهائي.",
+                service_2_title: "إنشاء محطات الخزانات",
+                service_2_desc: "بناء مرافق تخزين النفط والمواد الكيميائية على نطاق واسع بخبرة عالية.",
+                service_3_title: "أعمال محطات النفط والغاز",
+                service_3_desc: "البنية التحتية المتخصصة للمحطات البحرية وأنظمة التحميل.",
+                service_4_title: "تصميم وتصنيع خزانات التخزين",
+                service_4_desc: "الهندسة الدقيقة وتصنيع حلول التخزين المخصصة.",
+                service_5_title: "محطات التقطير والتكرير",
+                service_5_desc: "بناء وصيانة مرافق المعالجة المتقدمة.",
+                service_6_title: "محطات خلط الزيوت",
+                service_6_desc: "حلول متكاملة لمرافق إنتاج زيوت التشحيم الصناعية.",
+                service_7_title: "أعمال الكهروميكانيك",
+                service_7_desc: "البنية التحتية الميكانيكية والكهربائية والسباكة للصناعة.",
+                service_8_title: "الأعمال المدنية والبناء",
+                service_8_desc: "بناء المباني الصناعية الشاملة وأعمال الخرسانة الإنشائية.",
+                service_9_title: "تصنيع الهياكل الفولاذية",
+                service_9_desc: "هياكل فولاذية عالية الدقة للمخططات الصناعية المعقدة.",
+                service_10_title: "تصنيع وتركيب الأنابيب",
+                service_10_desc: "أنابيب صناعية متوافقة مع معايير ASME لمرافق المعالجة.",
+                service_11_title: "أنظمة مكافحة الحرائق",
+                service_11_desc: "تركيب أنظمة الحماية من الحرائق وإخمادها المتوافقة مع NFPA.",
+                service_12_title: "أساسات الخزانات",
+                service_12_desc: "أعمال مدنية متخصصة لأساسات التخزين واسعة النطاق.",
+                btn_all_services: "عرض جميع الخدمات",
+                why_pill: "لماذا تختارنا",
+                why_title: "التزامنا بالتميز",
+                why_1_title: "معايير API وASME",
+                why_1_desc: "الالتزام الصارم بالمعايير العالمية للصناعة.",
+                why_2_title: "ثقافة سلامة قوية",
+                why_2_desc: "هدف صفر حوادث في جميع العمليات.",
+                why_3_title: "فريق هندسي ماهر",
+                why_3_desc: "خبرة في تحديات الهندسة والتوريد والإنشاء المعقدة.",
+                why_4_title: "ممارسات مستدامة",
+                why_4_desc: "ملتزمون بالمسؤولية البيئية.",
+                why_5_title: "التسليم في الوقت المحدد",
+                why_5_desc: "إدارة مشاريع ولوجستيات فعالة.",
+                projects_pill: "محفظة الأعمال",
+                projects_title: "مشاريع مختارة",
+                proj_1_cat: "محطات الخزانات",
+                proj_1_loc: "الشارقة، الإمارات",
+                proj_1_title: "توسعة محطة خزانات الشارقة",
+                proj_1_desc: "هندسة وتوريد وإنشاء كامل لمرفق تخزين منتجات متعددة جديد يشمل الأنابيب ومحطات الضخ.",
+                proj_2_cat: "المصافي",
+                proj_2_loc: "أبوظبي، الإمارات",
+                proj_2_title: "تطوير مصفاة أبوظبي",
+                proj_2_desc: "دمج وحدات المعالجة عالية الضغط وأنظمة التحكم المطورة للمصفاة القائمة.",
+                proj_3_cat: "الأنابيب",
+                proj_3_loc: "دبي، الإمارات",
+                proj_3_title: "مشروع خط أنابيب دبي-الشارقة",
+                proj_3_desc: "تصميم وبناء خط أنابيب نقل الوقود عبر الإمارات مع دمج نظام سكادا.",
+                proj_4_cat: "المباني الصناعية",
+                proj_4_loc: "الشارقة، الإمارات",
+                proj_4_title: "مرفق خلط الزيوت",
+                proj_4_desc: "مرفق صناعي متكامل يشمل خزانات الخلط، وخطوط التعبئة، ومستودعات التخزين.",
+                view_details: "عرض التفاصيل",
+                btn_all_projects: "عرض جميع المشاريع",
+                cert_1: "معتمد من API",
+                cert_2: "متوافق مع ASME",
+                cert_3: "ISO 9001:2015",
+                cert_4: "ISO 45001",
+                strip_1: "سلامة الحرائق NFPA",
+                strip_2: "الدفاع المدني الإماراتي",
+                strip_3: "معايير أدنوك",
+                strip_4: "نيبوش HSE",
+                btn_all_certs: "عرض جميع الشهادات",
+                res_pill: "نظرة عامة على الشركة",
+                res_title_prefix: "تحميل",
+                res_title_highlight: "كتيب الشركة",
+                res_subtitle: "احصل على معلومات شاملة حول خدماتنا وقدراتنا ومشاريعنا الناجحة. املأ النموذج أدناه لتلقي كتيب شركتنا المفصل.",
+                brochure_title: "كتيب الشركة",
+                brochure_desc: "نظرة عامة كاملة على خدماتنا وقدراتنا",
+                btn_download_brochure: "تحميل الكتيب (PDF)",
+                metadata_format: "تنسيق PDF",
+                metadata_size: "4.2 ميجابايت",
+                metadata_pages: "24 صفحة",
+                modal_title: "الوصول إلى كتيب الشركة",
+                modal_subtitle: "يرجى تقديم تفاصيلك لبدء التحميل.",
+                phone_placeholder_alt: "+974 XXXX XXXX",
+                message_placeholder_alt: "أي متطلبات أو أسئلة محددة؟",
+                btn_submit_text: "إرسال وتحميل",
+                success_title: "شكراً لك!",
+                success_msg: "لقد بدأ تحميك. إذا لم يبدأ تلقائياً، اضغط على الرابط أدناه.",
+                direct_link: "رابط التحميل المباشر",
+                media_pill: "المركز الإعلامي",
+                media_title: "آخر الأخبار والتحديثات",
+                news_1_cat: "شركات",
+                news_1_date: "12 أكتوبر 2023",
+                news_1_title: "توسعة مرفق التصنيع بالشارقة لمضاعفة السعة",
+                news_1_excerpt: "يسعدنا الإعلان عن وضع حجر الأساس لتوسعتنا الجديدة بمساحة 10,000 متر مربع لتلبية الطلب الإقليمي بشكل أفضل.",
+                news_2_cat: "مشاريع",
+                news_2_date: "28 سبتمبر 2023",
+                news_2_title: "التشغيل الناجح لمشروع الخزانات في أبوظبي",
+                news_2_excerpt: "أكمل الفريق بنجاح اختبار وتشغيل 4 خزانات تخزين خام واسعة النطاق.",
+                news_3_cat: "سلامة",
+                news_3_date: "15 أغسطس 2023",
+                news_3_title: "الاحتفال بـ 5 ملايين ساعة عمل آمنة دون إصابات هادرة للوقت",
+                news_3_excerpt: "إنجاز هام في التزامنا بالصحة والسلامة والبيئة في جميع مواقع عملنا.",
+                read_more: "اقرأ المزيد",
+                btn_all_news: "عرض جميع الأخبار",
+                cta_title: "لنبنِ مستقبل البنية التحتية للطاقة معاً",
+                cta_text: "شارك مجموعة البحر العربي في مشروعك القادم للنفط والغاز. فريق خبرائنا جاهز لتقديم حلول هندسية وتوريد وإنشاء عالمية المستوى مصممة وفقاً لمتطلباتك.",
+                btn_consultation: "طلب استشارة",
+                call_us: "اتصل بنا مباشرة",
+                get_in_touch: "تواصل معنا",
+                head_office: "المكتب الرئيسي",
+                address: "المنطقة الحرة بالحمرية، الشارقة، الإمارات العربية المتحدة",
+                phone_label: "الهاتف",
+                email_label: "البريد الإلكتروني",
+                hours_label: "ساعات العمل",
+                hours_text: "الأحد - الخميس 8:00 صباحاً - 5:00 مساءً<br>الجمعة - السبت مغلق",
+                send_msg: "أرسل لنا رسالة",
+                name_label: "الاسم",
+                name_placeholder: "اسمك",
+                email_field_label: "البريد الإلكتروني",
+                email_placeholder: "بريدك الإلكتروني",
+                phone_field_label: "الهاتف",
+                phone_placeholder: "هاتفك",
+                subject_label: "الموضوع",
+                subject_placeholder: "استفسار عن مشروع",
+                message_label: "الرسالة",
+                message_placeholder: "كيف يمكننا مساعدتك؟",
+                btn_send: "إرسال الرسالة",
+                quick_links: "روابط سريعة",
+                services_col: "الخدمات",
+                contact_col: "اتصل",
+                copyright: "© 2026 مجموعة البحر العربي. جميع الحقوق محفوظة.",
+                privacy: "سياسة الخصوصية",
+                terms: "شروط الخدمة"
+            }
+        };
+
+        function setLanguage(lang) {
+            try {
+                localStorage.setItem('preferredLang', lang);
+            } catch (e) {
+                console.warn('localStorage access denied');
+            }
+            const html = document.documentElement;
+            html.lang = lang;
+            // Force Left-to-Right layout even for Arabic as per user request
+            html.dir = 'ltr';
+
+            const langToggle = document.getElementById('lang-text');
+            langToggle.innerText = lang === 'ar' ? 'عربي | EN' : 'EN | عربي';
+
+            const elements = document.querySelectorAll('[data-i18n]');
+            elements.forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[lang][key]) {
+                    el.innerHTML = i18n[lang][key];
+                }
+            });
+
+            const placeholders = document.querySelectorAll('[data-i18n-placeholder]');
+            placeholders.forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (i18n[lang][key]) {
+                    el.placeholder = i18n[lang][key];
+                }
+            });
+
+            // Apply appropriate font but keep LTR layout
+            if (lang === 'ar') {
+                document.body.classList.add('font-arabic');
+                document.body.classList.remove('font-sans');
+                // Ensure text alignment remains start (left)
+                document.body.style.textAlign = 'left';
+            } else {
+                document.body.classList.add('font-sans');
+                document.body.classList.remove('font-arabic');
+                document.body.style.textAlign = '';
+            }
+        }
+
+        // Initialize language
+        let savedLang = 'en';
+        try {
+            savedLang = localStorage.getItem('preferredLang') || 'en';
+        } catch (e) {
+            console.warn('localStorage access denied');
+        }
+        setLanguage(savedLang);
+
+        document.getElementById('lang-toggle').addEventListener('click', () => {
+            const currentLang = document.documentElement.lang;
+            setLanguage(currentLang === 'en' ? 'ar' : 'en');
+        });
+
+        // Mobile Menu Toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Mobile Dropdown Toggle
+        const mobileDropdownBtn = document.getElementById('mobile-dropdown-btn');
+        const mobileDropdownContent = document.getElementById('mobile-dropdown-content');
+        mobileDropdownBtn.addEventListener('click', () => {
+            mobileDropdownContent.classList.toggle('hidden');
+            mobileDropdownBtn.querySelector('i').classList.toggle('rotate-180');
+        });
+
+        // Download Modal Logic
+        const downloadModal = document.getElementById('download-modal');
+        const modalContent = document.getElementById('modal-content');
+        const triggerDownload = document.getElementById('trigger-download');
+        const closeModal = document.getElementById('close-modal');
+        const modalOverlay = document.getElementById('modal-overlay');
+        const brochureForm = document.getElementById('brochure-form');
+        const formSuccess = document.getElementById('form-success');
+
+        function openModal() {
+            downloadModal.classList.remove('hidden');
+            downloadModal.classList.add('flex');
+            setTimeout(() => {
+                modalContent.classList.remove('scale-95', 'opacity-0');
+                modalContent.classList.add('scale-100', 'opacity-100');
+            }, 10);
+        }
+
+        function hideModal() {
+            modalContent.classList.remove('scale-100', 'opacity-100');
+            modalContent.classList.add('scale-95', 'opacity-0');
+            setTimeout(() => {
+                downloadModal.classList.add('hidden');
+                downloadModal.classList.remove('flex');
+                // Reset form state after close
+                brochureForm.classList.remove('hidden');
+                formSuccess.classList.add('hidden');
+            }, 300);
+        }
+
+        triggerDownload.addEventListener('click', openModal);
+        closeModal.addEventListener('click', hideModal);
+        modalOverlay.addEventListener('click', hideModal);
+
+        brochureForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Simulate form processing
+            brochureForm.classList.add('hidden');
+            formSuccess.classList.remove('hidden');
+            // Trigger a dummy download (replace '#' with real file path in production)
+            const link = document.createElement('a');
+            link.href = '#';
+            link.download = 'AlBahr_AlArabi_Brochure.pdf';
+            link.click();
+        });
+    </script>
+    <script>
+        Object.assign(i18n.en, {
+            qa_pill: "Quality Assurance", qa_title: "Certifications & Compliance",
+            qa_subtitle: "Our companies are independently audited and certified to international management system standards.",
+            qa_s1: "Quality Management System", qa_s2: "Environmental Management System", qa_s3: "Occupational Health & Safety", qa_s4: "Third-Party Design Appraisal",
+            qa_across: "Certified across 3 group companies",
+            tab_marine: "Marine Engineering", tab_tech: "Technical Industries", tab_gulf: "Gulf-Tech Energy", tab_rec: "Recognitions & Appraisals",
+            l_company: "Certified Company", l_no: "Certificate No.", l_issued: "Issued by", l_since: "Registered Since", l_reissued: "Re-issued", l_valid: "Valid Until", l_scope: "Scope of Activities",
+            l_award: "Awarded To", l_date: "Date", l_details: "Details",
+            issuer_peers: "Peers Quality Assurance Ltd (UK), IAF and UKAS accredited",
+            b_valid: "Valid", b_soon: "Expiring Soon", b_renew: "Renewal in Progress", b_issued: "Issued",
+            btn_view_cert: "View Certificate",
+            scope_marine: "Repairing and Maintenance of Marine Parts, Ocean Going Vessels, Oil & Gas Structures, Marine Equipment, Fabrication, Assembly, Laying & Erection, Surface Preparation, Protective Coating & Welding - Marine Services.",
+            scope_tech: "Manufacturing, Fabrication, Assembly, Welding, Laying, Erection of All Types of Metal Structures, Oil & Gas Pipelines, Vessels, Oil Storage Tanks Including Under Ground Tanks, Repairs, Dismantling & Removal of the same, Protective Coating.",
+            scope_gulf: "Construction of Building up to 5th Floor & Villas.",
+            r1_t: "Certificate of Design Appraisal", r1_d: "Bureau Veritas, Abu Dhabi Branch. Awarded to Al Bahr Al Arabi Marine Engineering Services. Fixed cone roof oil storage tank (self supported), 22.00 m ID x 26.00 m height, nominal capacity 9,883.50 m³. Design code: API 650, 11th Edition, Welded Steel Tanks for Oil Storage. Material: ASTM A36 / S275 JR. End user: Arzoo International FZC. Designer: Deyar Engineering Consultancy.",
+            r2_t: "Certificate of Civil Design Appraisal", r2_d: "Bureau Veritas, Abu Dhabi Branch. Awarded to Al Bahr Al Arabi Marine Engineering Services. Civil design of the oil storage tank foundation, 22.0 m diameter x 26.0 m height, Plot 3A-05, HFZA, Sharjah, compliant with applicable international codes.",
+            r3_t: "Certificate of Recognition", r3_d: "Hamriyah Free Zone Authority, Government of Sharjah. Awarded to Al Bahr Al Arabi Marine Engineering Services for its support and investment in Hamriyah Free Zone's Petrochemical, Oil and Gas Sector.",
+            r4_t: "Certificate of Recognition", r4_d: "Hamriyah Free Zone Authority, Government of Sharjah. Awarded to Crystal Petroleum FZE for its support and investment in Hamriyah Free Zone's Petrochemical, Oil and Gas Sector."
+        });
+        Object.assign(i18n.ar, {
+            qa_pill: "ضمان الجودة", qa_title: "الشهادات والامتثال",
+            qa_subtitle: "يتم تدقيق شركاتنا واعتمادها بشكل مستقل وفق معايير أنظمة الإدارة الدولية.",
+            qa_s1: "نظام إدارة الجودة", qa_s2: "نظام الإدارة البيئية", qa_s3: "الصحة والسلامة المهنية", qa_s4: "تقييم التصميم من طرف ثالث",
+            qa_across: "معتمدة في 3 شركات من المجموعة",
+            tab_marine: "الهندسة البحرية", tab_tech: "الصناعات الفنية", tab_gulf: "جلف تك للطاقة", tab_rec: "التقديرات والاعتمادات",
+            l_company: "الشركة المعتمدة", l_no: "رقم الشهادة", l_issued: "الجهة المانحة", l_since: "مسجلة منذ", l_reissued: "أعيد إصدارها", l_valid: "صالحة حتى", l_scope: "نطاق الأنشطة",
+            l_award: "مُنحت إلى", l_date: "التاريخ", l_details: "التفاصيل",
+            issuer_peers: "Peers Quality Assurance Ltd (UK)، معتمدة من IAF وUKAS",
+            b_valid: "سارية", b_soon: "تنتهي قريباً", b_renew: "التجديد قيد التنفيذ", b_issued: "صدرت",
+            btn_view_cert: "عرض الشهادة",
+            scope_marine: "إصلاح وصيانة الأجزاء البحرية والسفن العابرة للمحيطات والمنشآت النفطية وحقول الغاز والمعدات البحرية، والتصنيع والتجميع والمد والتركيب، وتحضير الأسطح والطلاء الواقي واللحام - الخدمات البحرية.",
+            scope_tech: "التصنيع والتجميع واللحام ومد وتركيب جميع أنواع الهياكل المعدنية وخطوط أنابيب النفط والغاز والأوعية وخزانات تخزين النفط بما فيها الخزانات تحت الأرض، والإصلاح والتفكيك والإزالة، والطلاء الواقي.",
+            scope_gulf: "إنشاء المباني حتى الطابق الخامس والفلل.",
+            r1_t: "شهادة تقييم التصميم", r1_d: "Bureau Veritas، فرع أبوظبي. مُنحت لشركة البحر العربي للهندسة البحرية. خزان تخزين نفط بسقف مخروطي ثابت، قطر داخلي 22.00 م وارتفاع 26.00 م، بسعة اسمية 9,883.50 م³. كود التصميم: API 650 الإصدار 11. المستخدم النهائي: Arzoo International FZC. المصمم: Deyar Engineering Consultancy.",
+            r2_t: "شهادة تقييم التصميم المدني", r2_d: "Bureau Veritas، فرع أبوظبي. مُنحت لشركة البحر العربي للهندسة البحرية. التصميم المدني لأساس خزان تخزين النفط، قطر 22.0 م وارتفاع 26.0 م، قطعة 3A-05، المنطقة الحرة بالحمرية، الشارقة.",
+            r3_t: "شهادة تقدير", r3_d: "هيئة المنطقة الحرة بالحمرية، حكومة الشارقة. مُنحت لشركة البحر العربي للهندسة البحرية تقديراً لدعمها واستثمارها في قطاع البتروكيماويات والنفط والغاز.",
+            r4_t: "شهادة تقدير", r4_d: "هيئة المنطقة الحرة بالحمرية، حكومة الشارقة. مُنحت لشركة Crystal Petroleum FZE تقديراً لدعمها واستثمارها في قطاع البتروكيماويات والنفط والغاز."
+        });
+
+        // Single place to update certificate data
+        const CERTS = [];
+        const ISO = [
+            { std: 'ISO 9001:2015', icon: 'fa-award', since: '09 May 2019' },
+            { std: 'ISO 14001:2015', icon: 'fa-leaf', since: '09 May 2019' },
+            { std: 'ISO 45001:2018', icon: 'fa-shield-halved', since: '09 May 2021' }
+        ];
+        [
+            { tab: 'marine', company: 'Al Bahr Al Arabi Marine Engineering Services', scope: 'scope_marine', nums: ['UAE/5/4431584245', 'UAE/5/3584875778', 'UAE/5/3004569975'] },
+            { tab: 'tech', company: 'Al Bahr Al Arabi Technical Industries FZC', scope: 'scope_tech', nums: ['UAE/5/3902978959', 'UAE/5/6386713798', 'UAE/5/7908129011'] },
+            { tab: 'gulf', company: 'Gulf-Tech Energy Contracting L.L.C', scope: 'scope_gulf', nums: ['UAE/5/3798077910', 'UAE/5/4116681096', 'UAE/5/1721557146'] }
+        ].forEach(c => ISO.forEach((s, i) => CERTS.push({
+            tab: c.tab, type: 'iso', company: c.company, standard: s.std, number: c.nums[i], issuer: 'issuer_peers',
+            registeredSince: s.since, reissued: '10 Jul 2023', validUntil: '2026-07-10', validLabel: '10 Jul 2026',
+            scope: c.scope, icon: s.icon, image: ''
+        })));
+        [
+            { k: 'r1', icon: 'fa-file-signature', date: '16 Nov 2016', badge: 'Issued 2016', image: '' },
+            { k: 'r2', icon: 'fa-file-signature', date: '24 Jul 2016', badge: 'Issued 2016', image: '' },
+            { k: 'r3', icon: 'fa-medal', date: '07 May 2018', badge: 'Issued 2018', image: '', landscape: true },
+            { k: 'r4', icon: 'fa-medal', date: '07 May 2018', badge: 'Issued 2018', image: '', landscape: true }
+        ].forEach(r => CERTS.push(Object.assign({ tab: 'rec', type: 'rec' }, r)));
+
+        const TABS = [['marine', 'tab_marine'], ['tech', 'tab_tech'], ['gulf', 'tab_gulf'], ['rec', 'tab_rec']];
+        let activeTab = 'marine', lbList = [], lbIndex = 0;
+        const L = () => document.documentElement.lang === 'ar' ? 'ar' : 'en';
+        const T = k => i18n[L()][k] || k;
+
+        function placeholder(c) {
+            const w = c.landscape ? 600 : 500, h = c.landscape ? 354 : 707;
+            const title = (c.standard || T(c.k + '_t')).replace(/&/g, '&amp;');
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}"><rect width="100%" height="100%" fill="#ffffff"/><rect x="14" y="14" width="${w - 28}" height="${h - 28}" fill="none" stroke="#1976D2" stroke-width="3"/><rect x="26" y="26" width="${w - 52}" height="${h - 52}" fill="none" stroke="#0A2647" stroke-width="1"/><text x="50%" y="22%" text-anchor="middle" font-family="Arial" font-size="${w / 18}" font-weight="700" fill="#0A2647">CERTIFICATE</text><text x="50%" y="${h / 2}" text-anchor="middle" font-family="Arial" font-size="${w / 14}" font-weight="700" fill="#1976D2">${title.slice(0, 24)}</text><text x="50%" y="${h * 0.78}" text-anchor="middle" font-family="Arial" font-size="${w / 30}" fill="#455A64">Al Bahr Al Arabi Group</text></svg>`;
+            return 'data:image/svg+xml;utf8,' + encodeURIComponent(svg);
+        }
+        function badge(c) {
+            if (c.type !== 'iso') return `<span class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-blue-50 text-accent-blue"><i class="fa-solid fa-stamp"></i>${c.badge}</span>`;
+            const days = (new Date(c.validUntil) - new Date()) / 86400000;
+            if (days < 0) return '';
+            if (days <= 60) return `<span class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-amber-100 text-amber-700"><i class="fa-solid fa-triangle-exclamation"></i>${T('b_soon')}</span>`;
+            return `<span class="inline-flex items-center gap-1.5 text-xs font-bold px-3 py-1 rounded-full bg-green-100 text-green-700"><i class="fa-solid fa-circle-check"></i>${T('b_valid')}</span>`;
+        }
+        function row(icon, label, val) {
+            return `<li class="flex gap-3 text-sm"><i class="fa-solid ${icon} text-accent-blue mt-1 w-4 text-center"></i><span><span class="font-semibold text-corporate-blue">${label}:</span> <span class="text-steel-grey">${val}</span></span></li>`;
+        }
+        function renderCerts() {
+            document.getElementById('cert-tabs').innerHTML = TABS.map(([id, key]) =>
+                `<button data-tab="${id}" role="tab" class="snap-start shrink-0 min-h-[44px] px-5 rounded font-semibold text-sm whitespace-nowrap transition-all ${id === activeTab ? 'bg-accent-blue text-white' : 'bg-white/10 text-blue-100 hover:bg-white/20'}">${T(key)}</button>`).join('');
+            const list = CERTS.filter(c => c.tab === activeTab);
+            document.getElementById('cert-grid').innerHTML = list.map((c, i) => {
+                const title = c.type === 'iso' ? c.standard : T(c.k + '_t');
+                let details;
+                if (c.type === 'iso') {
+                    details = row('fa-building', T('l_company'), c.company) + row('fa-hashtag', T('l_no'), c.number) + row('fa-landmark', T('l_issued'), T(c.issuer)) +
+                        row('fa-calendar-check', T('l_since'), c.registeredSince) + row('fa-calendar-check', T('l_reissued'), c.reissued) +
+                        row('fa-calendar-xmark', T('l_valid'), c.validLabel) + row('fa-list-check', T('l_scope'), T(c.scope));
+                } else {
+                    details = row('fa-calendar-check', T('l_date'), c.date) + row('fa-list-check', T('l_details'), T(c.k + '_d'));
+                }
+                return `<div class="bg-white rounded-lg shadow hover:shadow-xl transition-all border-l-4 border-accent-blue p-6 flex flex-col text-steel-grey">
+                    <div class="flex items-center gap-3 mb-3">
+                        <div class="w-12 h-12 shrink-0 bg-blue-50 rounded-lg flex items-center justify-center text-accent-blue text-xl"><i class="fa-solid ${c.icon}"></i></div>
+                        <h4 class="font-bold text-corporate-blue text-lg leading-tight">${title}</h4></div>
+                    <div class="mb-4">${badge(c)}</div>
+                    <ul class="space-y-2 flex-1">${details}</ul>
+                </div>`;
+            }).join('');
+        }
+        document.getElementById('certifications').addEventListener('click', e => {
+            const t = e.target.closest('[data-tab]'); if (t) { activeTab = t.dataset.tab; renderCerts(); }
+        });
+
+        const baseSetLanguage = setLanguage;
+        setLanguage = function (lang) { baseSetLanguage(lang); renderCerts(); };
+        setLanguage(document.documentElement.lang || 'en');
+    </script>
 </body>
 </html>
