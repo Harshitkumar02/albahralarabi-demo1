@@ -1,0 +1,21 @@
+# Dependencies & Build
+node_modules/
+.vercel
+dist/
+build/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.py
+
+# OS Metadata
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Environment
+.env
+.env.local
+*.log

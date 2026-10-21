@@ -1,0 +1,928 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Al Bahr Al Arabi Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'corporate-blue': '#0A2647',
+                        'steel-grey': '#455A64',
+                        'light-grey': '#ECEFF1',
+                        'accent-blue': '#1976D2',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'arabic': ['Cairo', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        [dir="rtl"] .font-sans { font-family: 'Cairo', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(10,38,71,0.95) 0%, rgba(25,118,210,0.85) 100%);
+        }
+        .transition-all { transition: all 0.3s ease; }
+        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+        .subnav-chip.active {
+            background-color: #0A2647 !important;
+            color: #ffffff !important;
+            border-color: #0A2647 !important;
+        }
+    </style>
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/site-i18n.js"></script>
+    <script src="assets/js/layout.js"></script>
+</head>
+<body class="font-sans text-steel-grey bg-white overflow-x-hidden">
+    <div id="site-header"></div><script>SiteLayout.mountHeader('site-header')</script>
+
+            <!-- Sticky Sub-Navigation Chips -->
+        <nav class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm overflow-x-auto py-3">
+            <div class="container mx-auto px-4 flex gap-2 sm:gap-3 whitespace-nowrap min-w-max">
+                <a href="#profile" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_profile">Company Profile</a>
+                <a href="#specialty" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_specialty">Specialty</a>
+                <a href="#strengths" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_strengths">Strengths</a>
+                <a href="#mission" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_mission">Mission &amp; Vision</a>
+                <a href="#chairman" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_chairman">Chairman's Message</a>
+                <a href="#history" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_history">History</a>
+                <a href="#presence" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_presence">Global Presence</a>
+                <a href="#hsse" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_hsse">HSSE</a>
+                <a href="#certifications" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_certs">Certifications</a>
+            </div>
+        </nav>
+
+    <main id="main">
+<!-- Page Banner -->
+    <section id="page-banner"
+      class="relative h-[360px] overflow-hidden flex items-center">
+      <div class="absolute inset-0 z-0"><img
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_2a02f5d05c_7e786b84810f2990.png"
+          alt="Oil Refinery" class="w-full h-full object-cover">
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <nav
+          class="text-blue-100 text-xs font-semibold uppercase tracking-widest mb-4 flex items-center gap-2">
+          <a href="index.html" data-i18n="menu_home"
+            class="hover:text-white">Home</a><i class="fa-solid fa-chevron-right text-[8px]"></i><span data-i18n="menu_about" class="text-white">About
+            Us</span></nav>
+        <h1 data-i18n="banner_title"
+          class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-4">
+          About Al Bahr Al Arabi</h1>
+        <p data-i18n="banner_sub"
+          class="text-blue-50 text-lg sm:text-xl max-w-3xl leading-relaxed">A
+          trusted Oil &amp; Gas engineering and construction group delivering
+          safety, quality and excellence across the MENA region.</p>
+      </div>
+    </section><!-- Company Profile -->
+    <section id="profile" class="scroll-mt-28 py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+          <div><span data-i18n="profile_pill"
+              class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Company
+              Profile</span>
+            <h2 data-i18n="profile_title"
+              class="text-4xl font-bold text-corporate-blue mb-8">Engineering
+              Excellence Since 1998</h2>
+            <div class="space-y-6 text-lg leading-relaxed">
+              <p data-i18n="profile_p1" id="irt5dr">Al Bahr Al Arabi Group is a
+                premier Engineering, Procurement and Construction contractor
+                with over 25 years of distinguished service in the Oil &amp; Gas
+                sector, serving Petrochemical, Power and Desalination clients.
+              </p>
+              <p data-i18n="profile_p2">Operating from our 20,000 sqm
+                fabrication facility in Hamriyah Free Zone, Sharjah, we deliver
+                turnkey solutions backed by international standards, a strong
+                safety culture and a highly skilled workforce.</p>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-10">
+              <div class="flex items-center gap-3 bg-light-grey rounded-xl p-4">
+                <i class="fa-solid fa-location-dot text-accent-blue text-xl"></i>
+                <div>
+                  <p data-i18n="p_loc_l"
+                    class="text-[10px] uppercase font-bold text-steel-grey/70">
+                    Headquarters</p>
+                  <p data-i18n="p_loc_v"
+                    class="text-sm font-bold text-corporate-blue">Sharjah, UAE
+                  </p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 bg-light-grey rounded-xl p-4">
+                <i class="fa-solid fa-calendar text-accent-blue text-xl"></i>
+                <div>
+                  <p data-i18n="p_est_l"
+                    class="text-[10px] uppercase font-bold text-steel-grey/70">
+                    Established</p>
+                  <p class="text-sm font-bold text-corporate-blue">1998</p>
+                </div>
+              </div>
+              <div class="flex items-center gap-3 bg-light-grey rounded-xl p-4">
+                <i class="fa-solid fa-warehouse text-accent-blue text-xl"></i>
+                <div>
+                  <p data-i18n="p_fac_l"
+                    class="text-[10px] uppercase font-bold text-steel-grey/70">
+                    Facility</p>
+                  <p data-i18n="p_fac_v"
+                    class="text-sm font-bold text-corporate-blue">20,000 sqm</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div
+            class="bg-corporate-blue p-1 rounded-2xl shadow-2xl overflow-hidden group">
+            <img
+              src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_637fd141f0_208d2f5849485081.png"
+              alt="Al Bahr Al Arabi fabrication facility" loading="lazy"
+              class="w-full h-[500px] object-cover rounded-xl transition-all duration-700 group-hover:scale-105">
+          </div>
+        </div>
+      </div>
+    </section><!-- Our Specialty -->
+    <section id="specialty" class="scroll-mt-28 py-20 bg-light-grey">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16"><span data-i18n="spec_pill"
+            class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Our
+            Specialty</span>
+          <h2 data-i18n="spec_title"
+            class="text-4xl font-bold text-corporate-blue mb-4">Sectors We Serve
+          </h2>
+          <p data-i18n="spec_sub" class="max-w-2xl mx-auto">Integrated EPC
+            capability across the full energy and process value chain.</p>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 border-t-4 border-t-accent-blue group">
+            <div
+              class="w-14 h-14 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-2xl mb-6 group-hover:bg-accent-blue group-hover:text-white transition-all">
+              <i class="fa-solid fa-industry"></i></div>
+            <h3 data-i18n="spec_1_t"
+              class="text-xl font-bold text-corporate-blue mb-3">Oil &amp; Gas
+            </h3>
+            <p data-i18n="spec_1_d" class="text-sm">Tank farms, terminals,
+              refinery plants and pipelines delivered to API and ASME standards.
+            </p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 border-t-4 border-t-accent-blue group">
+            <div
+              class="w-14 h-14 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-2xl mb-6 group-hover:bg-accent-blue group-hover:text-white transition-all">
+              <i class="fa-solid fa-flask-vial"></i></div>
+            <h3 data-i18n="spec_2_t"
+              class="text-xl font-bold text-corporate-blue mb-3">Petrochemical
+            </h3>
+            <p data-i18n="spec_2_d" class="text-sm">Process facilities, storage
+              and blending plants engineered for chemical operations.</p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 border-t-4 border-t-accent-blue group">
+            <div
+              class="w-14 h-14 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-2xl mb-6 group-hover:bg-accent-blue group-hover:text-white transition-all">
+              <i class="fa-solid fa-bolt"></i></div>
+            <h3 data-i18n="spec_3_t"
+              class="text-xl font-bold text-corporate-blue mb-3">Power</h3>
+            <p data-i18n="spec_3_d" class="text-sm">MEP, electrical
+              infrastructure and structural works for power generation
+              facilities.</p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 border-t-4 border-t-accent-blue group">
+            <div
+              class="w-14 h-14 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-2xl mb-6 group-hover:bg-accent-blue group-hover:text-white transition-all">
+              <i class="fa-solid fa-droplet"></i></div>
+            <h3 data-i18n="spec_4_t"
+              class="text-xl font-bold text-corporate-blue mb-3">Desalination
+            </h3>
+            <p data-i18n="spec_4_d" class="text-sm">Piping, steel structures and
+              civil works supporting large-scale water desalination plants.</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- Key Strengths & Stats -->
+    <section id="strengths" class="scroll-mt-28 py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16"><span data-i18n="str_pill"
+            class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Key
+            Strengths</span>
+          <h2 data-i18n="str_title"
+            class="text-4xl font-bold text-corporate-blue mb-4">What Sets Us
+            Apart</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+          <div
+            class="flex gap-5 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transition-all">
+            <div
+              class="w-14 h-14 shrink-0 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl">
+              <i class="fa-solid fa-diagram-project"></i></div>
+            <div>
+              <h3 data-i18n="str_1_t"
+                class="font-bold text-corporate-blue text-lg mb-2">Integrated
+                EPC</h3>
+              <p data-i18n="str_1_d" class="text-sm">Single-point responsibility
+                from design to commissioning.</p>
+            </div>
+          </div>
+          <div
+            class="flex gap-5 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transition-all">
+            <div
+              class="w-14 h-14 shrink-0 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl">
+              <i class="fa-solid fa-gears"></i></div>
+            <div>
+              <h3 data-i18n="str_2_t"
+                class="font-bold text-corporate-blue text-lg mb-2">In-house
+                Fabrication</h3>
+              <p data-i18n="str_2_d" class="text-sm">20,000 sqm facility
+                ensuring quality control and schedule certainty.</p>
+            </div>
+          </div>
+          <div
+            class="flex gap-5 p-6 rounded-xl border border-gray-100 shadow-sm hover:shadow-xl transition-all">
+            <div
+              class="w-14 h-14 shrink-0 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl">
+              <i class="fa-solid fa-people-group"></i></div>
+            <div>
+              <h3 data-i18n="str_3_t"
+                class="font-bold text-corporate-blue text-lg mb-2">Skilled
+                Workforce</h3>
+              <p data-i18n="str_3_d" class="text-sm">Experienced engineers,
+                supervisors and certified craftsmen.</p>
+            </div>
+          </div>
+        </div>
+        <div class="bg-corporate-blue rounded-2xl p-12 shadow-xl">
+          <div class="grid grid-cols-2 lg:grid-cols-4 gap-8">
+            <div class="text-center">
+              <p class="text-4xl font-bold text-white mb-2">25+</p>
+              <p data-i18n="stat_1_label"
+                class="text-blue-300 text-sm font-semibold uppercase tracking-widest">
+                Years of Experience</p>
+            </div>
+            <div class="text-center">
+              <p class="text-4xl font-bold text-white mb-2">500+</p>
+              <p data-i18n="stat_2_label"
+                class="text-blue-300 text-sm font-semibold uppercase tracking-widest">
+                Completed Projects</p>
+            </div>
+            <div class="text-center">
+              <p class="text-4xl font-bold text-white mb-2">20,000</p>
+              <p data-i18n="stat_3_label"
+                class="text-blue-300 text-sm font-semibold uppercase tracking-widest">
+                Sqm Fabrication Facility</p>
+            </div>
+            <div class="text-center">
+              <p class="text-4xl font-bold text-white mb-2">100+</p>
+              <p data-i18n="stat_4_label"
+                class="text-blue-300 text-sm font-semibold uppercase tracking-widest">
+                Supplier Partnerships</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- Mission / Vision / Values -->
+    <section id="mission" class="scroll-mt-28 py-20 bg-light-grey">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16"><span data-i18n="mv_pill"
+            class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Mission,
+            Vision &amp; Values</span>
+          <h2 data-i18n="mv_title"
+            class="text-4xl font-bold text-corporate-blue mb-4">Guided by
+            Purpose</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
+          <div
+            class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 border-t-4 border-t-accent-blue hover:shadow-xl transition-all">
+            <div
+              class="w-14 h-14 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl mb-6">
+              <i class="fa-solid fa-bullseye"></i></div>
+            <h3 data-i18n="mission_t"
+              class="text-2xl font-bold text-corporate-blue mb-3">Our Mission
+            </h3>
+            <p data-i18n="mission_d">To deliver safe, high-quality and
+              cost-effective engineering and construction solutions that exceed
+              client expectations and strengthen regional energy infrastructure.
+            </p>
+          </div>
+          <div
+            class="bg-white p-10 rounded-2xl shadow-sm border border-gray-100 border-t-4 border-t-accent-blue hover:shadow-xl transition-all">
+            <div
+              class="w-14 h-14 bg-corporate-blue rounded flex items-center justify-center text-white text-2xl mb-6">
+              <i class="fa-solid fa-eye"></i></div>
+            <h3 data-i18n="vision_t"
+              class="text-2xl font-bold text-corporate-blue mb-3">Our Vision
+            </h3>
+            <p data-i18n="vision_d">To be the most trusted EPC partner in the
+              Oil &amp; Gas industry across the Middle East and beyond.</p>
+          </div>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-5 gap-6">
+          <div
+            class="bg-white p-6 rounded-xl text-center border border-gray-100 hover:shadow-xl transition-all">
+            <i class="fa-solid fa-shield-halved text-accent-blue text-3xl mb-3"></i>
+            <h4 data-i18n="val_1" class="font-bold text-corporate-blue text-sm">
+              Safety First</h4>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl text-center border border-gray-100 hover:shadow-xl transition-all">
+            <i class="fa-solid fa-award text-accent-blue text-3xl mb-3"></i>
+            <h4 data-i18n="val_2" class="font-bold text-corporate-blue text-sm">
+              Quality</h4>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl text-center border border-gray-100 hover:shadow-xl transition-all">
+            <i class="fa-solid fa-scale-balanced text-accent-blue text-3xl mb-3"></i>
+            <h4 data-i18n="val_3" class="font-bold text-corporate-blue text-sm">
+              Integrity</h4>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl text-center border border-gray-100 hover:shadow-xl transition-all">
+            <i class="fa-solid fa-lightbulb text-accent-blue text-3xl mb-3"></i>
+            <h4 data-i18n="val_4" class="font-bold text-corporate-blue text-sm">
+              Innovation</h4>
+          </div>
+          <div
+            class="bg-white p-6 rounded-xl text-center border border-gray-100 hover:shadow-xl transition-all">
+            <i class="fa-solid fa-leaf text-accent-blue text-3xl mb-3"></i>
+            <h4 data-i18n="val_5" class="font-bold text-corporate-blue text-sm">
+              Sustainability</h4>
+          </div>
+        </div>
+      </div>
+    </section><!-- Chairman's Message -->
+    <section id="chairman" class="scroll-mt-28 py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 lg:grid-cols-5 gap-12 items-center">
+          <div class="lg:col-span-2">
+            <div
+              class="bg-corporate-blue p-1 rounded-2xl shadow-2xl overflow-hidden">
+              <img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_3b766e58f1_6e05ea2663261aaf.png"
+                alt="professional portrait of a senior Arab businessman in dark suit, corporate office background, studio"
+                class="w-full h-[460px] object-cover object-top rounded-xl">
+            </div>
+          </div>
+          <div class="lg:col-span-3"><span data-i18n="ch_pill"
+              class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Chairman's
+              Message</span><i class="fa-solid fa-quote-left text-accent-blue/30 text-5xl block mb-4"></i>
+            <blockquote data-i18n="ch_quote"
+              class="text-xl lg:text-2xl text-corporate-blue font-semibold leading-relaxed mb-6">
+              Our success is built on trust, safety and an unwavering commitment
+              to quality. We continue to invest in people and technology to
+              build the infrastructure that powers our region.</blockquote>
+            <p data-i18n="ch_text" class="mb-8">As we look to the future,
+              Al Bahr Al Arabi remains dedicated to long-term partnerships,
+              responsible growth and delivering lasting value to our clients,
+              employees and communities.</p>
+            <div class="flex items-center gap-4">
+              <div
+                class="w-12 h-12 bg-corporate-blue rounded-full flex items-center justify-center text-white">
+                <i class="fa-solid fa-user-tie"></i></div>
+              <div>
+                <p data-i18n="ch_name" class="font-bold text-corporate-blue">The
+                  Chairman</p>
+                <p data-i18n="ch_role" class="text-xs uppercase tracking-wider">
+                  Chairman, Al Bahr Al Arabi Group</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- Company History -->
+    <section id="history" class="scroll-mt-28 py-20 bg-light-grey">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16"><span data-i18n="hist_pill"
+            class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Company
+            History</span>
+          <h2 data-i18n="hist_title"
+            class="text-4xl font-bold text-corporate-blue mb-4">Our Journey of
+            Growth</h2>
+        </div>
+        <div class="relative max-w-5xl mx-auto">
+          <div
+            class="absolute left-4 lg:left-1/2 top-0 bottom-0 w-0.5 bg-accent-blue/30 lg:-translate-x-1/2">
+          </div>
+          <div class="space-y-10">
+            <div
+              class="relative grid grid-cols-1 lg:grid-cols-2 gap-6 pl-12 lg:pl-0">
+              <span
+                class="absolute left-4 lg:left-1/2 top-6 w-4 h-4 bg-accent-blue rounded-full border-4 border-white -translate-x-1/2 shadow"></span>
+              <div class="lg:pr-12 lg:text-right">
+                <div
+                  class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+                  <p class="text-accent-blue font-bold text-sm mb-1">1998</p>
+                  <h3 data-i18n="h1_t"
+                    class="font-bold text-corporate-blue text-lg mb-2">
+                    Foundation</h3>
+                  <p data-i18n="h1_d" class="text-sm">Al Bahr Al Arabi is
+                    established in Sharjah to serve the marine and Oil &amp; Gas
+                    sector.</p>
+                </div>
+              </div>
+              <div class="hidden lg:block"></div>
+            </div>
+            <div
+              class="relative grid grid-cols-1 lg:grid-cols-2 gap-6 pl-12 lg:pl-0">
+              <span
+                class="absolute left-4 lg:left-1/2 top-6 w-4 h-4 bg-accent-blue rounded-full border-4 border-white -translate-x-1/2 shadow"></span>
+              <div class="hidden lg:block"></div>
+              <div class="lg:pl-12">
+                <div
+                  class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+                  <p class="text-accent-blue font-bold text-sm mb-1">2008</p>
+                  <h3 data-i18n="h2_t"
+                    class="font-bold text-corporate-blue text-lg mb-2">Hamriyah
+                    Facility</h3>
+                  <p data-i18n="h2_d" class="text-sm">Fabrication yard
+                    commissioned in Hamriyah Free Zone with advanced steel
+                    capabilities.</p>
+                </div>
+              </div>
+            </div>
+            <div
+              class="relative grid grid-cols-1 lg:grid-cols-2 gap-6 pl-12 lg:pl-0">
+              <span
+                class="absolute left-4 lg:left-1/2 top-6 w-4 h-4 bg-accent-blue rounded-full border-4 border-white -translate-x-1/2 shadow"></span>
+              <div class="lg:pr-12 lg:text-right">
+                <div
+                  class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+                  <p class="text-accent-blue font-bold text-sm mb-1">2016</p>
+                  <h3 data-i18n="h3_t"
+                    class="font-bold text-corporate-blue text-lg mb-2">Group
+                    Expansion</h3>
+                  <p data-i18n="h3_d" class="text-sm">Growth into a
+                    multi-company group across petroleum, petrochemicals and
+                    contracting.</p>
+                </div>
+              </div>
+              <div class="hidden lg:block"></div>
+            </div>
+            <div
+              class="relative grid grid-cols-1 lg:grid-cols-2 gap-6 pl-12 lg:pl-0">
+              <span
+                class="absolute left-4 lg:left-1/2 top-6 w-4 h-4 bg-accent-blue rounded-full border-4 border-white -translate-x-1/2 shadow"></span>
+              <div class="hidden lg:block"></div>
+              <div class="lg:pl-12">
+                <div
+                  class="bg-white p-6 rounded-xl shadow-sm border border-gray-100 hover:shadow-xl transition-all">
+                  <p class="text-accent-blue font-bold text-sm mb-1">2024</p>
+                  <h3 data-i18n="h4_t"
+                    class="font-bold text-corporate-blue text-lg mb-2">Regional
+                    Reach</h3>
+                  <p data-i18n="h4_d" class="text-sm">Operations established
+                    across UAE, Qatar, KSA, Turkey and the United Kingdom.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- Global Presence -->
+    <section id="presence" class="scroll-mt-28 py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16"><span data-i18n="gp_pill"
+            class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Global
+            Presence</span>
+          <h2 data-i18n="gp_title"
+            class="text-4xl font-bold text-corporate-blue mb-4">Operating Across
+            Borders</h2>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-12">
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 border-t-4 border-t-accent-blue hover:shadow-xl transition-all text-center">
+            <i class="fa-solid fa-location-dot text-accent-blue text-3xl mb-4"></i>
+            <h3 data-i18n="gp_1"
+              class="font-bold text-corporate-blue text-lg mb-1">UAE</h3>
+            <p data-i18n="gp_1_d" class="text-sm">Marine, Technical, Gulf Tech,
+              Crystal Petroleum &amp; Petrochemicals</p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 border-t-4 border-t-accent-blue hover:shadow-xl transition-all text-center">
+            <i class="fa-solid fa-location-dot text-accent-blue text-3xl mb-4"></i>
+            <h3 data-i18n="gp_2"
+              class="font-bold text-corporate-blue text-lg mb-1">Qatar &amp; KSA
+            </h3>
+            <p data-i18n="gp_2_d" class="text-sm">Crystal Oilfield and Crystal
+              Care</p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 border-t-4 border-t-accent-blue hover:shadow-xl transition-all text-center">
+            <i class="fa-solid fa-location-dot text-accent-blue text-3xl mb-4"></i>
+            <h3 data-i18n="gp_3"
+              class="font-bold text-corporate-blue text-lg mb-1">Turkey</h3>
+            <p data-i18n="gp_3_d" class="text-sm">Crystal Petrokimya</p>
+          </div>
+          <div
+            class="bg-white p-8 rounded-xl shadow-sm border border-gray-100 border-t-4 border-t-accent-blue hover:shadow-xl transition-all text-center">
+            <i class="fa-solid fa-location-dot text-accent-blue text-3xl mb-4"></i>
+            <h3 data-i18n="gp_4"
+              class="font-bold text-corporate-blue text-lg mb-1">United Kingdom
+            </h3>
+            <p data-i18n="gp_4_d" class="text-sm">Meecon LTD</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- HSSE -->
+    <section id="hsse" class="scroll-mt-28 py-20 bg-corporate-blue text-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14"><span data-i18n="hs_pill"
+            class="bg-white/10 text-blue-200 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">HSSE</span>
+          <h2 data-i18n="hs_title" class="text-4xl font-bold mb-4">Health,
+            Safety, Security &amp; Environment</h2>
+          <p data-i18n="hs_sub"
+            class="text-blue-100 opacity-80 max-w-2xl mx-auto">A zero-harm
+            culture embedded in every site and every decision.</p>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div
+            class="bg-white/5 p-6 rounded-xl border border-white/10 text-center">
+            <p class="text-4xl font-bold mb-1">5M+</p>
+            <p data-i18n="hs_1"
+              class="text-xs text-blue-200 uppercase tracking-widest">Safe
+              Man-Hours</p>
+          </div>
+          <div
+            class="bg-white/5 p-6 rounded-xl border border-white/10 text-center">
+            <p class="text-4xl font-bold mb-1">0</p>
+            <p data-i18n="hs_2"
+              class="text-xs text-blue-200 uppercase tracking-widest">Lost Time
+              Incidents</p>
+          </div>
+          <div
+            class="bg-white/5 p-6 rounded-xl border border-white/10 text-center">
+            <p class="text-4xl font-bold mb-1">100%</p>
+            <p data-i18n="hs_3"
+              class="text-xs text-blue-200 uppercase tracking-widest">Induction
+              Coverage</p>
+          </div>
+          <div
+            class="bg-white/5 p-6 rounded-xl border border-white/10 text-center">
+            <p class="text-4xl font-bold mb-1">3</p>
+            <p data-i18n="hs_4"
+              class="text-xs text-blue-200 uppercase tracking-widest">ISO
+              Certifications</p>
+          </div>
+        </div><!-- Table (desktop) -->
+        <div
+          class="hidden md:block bg-white rounded-xl overflow-hidden text-steel-grey">
+          <table class="w-full text-sm text-left">
+            <thead
+              class="bg-light-grey text-corporate-blue uppercase text-xs tracking-wider">
+              <tr>
+                <th data-i18n="t_year" class="px-6 py-4">Year</th>
+                <th data-i18n="t_hours" class="px-6 py-4">Man-Hours</th>
+                <th data-i18n="t_lti" class="px-6 py-4">LTI</th>
+                <th data-i18n="t_train" class="px-6 py-4">Training Sessions</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-gray-100">
+              <tr>
+                <td class="px-6 py-4 font-bold text-corporate-blue">2023</td>
+                <td class="px-6 py-4">1,450,000</td>
+                <td class="px-6 py-4">0</td>
+                <td class="px-6 py-4">240</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-bold text-corporate-blue">2024</td>
+                <td class="px-6 py-4">1,620,000</td>
+                <td class="px-6 py-4">0</td>
+                <td class="px-6 py-4">265</td>
+              </tr>
+              <tr>
+                <td class="px-6 py-4 font-bold text-corporate-blue">2025</td>
+                <td class="px-6 py-4">1,780,000</td>
+                <td class="px-6 py-4">0</td>
+                <td class="px-6 py-4">290</td>
+              </tr>
+            </tbody>
+          </table>
+        </div><!-- Cards (mobile) -->
+        <div class="md:hidden space-y-4">
+          <div class="bg-white text-steel-grey rounded-xl p-5">
+            <p class="font-bold text-corporate-blue mb-2">2023</p>
+            <p class="text-sm">Man-Hours: 1,450,000 · LTI: 0 · Training: 240</p>
+          </div>
+          <div class="bg-white text-steel-grey rounded-xl p-5">
+            <p class="font-bold text-corporate-blue mb-2">2024</p>
+            <p class="text-sm">Man-Hours: 1,620,000 · LTI: 0 · Training: 265</p>
+          </div>
+          <div class="bg-white text-steel-grey rounded-xl p-5">
+            <p class="font-bold text-corporate-blue mb-2">2025</p>
+            <p class="text-sm">Man-Hours: 1,780,000 · LTI: 0 · Training: 290</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- Certifications Highlights -->
+    <section id="certifications" class="scroll-mt-28 py-16 bg-light-grey">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14"><span data-i18n="qa_pill"
+            class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Quality
+            Assurance</span>
+          <h2 data-i18n="qa_title"
+            class="text-4xl font-bold text-corporate-blue mb-4">Certifications
+            &amp; Compliance</h2>
+          <p data-i18n="qa_subtitle" class="max-w-2xl mx-auto">Our companies are
+            independently audited and certified to international management
+            system standards.</p>
+        </div>
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-xl transition-all p-6 text-center">
+            <div
+              class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-accent-blue text-3xl">
+              <i class="fa-solid fa-award"></i></div>
+            <h3 class="text-corporate-blue font-bold text-lg">ISO 9001:2015</h3>
+            <p data-i18n="qa_s1" class="text-sm">Quality Management System</p>
+            <p data-i18n="qa_across"
+              class="text-xs text-accent-blue font-semibold mt-3">Certified
+              across 3 group companies</p>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-xl transition-all p-6 text-center">
+            <div
+              class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-accent-blue text-3xl">
+              <i class="fa-solid fa-leaf"></i></div>
+            <h3 class="text-corporate-blue font-bold text-lg">ISO 14001:2015
+            </h3>
+            <p data-i18n="qa_s2" class="text-sm">Environmental Management System
+            </p>
+            <p data-i18n="qa_across"
+              class="text-xs text-accent-blue font-semibold mt-3">Certified
+              across 3 group companies</p>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-xl transition-all p-6 text-center">
+            <div
+              class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-accent-blue text-3xl">
+              <i class="fa-solid fa-shield-halved"></i></div>
+            <h3 class="text-corporate-blue font-bold text-lg">ISO 45001:2018
+            </h3>
+            <p data-i18n="qa_s3" class="text-sm">Occupational Health &amp;
+              Safety</p>
+            <p data-i18n="qa_across"
+              class="text-xs text-accent-blue font-semibold mt-3">Certified
+              across 3 group companies</p>
+          </div>
+          <div
+            class="bg-white rounded-lg shadow hover:shadow-xl transition-all p-6 text-center">
+            <div
+              class="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center mx-auto mb-4 text-accent-blue text-3xl">
+              <i class="fa-solid fa-magnifying-glass-chart"></i></div>
+            <h3 class="text-corporate-blue font-bold text-lg">API Q1 / ASME</h3>
+            <p data-i18n="qa_s4" class="text-sm">Fabrication &amp; Industry
+              Standards</p>
+            <p data-i18n="qa_across_2"
+              class="text-xs text-accent-blue font-semibold mt-3">Certified
+              across 2 group companies</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- Footer -->
+    </main>
+
+    <div id="site-footer"></div><script>SiteLayout.mountFooter('site-footer')</script>
+
+    <!-- Page Scripts -->
+    <script>
+        SiteLang.register({
+            en: {
+                banner_title: "About Al Bahr Al Arabi",
+                banner_sub: "A trusted Oil & Gas engineering and construction group delivering safety, quality, and excellence across the MENA region.",
+                chip_profile: "Company Profile",
+                chip_specialty: "Specialty",
+                chip_strengths: "Strengths",
+                chip_mission: "Mission & Vision",
+                chip_chairman: "Chairman's Message",
+                chip_history: "History",
+                chip_presence: "Global Presence",
+                chip_hsse: "HSSE",
+                chip_certs: "Certifications",
+                profile_pill: "Company Profile",
+                profile_title: "Engineering Excellence Since 1998",
+                profile_p1: "Al Bahr Al Arabi Group is a premier Engineering, Procurement and Construction contractor with over 25 years of distinguished service in the Oil & Gas sector, serving Petrochemical, Power and Desalination clients.",
+                profile_p2: "Operating from our 20,000 sqm fabrication facility in Hamriyah Free Zone, Sharjah, we deliver turnkey solutions backed by international standards, a strong safety culture and a highly skilled workforce.",
+                p_loc_l: "Headquarters",
+                p_loc_v: "Sharjah, UAE",
+                p_est_l: "Established",
+                p_fac_l: "Facility",
+                p_fac_v: "20,000 sqm",
+                stat_1_label: "Years of Experience",
+                stat_2_label: "Completed Projects",
+                stat_3_label: "Sqm Fabrication Facility",
+                stat_4_label: "Supplier Partnerships",
+                spec_pill: "Our Specialty",
+                spec_title: "Sectors We Serve",
+                spec_sub: "Integrated EPC capability across the full energy and process value chain.",
+                spec_1_t: "Oil & Gas",
+                spec_1_d: "Tank farms, terminals, refinery plants and pipelines delivered to API and ASME standards.",
+                spec_2_t: "Petrochemical",
+                spec_2_d: "Process facilities, storage and blending plants engineered for chemical operations.",
+                spec_3_t: "Power",
+                spec_3_d: "MEP, electrical infrastructure and structural works for power generation facilities.",
+                spec_4_t: "Desalination",
+                spec_4_d: "Piping, steel structures and civil works supporting large-scale water desalination plants.",
+                str_pill: "Core Strengths",
+                str_title: "What Sets Us Apart",
+                str_1_t: "Integrated EPC",
+                str_1_d: "Single-point responsibility from design to commissioning.",
+                str_2_t: "In-house Fabrication",
+                str_2_d: "20,000 sqm facility ensuring quality control and schedule certainty.",
+                str_3_t: "Skilled Workforce",
+                str_3_d: "Experienced engineers, supervisors and certified craftsmen.",
+                mv_pill: "Mission, Vision & Values",
+                mv_title: "Guided by Purpose",
+                mission_t: "Our Mission",
+                mission_d: "To deliver safe, high-quality and cost-effective engineering and construction solutions that exceed client expectations and strengthen regional energy infrastructure.",
+                vision_t: "Our Vision",
+                vision_d: "To be the most trusted EPC partner in the Oil & Gas industry across the Middle East and beyond.",
+                val_1: "Safety First",
+                val_2: "Quality",
+                val_3: "Integrity",
+                val_4: "Innovation",
+                val_5: "Sustainability",
+                ch_pill: "Chairman's Message",
+                ch_quote: "Our success is built on trust, safety and an unwavering commitment to quality. We continue to invest in people and technology to build the infrastructure that powers our region.",
+                ch_text: "As we look to the future, Al Bahr Al Arabi remains dedicated to long-term partnerships, responsible growth and delivering lasting value to our clients, employees and communities.",
+                ch_name: "The Chairman",
+                ch_role: "Chairman, Al Bahr Al Arabi Group",
+                hist_pill: "Company History",
+                hist_title: "A Journey of Growth",
+                h1_t: "Foundation",
+                h1_d: "Al Bahr Al Arabi is established in Sharjah to serve the marine and Oil & Gas sector.",
+                h2_t: "Hamriyah Facility",
+                h2_d: "Fabrication yard commissioned in Hamriyah Free Zone with advanced steel capabilities.",
+                h3_t: "Group Expansion",
+                h3_d: "Growth into a multi-company group across petroleum, petrochemicals and contracting.",
+                h4_t: "Regional Reach",
+                h4_d: "Operations established across UAE, Qatar, KSA, Turkey and the United Kingdom.",
+                gp_pill: "Global Presence",
+                gp_title: "Operating Across Borders",
+                gp_1: "UAE",
+                gp_1_d: "Marine, Technical, Gulf Tech, Crystal Petroleum & Petrochemicals",
+                gp_2: "Qatar & KSA",
+                gp_2_d: "Crystal Oilfield and Crystal Care",
+                gp_3: "Turkey",
+                gp_3_d: "Crystal Petrokimya",
+                gp_4: "United Kingdom",
+                gp_4_d: "Meecon LTD",
+                btn_group: "View Group Companies",
+                hs_pill: "Health & Safety",
+                hs_title: "Health, Safety, Security & Environment",
+                hs_sub: "A zero-harm culture embedded in every site and every decision.",
+                hs_1: "Safe Man-Hours",
+                hs_2: "Lost Time Incidents",
+                hs_3: "Induction Coverage",
+                hs_4: "ISO Certifications",
+                t_year: "Year",
+                t_hours: "Man-Hours",
+                t_lti: "LTI",
+                t_train: "Training Sessions",
+                qa_pill: "Quality Assurance",
+                qa_title: "Certifications & Compliance",
+                qa_subtitle: "Our companies are independently audited and certified to international management system standards.",
+                qa_s1: "Quality Management System",
+                qa_s2: "Environmental Management System",
+                qa_s3: "Occupational Health & Safety",
+                qa_s4: "Manufacturing & Industry Standards",
+                qa_across: "Certified across 3 group companies",
+                qa_across_2: "Certified across 2 group companies",
+                btn_all_certs: "View All Certificates"
+            },
+            ar: {
+                banner_title: 'عن البحر العربي',
+                banner_sub: 'مجموعة هندسة وإنشاءات موثوقة في قطاع النفط والغاز تقدم السلامة والجودة والتميز في منطقة الشرق الأوسط وشمال أفريقيا.',
+                chip_profile: 'نبذة عن الشركة',
+                chip_specialty: 'تخصصنا',
+                chip_strengths: 'نقاط القوة',
+                chip_mission: 'الرسالة والرؤية',
+                chip_chairman: 'كلمة الرئيس',
+                chip_history: 'التاريخ',
+                chip_presence: 'التواجد العالمي',
+                chip_hsse: 'الصحة والسلامة',
+                chip_certs: 'الشهادات',
+                profile_pill: 'نبذة عن الشركة',
+                profile_title: 'التميز الهندسي منذ 1998',
+                profile_p1: 'مجموعة البحر العربي هي مقاول رائد في مجالات الهندسة والتوريد والإنشاء بخبرة تزيد عن 25 عاماً من الخدمة المتميزة في قطاع النفط والغاز، وتخدم عملاء البتروكيماويات والطاقة وتحلية المياه.',
+                profile_p2: 'انطلاقاً من مرفق التصنيع الخاص بنا والبالغة مساحته 20,000 متر مربع في المنطقة الحرة بالحمرية بالشارقة، نقدم حلولاً متكاملة مدعومة بأعلى المعايير الدولية وثقافة سلامة راسخة وقوى عاملة عالية المهارة.',
+                p_loc_l: 'المقر الرئيسي',
+                p_loc_v: 'الشارقة، الإمارات',
+                p_est_l: 'سنة التأسيس',
+                p_fac_l: 'مرفق التصنيع',
+                p_fac_v: '20,000 متر مربع',
+                stat_1_label: 'سنة من الخبرة',
+                stat_2_label: 'مشروع مكتمل',
+                stat_3_label: 'متر مربع من مرافق التصنيع',
+                stat_4_label: 'شراكة مع الموردين',
+                spec_pill: 'تخصصنا',
+                spec_title: 'القطاعات التي نخدمها',
+                spec_sub: 'قدرات هندسية وتوريدية وإنشائية متكاملة عبر كامل سلسلة القيمة في قطاع الطاقة والعمليات الصناعية.',
+                spec_1_t: 'النفط والغاز',
+                spec_1_d: 'محطات الخزانات والموانئ ومحطات التكرير وخطوط الأنابيب المنفذة وفق معايير API وASME.',
+                spec_2_t: 'البتروكيماويات',
+                spec_2_d: 'مرافق العمليات ومحطات التخزين والخلط المصممة للعمليات الكيميائية.',
+                spec_3_t: 'الطاقة',
+                spec_3_d: 'الأعمال الكهروميكانيكية والبنية التحتية الكهربائية والأعمال الإنشائية لمرافق توليد الطاقة.',
+                spec_4_t: 'تحلية المياه',
+                spec_4_d: 'الأنابيب والهياكل الفولاذية والأعمال المدنية الداعمة لمحطات تحلية المياه الكبرى.',
+                str_pill: 'نقاط القوة',
+                str_title: 'ما يميزنا',
+                str_1_t: 'الهندسة والتوريد والإنشاء المتكاملة',
+                str_1_d: 'مسؤولية متكاملة من نقطة واحدة تبدأ من التصميم وحتى التشغيل.',
+                str_2_t: 'تصنيع داخلي متطور',
+                str_2_d: 'مرفق بمساحة 20,000 متر مربع يضمن ضبط الجودة والالتزام الصارم بالجداول الزمنية.',
+                str_3_t: 'كوادر ماهرة متخصصة',
+                str_3_d: 'مهندسون ومشرفون ذوو خبرة وحرفيون معتمدون.',
+                mv_pill: 'الرسالة والرؤية والقيم',
+                mv_title: 'نسترشد بالهدف',
+                mission_t: 'رسالتنا',
+                mission_d: 'تقديم حلول هندسية وإنشائية آمنة وعالية الجودة وفعالة من حيث التكلفة تتجاوز توقعات العملاء وتعزز البنية التحتية الإقليمية للطاقة.',
+                vision_t: 'رؤيتنا',
+                vision_d: 'أن نكون الشريك الأكثر موثوقية في مجال الهندسة والتوريد والإنشاء في قطاع النفط والغاز عبر منطقة الشرق الأوسط وخارجها.',
+                val_1: 'السلامة أولاً',
+                val_2: 'الجودة',
+                val_3: 'النزاهة',
+                val_4: 'الابتكار',
+                val_5: 'الاستدامة',
+                ch_pill: 'كلمة الرئيس',
+                ch_quote: 'إن نجاحنا مبني على الثقة والسلامة والالتزام الراسخ بالجودة. ونحن نواصل الاستثمار في كوادرنا وتقنياتنا لبناء البنية التحتية التي تدعم طاقة منطقتنا.',
+                ch_text: 'وبينما نتطلع إلى المستقبل، تظل مجموعة البحر العربي ملتزمة بالشراكات طويلة الأجل والنمو المسؤول وتقديم قيمة مستدامة لعملائنا وموظفينا ومجتمعاتنا.',
+                ch_name: 'رئيس مجلس الإدارة',
+                ch_role: 'رئيس مجلس الإدارة، مجموعة البحر العربي',
+                hist_pill: 'تاريخ الشركة',
+                hist_title: 'رحلة النمو',
+                h1_t: 'التأسيس',
+                h1_d: 'تأسيس شركة البحر العربي في الشارقة لخدمة القطاع البحري وقطاع النفط والغاز.',
+                h2_t: 'مرفق الحمرية',
+                h2_d: 'تدشين ساحة التصنيع في المنطقة الحرة بالحمرية بقدرات متقدمة في تصنيع الفولاذ.',
+                h3_t: 'توسع المجموعة',
+                h3_d: 'النمو إلى مجموعة متعددة الشركات في مجالات البترول والبتروكيماويات والمقاولات.',
+                h4_t: 'الانتشار الإقليمي',
+                h4_d: 'تأسيس عمليات المجموعة عبر الإمارات وقطر والسعودية وتركيا والمملكة المتحدة.',
+                gp_pill: 'التواجد العالمي',
+                gp_title: 'نعمل عبر الحدود',
+                gp_1: 'الإمارات',
+                gp_1_d: 'الهندسية البحرية، الصناعات الفنية، جلف تك، كريستال للبترول والبتروكيماويات',
+                gp_2: 'قطر والسعودية',
+                gp_2_d: 'كريستال لإنشاءات حقول النفط وكريستال كير',
+                gp_3: 'تركيا',
+                gp_3_d: 'كريستال بتروكيمي',
+                gp_4: 'المملكة المتحدة',
+                gp_4_d: 'ميكون المحدودة',
+                btn_group: 'عرض الشركات التابعة',
+                hs_pill: 'الصحة والسلامة',
+                hs_title: 'الصحة والسلامة والأمن والبيئة',
+                hs_sub: 'ثقافة انعدام الحوادث والضرر متأصلة في كل موقع وكل قرار.',
+                hs_1: 'ساعات عمل آمنة',
+                hs_2: 'إصابات هادرة للوقت',
+                hs_3: 'نسبة تغطية التدريب التعريفي',
+                hs_4: 'شهادات الآيزو',
+                t_year: 'السنة',
+                t_hours: 'ساعات العمل',
+                t_lti: 'الإصابات الهادرة للوقت',
+                t_train: 'جلسات التدريب',
+                qa_pill: 'ضمان الجودة',
+                qa_title: 'الشهادات والامتثال',
+                qa_subtitle: 'يتم تدقيق شركاتنا واعتمادها بشكل مستقل وفق معايير أنظمة الإدارة الدولية.',
+                qa_s1: 'نظام إدارة الجودة',
+                qa_s2: 'نظام الإدارة البيئية',
+                qa_s3: 'الصحة والسلامة المهنية',
+                qa_s4: 'التصنيع ومعايير الصناعة',
+                qa_across: 'معتمدة في 3 شركات تابعة',
+                qa_across_2: 'معتمدة في شركتين تابعتين',
+                btn_all_certs: 'عرض جميع الشهادات'
+            }
+        });
+
+        // Sub-nav active state
+        (function() {
+            var chips = document.querySelectorAll('.subnav-chip');
+            var sections = ['profile', 'specialty', 'strengths', 'mission', 'chairman', 'history', 'presence', 'hsse', 'certifications'].map(function(id) {
+                return document.getElementById(id);
+            });
+
+            function setActive() {
+                var pos = window.scrollY + 200;
+                var current = 0;
+                sections.forEach(function(s, i) {
+                    if (s && s.offsetTop <= pos) current = i;
+                });
+                chips.forEach(function(c, i) {
+                    c.classList.toggle('active', i === current);
+                });
+            }
+            window.addEventListener('scroll', setActive, { passive: true });
+            setActive();
+        })();
+    </script>
+</body>
+</html>

@@ -1,0 +1,851 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services - Al Bahr Al Arabi Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'corporate-blue': '#0A2647',
+                        'steel-grey': '#455A64',
+                        'light-grey': '#ECEFF1',
+                        'accent-blue': '#1976D2',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'arabic': ['Cairo', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        ::-webkit-scrollbar { display: none; }
+        [dir="rtl"] .font-sans { font-family: 'Cairo', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(10,38,71,0.95) 0%, rgba(25,118,210,0.85) 100%);
+        }
+        .transition-all { transition: all 0.3s ease; }
+        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+        a:focus-visible, button:focus-visible {
+            outline: 3px solid #1976D2;
+            outline-offset: 2px;
+        }
+        [dir="rtl"] .rtl-flip {
+            transform: scaleX(-1);
+        }
+    </style>
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/site-i18n.js"></script>
+    <script src="assets/js/layout.js"></script>
+</head>
+<body class="font-sans text-steel-grey bg-white overflow-x-hidden">
+    <div id="site-header"></div><script>SiteLayout.mountHeader('site-header')</script>
+
+    <main id="main">
+        <!-- Hero -->
+        <section id="services-hero" class="relative h-[560px] overflow-hidden flex items-center">
+            <div class="absolute inset-0 z-0">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_695b52669d_78d517e1c6bff1f0.png"
+                    alt="large oil and gas refinery with steel pipework and storage tanks at dusk, industrial engineering photo"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 hero-gradient"></div>
+            </div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <nav class="text-blue-100 text-xs font-semibold uppercase tracking-widest mb-5 flex items-center gap-2">
+                    <a href="index.html" data-i18n="menu_home" class="hover:text-white">Home</a>
+                    <i class="fa-solid fa-chevron-right text-[8px] rtl-flip"></i>
+                    <span data-i18n="menu_services" class="text-white">Services</span>
+                </nav>
+                <span data-i18n="hero_eyebrow"
+                    class="inline-block text-blue-100 text-xs font-bold uppercase tracking-[0.2em] mb-4 border-b border-blue-300/50 pb-1">Our Services</span>
+                <h1 data-i18n="hero_title"
+                    class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl">
+                    Integrated EPC Solutions for Industrial Excellence</h1>
+                <p data-i18n="hero_sub" class="text-blue-50 text-lg sm:text-xl max-w-3xl leading-relaxed mb-10">
+                    From engineering and procurement to construction, commissioning and maintenance — Al Bahr Al Arabi Group delivers safe, high-quality solutions for Oil &amp; Gas, Petrochemical, Power and Desalination facilities.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="contact.html?topic=quote#contact-form-el" data-i18n="btn_quote_long"
+                        class="bg-accent-blue text-white px-8 py-4 rounded font-bold hover:bg-white hover:text-corporate-blue transition-all text-center uppercase text-sm tracking-wider">Request a Quote</a>
+                    <a href="#overview" data-i18n="btn_explore"
+                        class="border-2 border-white text-white px-8 py-4 rounded font-bold hover:bg-white hover:text-corporate-blue transition-all text-center uppercase text-sm tracking-wider">Explore Our Services</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quick facts strip -->
+        <section id="facts-strip" class="bg-corporate-blue">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+                    <div>
+                        <p class="text-3xl font-bold text-white">25+</p>
+                        <p data-i18n="stat_1" class="text-blue-300 text-xs font-semibold uppercase tracking-widest mt-1">Years of Experience</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-white">20,000</p>
+                        <p data-i18n="stat_2" class="text-blue-300 text-xs font-semibold uppercase tracking-widest mt-1">Sqm Fabrication Facility</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-white">12</p>
+                        <p data-i18n="stat_3" class="text-blue-300 text-xs font-semibold uppercase tracking-widest mt-1">Service Capabilities</p>
+                    </div>
+                    <div>
+                        <p class="text-3xl font-bold text-white">ISO</p>
+                        <p data-i18n="stat_4" class="text-blue-300 text-xs font-semibold uppercase tracking-widest mt-1">Certified Management Systems</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Services Overview -->
+        <section id="overview" class="py-20 bg-light-grey scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span data-i18n="ov_pill"
+                        class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Services Overview</span>
+                    <h2 data-i18n="ov_title" class="text-4xl font-bold text-corporate-blue mb-4">Comprehensive Industrial Capabilities</h2>
+                    <p data-i18n="ov_sub" class="max-w-2xl mx-auto text-lg">Twelve integrated service lines supporting every stage of your facility's lifecycle.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- 1. EPC Contracting -->
+                    <div id="card-epc"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fe60430d53_791c17240a7bcff9.png"
+                                alt="engineers reviewing plans at an industrial oil and gas plant site, hard hats, photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-diagram-project"></i>
+                            </div>
+                            <h3 data-i18n="s1_t" class="text-xl font-bold text-corporate-blue mb-3">EPC Contracting</h3>
+                            <p data-i18n="s1_d" class="text-sm leading-relaxed mb-5">Turnkey engineering, procurement and construction with single-point responsibility.</p>
+                            <a href="#detail-epc" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 2. Tanks & Terminals -->
+                    <div id="card-tanks"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_b3371f702f_48274cbae93387b1.png"
+                                alt="large steel storage tanks in an oil terminal tank farm, clear sky, industrial photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-oil-can"></i>
+                            </div>
+                            <h3 data-i18n="s2_t" class="text-xl font-bold text-corporate-blue mb-3">Tanks &amp; Terminals</h3>
+                            <p data-i18n="s2_d" class="text-sm leading-relaxed mb-5">Storage tanks, tank farms and terminal facilities built to API and ASME standards.</p>
+                            <a href="#detail-tanks" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 3. Piping & Pipelines -->
+                    <div id="card-pipelines"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_53880be0f3_d6e4222f99e3df2d.png"
+                                alt="welders working on industrial pipeline installation in desert, industrial photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-grip-lines"></i>
+                            </div>
+                            <h3 data-i18n="s3_t" class="text-xl font-bold text-corporate-blue mb-3">Piping &amp; Pipelines</h3>
+                            <p data-i18n="s3_d" class="text-sm leading-relaxed mb-5">Fabrication, installation and testing of process piping and cross-country pipelines.</p>
+                            <a href="#detail-piping" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 4. Structural Steel Fabrication -->
+                    <div id="card-steel"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_4411f3a473_1a43ad0ba409240f.png"
+                                alt="structural steel fabrication workshop with large steel beams and overhead crane, industrial photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-warehouse"></i>
+                            </div>
+                            <h3 data-i18n="s4_t" class="text-xl font-bold text-corporate-blue mb-3">Structural Steel Fabrication</h3>
+                            <p data-i18n="s4_d" class="text-sm leading-relaxed mb-5">In-house fabrication at our 20,000 sqm Hamriyah facility with strict quality control.</p>
+                            <a href="#detail-steel" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 5. Marine Engineering -->
+                    <div id="card-marine"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_3dee6dce72_e3abc652f742f759.png"
+                                alt="marine engineering shipyard with vessel under repair, cranes, industrial photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-ship"></i>
+                            </div>
+                            <h3 data-i18n="s5_t" class="text-xl font-bold text-corporate-blue mb-3">Marine Engineering</h3>
+                            <p data-i18n="s5_d" class="text-sm leading-relaxed mb-5">Marine structures, vessel repair and offshore support engineering services.</p>
+                            <a href="#detail-epc" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 6. Electrical & MEP Works -->
+                    <div id="card-mep"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_df1c1c0415_edda9ac836984809.png"
+                                alt="electrical engineers working on industrial switchgear panels and cable trays, photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-bolt"></i>
+                            </div>
+                            <h3 data-i18n="s6_t" class="text-xl font-bold text-corporate-blue mb-3">Electrical &amp; MEP Works</h3>
+                            <p data-i18n="s6_d" class="text-sm leading-relaxed mb-5">Electrical, instrumentation and mechanical systems for industrial and power facilities.</p>
+                            <a href="#detail-epc" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 7. Civil & Construction Works -->
+                    <div id="card-civil"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_132a5c9787_35b10267bd8cf839.png"
+                                alt="civil construction site with concrete foundations and excavators at industrial plant, photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-helmet-safety"></i>
+                            </div>
+                            <h3 data-i18n="s7_t" class="text-xl font-bold text-corporate-blue mb-3">Civil &amp; Construction Works</h3>
+                            <p data-i18n="s7_d" class="text-sm leading-relaxed mb-5">Foundations, buildings and infrastructure for industrial plants and facilities.</p>
+                            <a href="#detail-epc" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 8. Maintenance & Shutdown -->
+                    <div id="card-maintenance"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_cff4604442_c3e43d83ad53bbb1.png"
+                                alt="maintenance technicians inspecting equipment in petrochemical plant, safety gear, photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-screwdriver-wrench"></i>
+                            </div>
+                            <h3 data-i18n="s8_t" class="text-xl font-bold text-corporate-blue mb-3">Maintenance &amp; Shutdown</h3>
+                            <p data-i18n="s8_d" class="text-sm leading-relaxed mb-5">Planned maintenance, turnaround and shutdown services that minimise downtime.</p>
+                            <a href="#detail-maintenance" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 9. Inspection & Testing -->
+                    <div id="card-inspection"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_ef45b041fe_ec9e7388a2434fe0.png"
+                                alt="quality inspector checking weld on steel pipe with gauge, industrial photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                            </div>
+                            <h3 data-i18n="s9_t" class="text-xl font-bold text-corporate-blue mb-3">Inspection &amp; Testing</h3>
+                            <p data-i18n="s9_d" class="text-sm leading-relaxed mb-5">Quality inspection, NDT and testing aligned with international standards.</p>
+                            <a href="#quality" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 10. Procurement & Supply -->
+                    <div id="card-procurement"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fe883d0c59_9831d34af2226bff.png"
+                                alt="industrial warehouse with stacked steel pipes and equipment materials logistics, photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-boxes-stacked"></i>
+                            </div>
+                            <h3 data-i18n="s10_t" class="text-xl font-bold text-corporate-blue mb-3">Procurement &amp; Supply</h3>
+                            <p data-i18n="s10_d" class="text-sm leading-relaxed mb-5">Strategic sourcing backed by 100+ supplier partnerships and reliable logistics.</p>
+                            <a href="#detail-epc" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 11. Petrochemical Facilities -->
+                    <div id="card-petrochem"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6acc8431e1_a261d4cc15b3f67a.png"
+                                alt="petrochemical processing plant with distillation columns at sunset, industrial photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-flask-vial"></i>
+                            </div>
+                            <h3 data-i18n="s11_t" class="text-xl font-bold text-corporate-blue mb-3">Petrochemical Facilities</h3>
+                            <p data-i18n="s11_d" class="text-sm leading-relaxed mb-5">Process, storage and blending plants engineered for chemical operations.</p>
+                            <a href="#detail-tanks" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- 12. Power & Desalination -->
+                    <div id="card-desal"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group scroll-mt-28">
+                        <div class="h-48 overflow-hidden">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_aebcf8d783_57e93035bf4d46e0.png"
+                                alt="large desalination plant with piping and steel structures near the sea, industrial photography"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                        </div>
+                        <div class="p-8">
+                            <div class="w-12 h-12 bg-blue-50 rounded flex items-center justify-center text-accent-blue text-xl mb-5 group-hover:bg-accent-blue group-hover:text-white transition-all">
+                                <i class="fa-solid fa-droplet"></i>
+                            </div>
+                            <h3 data-i18n="s12_t" class="text-xl font-bold text-corporate-blue mb-3">Power &amp; Desalination</h3>
+                            <p data-i18n="s12_d" class="text-sm leading-relaxed mb-5">Piping, steel and civil works supporting power generation and desalination plants.</p>
+                            <a href="#detail-steel" class="text-accent-blue font-semibold text-sm hover:text-corporate-blue transition-all inline-flex items-center">
+                                <span data-i18n="learn_more">Learn More</span>
+                                <i class="fa-solid fa-arrow-right ml-1 rtl-flip"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Detailed Services -->
+        <section id="detailed-services" class="py-20 bg-white scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-20">
+                    <span data-i18n="dt_pill"
+                        class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Core Capabilities</span>
+                    <h2 data-i18n="dt_title" class="text-4xl font-bold text-corporate-blue mb-4">Priority Services in Detail</h2>
+                </div>
+
+                <!-- 01 — EPC Contracting -->
+                <div id="detail-epc" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 scroll-mt-28">
+                    <div>
+                        <span data-i18n="d1_pill"
+                            class="text-accent-blue text-xs font-bold uppercase tracking-[0.2em] mb-3 inline-block">01 — EPC Contracting</span>
+                        <h3 data-i18n="d1_title" class="text-3xl font-bold text-corporate-blue mb-6">Single-Point Responsibility from Design to Commissioning</h3>
+                        <p data-i18n="d1_p" class="text-lg leading-relaxed mb-6">As a premier EPC contractor, we manage the full project lifecycle, reducing interfaces and delivering predictable schedules, cost and quality for energy and process clients.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d1_l1">Detailed engineering and design management</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d1_l2">Global procurement and logistics coordination</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d1_l3">Construction, commissioning and handover</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-corporate-blue p-1 rounded-2xl shadow-2xl overflow-hidden group">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6404bbbf72_70de2f03019050b6.png"
+                            alt="EPC project construction site of oil and gas plant with steel structures and cranes, industrial photography"
+                            class="w-full h-[420px] object-cover rounded-xl transition-all duration-700 group-hover:scale-105">
+                    </div>
+                </div>
+
+                <!-- 02 — Tanks & Terminals -->
+                <div id="detail-tanks" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 scroll-mt-28">
+                    <div class="bg-corporate-blue p-1 rounded-2xl shadow-2xl overflow-hidden group order-2 lg:order-1">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_399bf24535_f0d40aca0b4f12b9.png"
+                            alt="aerial view of oil storage tank farm and terminal with pipelines, industrial photography"
+                            class="w-full h-[420px] object-cover rounded-xl transition-all duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <span data-i18n="d2_pill"
+                            class="text-accent-blue text-xs font-bold uppercase tracking-[0.2em] mb-3 inline-block">02 — Tanks &amp; Terminals</span>
+                        <h3 data-i18n="d2_title" class="text-3xl font-bold text-corporate-blue mb-6">Storage Infrastructure Built to International Standards</h3>
+                        <p data-i18n="d2_p" class="text-lg leading-relaxed mb-6">We design, fabricate and erect storage tanks, tank farms and terminal facilities for oil, gas and petrochemical clients, in compliance with API and ASME codes.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d2_l1">Atmospheric and pressure storage tanks</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d2_l2">Tank farm piping, pumping and loading systems</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d2_l3">Terminal and refinery plant facilities</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 03 — Piping & Pipelines -->
+                <div id="detail-piping" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 scroll-mt-28">
+                    <div>
+                        <span data-i18n="d3_pill"
+                            class="text-accent-blue text-xs font-bold uppercase tracking-[0.2em] mb-3 inline-block">03 — Piping &amp; Pipelines</span>
+                        <h3 data-i18n="d3_title" class="text-3xl font-bold text-corporate-blue mb-6">Precision Piping Systems for Critical Operations</h3>
+                        <p data-i18n="d3_p" class="text-lg leading-relaxed mb-6">Our certified welders and fabrication teams deliver process piping and pipeline systems with rigorous inspection and testing at every stage.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d3_l1">Shop and field piping fabrication</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d3_l2">Pipeline installation, tie-ins and hydrotesting</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d3_l3">Welding procedure qualification and NDT</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-corporate-blue p-1 rounded-2xl shadow-2xl overflow-hidden group">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_ba4b58adcd_10b6cc2c14866ff1.png"
+                            alt="complex industrial piping network with valves and flanges in a processing plant, photography"
+                            class="w-full h-[420px] object-cover rounded-xl transition-all duration-700 group-hover:scale-105">
+                    </div>
+                </div>
+
+                <!-- 04 — Structural Steel Fabrication -->
+                <div id="detail-steel" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center mb-24 scroll-mt-28">
+                    <div class="bg-corporate-blue p-1 rounded-2xl shadow-2xl overflow-hidden group order-2 lg:order-1">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_ef0e4b7b08_3e6d6d32121872c9.png"
+                            alt="welders fabricating heavy structural steel in a large fabrication yard, sparks, industrial photography"
+                            class="w-full h-[420px] object-cover rounded-xl transition-all duration-700 group-hover:scale-105">
+                    </div>
+                    <div class="order-1 lg:order-2">
+                        <span data-i18n="d4_pill"
+                            class="text-accent-blue text-xs font-bold uppercase tracking-[0.2em] mb-3 inline-block">04 — Structural Steel Fabrication</span>
+                        <h3 data-i18n="d4_title" class="text-3xl font-bold text-corporate-blue mb-6">In-House Fabrication with Schedule Certainty</h3>
+                        <p data-i18n="d4_p" class="text-lg leading-relaxed mb-6">Our 20,000 sqm facility in Hamriyah Free Zone enables full control of quality and delivery for steel structures, skids, modules and equipment.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d4_l1">Steel structures, pipe racks and platforms</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d4_l2">Pressure vessels, skids and modular units</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d4_l3">Blasting, painting and surface protection</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- 05 — Maintenance & Shutdown -->
+                <div id="detail-maintenance" class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center scroll-mt-28">
+                    <div>
+                        <span data-i18n="d5_pill"
+                            class="text-accent-blue text-xs font-bold uppercase tracking-[0.2em] mb-3 inline-block">05 — Maintenance &amp; Shutdown</span>
+                        <h3 data-i18n="d5_title" class="text-3xl font-bold text-corporate-blue mb-6">Keeping Your Facilities Operating Safely</h3>
+                        <p data-i18n="d5_p" class="text-lg leading-relaxed mb-6">We support operators with planned maintenance, turnarounds and shutdown execution delivered by experienced supervisors and a safety-first workforce.</p>
+                        <ul class="space-y-3 mb-8">
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d5_l1">Turnaround and shutdown planning and execution</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d5_l2">Mechanical, piping and electrical maintenance</span>
+                            </li>
+                            <li class="flex items-start gap-3">
+                                <i class="fa-solid fa-circle-check text-accent-blue mt-1"></i>
+                                <span data-i18n="d5_l3">Repair, modification and refurbishment works</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-corporate-blue p-1 rounded-2xl shadow-2xl overflow-hidden group">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_5b87f118cb_a53c6691dd7f6e41.png"
+                            alt="maintenance crew performing shutdown work on refinery equipment with scaffolding, industrial photography"
+                            class="w-full h-[420px] object-cover rounded-xl transition-all duration-700 group-hover:scale-105">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Project Delivery Process -->
+        <section id="process" class="py-20 bg-light-grey scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span data-i18n="pr_pill"
+                        class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Project Delivery</span>
+                    <h2 data-i18n="pr_title" class="text-4xl font-bold text-corporate-blue mb-4">Our Project Delivery Process</h2>
+                    <p data-i18n="pr_sub" class="max-w-2xl mx-auto text-lg">A structured lifecycle that keeps every project safe, on schedule and on specification.</p>
+                </div>
+                <div class="relative">
+                    <div class="hidden lg:block absolute top-8 left-[8%] right-[8%] h-0.5 bg-accent-blue/30"></div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 gap-8 relative">
+                        <!-- Step 1 -->
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto bg-corporate-blue text-white rounded-full flex items-center justify-center text-xl font-bold mb-5 relative z-10 border-4 border-light-grey">1</div>
+                            <i class="fa-solid fa-lightbulb text-accent-blue text-xl mb-2"></i>
+                            <h4 data-i18n="p1_t" class="font-bold text-corporate-blue mb-1">Consultation</h4>
+                            <p data-i18n="p1_d" class="text-xs leading-relaxed">Understanding scope, requirements and constraints.</p>
+                        </div>
+                        <!-- Step 2 -->
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto bg-corporate-blue text-white rounded-full flex items-center justify-center text-xl font-bold mb-5 relative z-10 border-4 border-light-grey">2</div>
+                            <i class="fa-solid fa-compass-drafting text-accent-blue text-xl mb-2"></i>
+                            <h4 data-i18n="p2_t" class="font-bold text-corporate-blue mb-1">Engineering</h4>
+                            <p data-i18n="p2_d" class="text-xs leading-relaxed">Detailed design and technical planning.</p>
+                        </div>
+                        <!-- Step 3 -->
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto bg-corporate-blue text-white rounded-full flex items-center justify-center text-xl font-bold mb-5 relative z-10 border-4 border-light-grey">3</div>
+                            <i class="fa-solid fa-boxes-stacked text-accent-blue text-xl mb-2"></i>
+                            <h4 data-i18n="p3_t" class="font-bold text-corporate-blue mb-1">Procurement</h4>
+                            <p data-i18n="p3_d" class="text-xs leading-relaxed">Sourcing materials and equipment globally.</p>
+                        </div>
+                        <!-- Step 4 -->
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto bg-corporate-blue text-white rounded-full flex items-center justify-center text-xl font-bold mb-5 relative z-10 border-4 border-light-grey">4</div>
+                            <i class="fa-solid fa-gears text-accent-blue text-xl mb-2"></i>
+                            <h4 data-i18n="p4_t" class="font-bold text-corporate-blue mb-1">Fabrication</h4>
+                            <p data-i18n="p4_d" class="text-xs leading-relaxed">In-house manufacturing under strict quality control.</p>
+                        </div>
+                        <!-- Step 5 -->
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto bg-corporate-blue text-white rounded-full flex items-center justify-center text-xl font-bold mb-5 relative z-10 border-4 border-light-grey">5</div>
+                            <i class="fa-solid fa-helmet-safety text-accent-blue text-xl mb-2"></i>
+                            <h4 data-i18n="p5_t" class="font-bold text-corporate-blue mb-1">Construction</h4>
+                            <p data-i18n="p5_d" class="text-xs leading-relaxed">Site installation with HSSE-led supervision.</p>
+                        </div>
+                        <!-- Step 6 -->
+                        <div class="text-center">
+                            <div class="w-16 h-16 mx-auto bg-accent-blue text-white rounded-full flex items-center justify-center text-xl font-bold mb-5 relative z-10 border-4 border-light-grey">6</div>
+                            <i class="fa-solid fa-flag-checkered text-accent-blue text-xl mb-2"></i>
+                            <h4 data-i18n="p6_t" class="font-bold text-corporate-blue mb-1">Commissioning</h4>
+                            <p data-i18n="p6_d" class="text-xs leading-relaxed">Testing, handover and ongoing support.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Quality, Safety & Commitment -->
+        <section id="quality" class="py-20 bg-corporate-blue text-white scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span data-i18n="q_pill"
+                        class="bg-white/10 text-blue-200 px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Quality, Safety &amp; Commitment</span>
+                    <h2 data-i18n="q_title" class="text-4xl font-bold text-white mb-4">Built on Safety, Quality and Trust</h2>
+                    <p data-i18n="q_sub" class="max-w-2xl mx-auto text-lg text-blue-100">Our management systems and people-first culture ensure every project meets the highest international standards.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <!-- Card 1 -->
+                    <div id="q-card-iso" class="bg-white/5 border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all">
+                        <div class="w-12 h-12 bg-accent-blue rounded flex items-center justify-center text-white text-xl mb-5">
+                            <i class="fa-solid fa-certificate"></i>
+                        </div>
+                        <h3 data-i18n="q1_t" class="text-lg font-bold mb-3">ISO Certified</h3>
+                        <p data-i18n="q1_d" class="text-sm text-blue-100 leading-relaxed">Integrated management systems certified to ISO 9001, 14001 and 45001.</p>
+                    </div>
+                    <!-- Card 2 -->
+                    <div id="q-card-hsse" class="bg-white/5 border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all">
+                        <div class="w-12 h-12 bg-accent-blue rounded flex items-center justify-center text-white text-xl mb-5">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 data-i18n="q2_t" class="text-lg font-bold mb-3">HSSE First</h3>
+                        <p data-i18n="q2_d" class="text-sm text-blue-100 leading-relaxed">Zero-harm culture with rigorous health, safety, security and environmental controls.</p>
+                    </div>
+                    <!-- Card 3 -->
+                    <div id="q-card-qc" class="bg-white/5 border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all">
+                        <div class="w-12 h-12 bg-accent-blue rounded flex items-center justify-center text-white text-xl mb-5">
+                            <i class="fa-solid fa-clipboard-check"></i>
+                        </div>
+                        <h3 data-i18n="q3_t" class="text-lg font-bold mb-3">Quality Control</h3>
+                        <p data-i18n="q3_d" class="text-sm text-blue-100 leading-relaxed">Inspection and NDT at every stage, aligned with API, ASME and client specifications.</p>
+                    </div>
+                    <!-- Card 4 -->
+                    <div id="q-card-people" class="bg-white/5 border border-white/10 rounded-xl p-8 hover:bg-white/10 transition-all">
+                        <div class="w-12 h-12 bg-accent-blue rounded flex items-center justify-center text-white text-xl mb-5">
+                            <i class="fa-solid fa-users-gear"></i>
+                        </div>
+                        <h3 data-i18n="q4_t" class="text-lg font-bold mb-3">Skilled Workforce</h3>
+                        <p data-i18n="q4_d" class="text-sm text-blue-100 leading-relaxed">Certified engineers, welders and supervisors committed to delivery excellence.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="site-footer"></div><script>SiteLayout.mountFooter('site-footer')</script>
+
+    <!-- Page Specific Translations -->
+    <script>
+        SiteLang.register({
+            en: {
+                hero_eyebrow: "Our Services",
+                hero_title: "Integrated EPC Solutions for Industrial Excellence",
+                hero_sub: "From engineering and procurement to construction, commissioning and maintenance — Al Bahr Al Arabi Group delivers safe, high-quality solutions for Oil & Gas, Petrochemical, Power and Desalination facilities.",
+                btn_quote_long: "Request a Quote",
+                btn_explore: "Explore Our Services",
+                stat_1: "Years of Experience",
+                stat_2: "Sqm Fabrication Facility",
+                stat_3: "Service Capabilities",
+                stat_4: "Certified Management Systems",
+                ov_pill: "Services Overview",
+                ov_title: "Comprehensive Industrial Capabilities",
+                ov_sub: "Twelve integrated service lines supporting every stage of your facility's lifecycle.",
+                s1_t: "EPC Contracting",
+                s1_d: "Turnkey engineering, procurement and construction with single-point responsibility.",
+                s2_t: "Tanks & Terminals",
+                s2_d: "Storage tanks, tank farms and terminal facilities built to API and ASME standards.",
+                s3_t: "Piping & Pipelines",
+                s3_d: "Fabrication, installation and testing of process piping and cross-country pipelines.",
+                s4_t: "Structural Steel Fabrication",
+                s4_d: "In-house fabrication at our 20,000 sqm Hamriyah facility with strict quality control.",
+                s5_t: "Marine Engineering",
+                s5_d: "Marine structures, vessel repair and offshore support engineering services.",
+                s6_t: "Electrical & MEP Works",
+                s6_d: "Electrical, instrumentation and mechanical systems for industrial and power facilities.",
+                s7_t: "Civil & Construction Works",
+                s7_d: "Foundations, buildings and infrastructure for industrial plants and facilities.",
+                s8_t: "Maintenance & Shutdown",
+                s8_d: "Planned maintenance, turnaround and shutdown services that minimise downtime.",
+                s9_t: "Inspection & Testing",
+                s9_d: "Quality inspection, NDT and testing aligned with international standards.",
+                s10_t: "Procurement & Supply",
+                s10_d: "Strategic sourcing backed by 100+ supplier partnerships and reliable logistics.",
+                s11_t: "Petrochemical Facilities",
+                s11_d: "Process, storage and blending plants engineered for chemical operations.",
+                s12_t: "Power & Desalination",
+                s12_d: "Piping, steel and civil works supporting power generation and desalination plants.",
+                learn_more: "Learn More",
+                dt_pill: "Core Capabilities",
+                dt_title: "Priority Services in Detail",
+                d1_pill: "01 — EPC Contracting",
+                d1_title: "Single-Point Responsibility from Design to Commissioning",
+                d1_p: "As a premier EPC contractor, we manage the full project lifecycle, reducing interfaces and delivering predictable schedules, cost and quality for energy and process clients.",
+                d1_l1: "Detailed engineering and design management",
+                d1_l2: "Global procurement and logistics coordination",
+                d1_l3: "Construction, commissioning and handover",
+                d2_pill: "02 — Tanks & Terminals",
+                d2_title: "Storage Infrastructure Built to International Standards",
+                d2_p: "We design, fabricate and erect storage tanks, tank farms and terminal facilities for oil, gas and petrochemical clients, in compliance with API and ASME codes.",
+                d2_l1: "Atmospheric and pressure storage tanks",
+                d2_l2: "Tank farm piping, pumping and loading systems",
+                d2_l3: "Terminal and refinery plant facilities",
+                d3_pill: "03 — Piping & Pipelines",
+                d3_title: "Precision Piping Systems for Critical Operations",
+                d3_p: "Our certified welders and fabrication teams deliver process piping and pipeline systems with rigorous inspection and testing at every stage.",
+                d3_l1: "Shop and field piping fabrication",
+                d3_l2: "Pipeline installation, tie-ins and hydrotesting",
+                d3_l3: "Welding procedure qualification and NDT",
+                d4_pill: "04 — Structural Steel Fabrication",
+                d4_title: "In-House Fabrication with Schedule Certainty",
+                d4_p: "Our 20,000 sqm facility in Hamriyah Free Zone enables full control of quality and delivery for steel structures, skids, modules and equipment.",
+                d4_l1: "Steel structures, pipe racks and platforms",
+                d4_l2: "Pressure vessels, skids and modular units",
+                d4_l3: "Blasting, painting and surface protection",
+                d5_pill: "05 — Maintenance & Shutdown",
+                d5_title: "Keeping Your Facilities Operating Safely",
+                d5_p: "We support operators with planned maintenance, turnarounds and shutdown execution delivered by experienced supervisors and a safety-first workforce.",
+                d5_l1: "Turnaround and shutdown planning and execution",
+                d5_l2: "Mechanical, piping and electrical maintenance",
+                d5_l3: "Repair, modification and refurbishment works",
+                pr_pill: "Project Delivery",
+                pr_title: "Our Project Delivery Process",
+                pr_sub: "A structured lifecycle that keeps every project safe, on schedule and on specification.",
+                p1_t: "Consultation",
+                p1_d: "Understanding scope, requirements and constraints.",
+                p2_t: "Engineering",
+                p2_d: "Detailed design and technical planning.",
+                p3_t: "Procurement",
+                p3_d: "Sourcing materials and equipment globally.",
+                p4_t: "Fabrication",
+                p4_d: "In-house manufacturing under strict quality control.",
+                p5_t: "Construction",
+                p5_d: "Site installation with HSSE-led supervision.",
+                p6_t: "Commissioning",
+                p6_d: "Testing, handover and ongoing support.",
+                q_pill: "Quality, Safety & Commitment",
+                q_title: "Built on Safety, Quality and Trust",
+                q_sub: "Our management systems and people-first culture ensure every project meets the highest international standards.",
+                q1_t: "ISO Certified",
+                q1_d: "Integrated management systems certified to ISO 9001, 14001 and 45001.",
+                q2_t: "HSSE First",
+                q2_d: "Zero-harm culture with rigorous health, safety, security and environmental controls.",
+                q3_t: "Quality Control",
+                q3_d: "Inspection and NDT at every stage, aligned with API, ASME and client specifications.",
+                q4_t: "Skilled Workforce",
+                q4_d: "Certified engineers, welders and supervisors committed to delivery excellence.",
+                cta_pill: "Get in Touch",
+                cta_title: "Ready to Start Your Next Project?",
+                cta_p: "Share your requirements with our team and receive a tailored proposal for your facility."
+            },
+            ar: {
+                hero_eyebrow: "خدماتنا",
+                hero_title: "حلول متكاملة للهندسة والتوريد والإنشاء للتميز الصناعي",
+                hero_sub: "من الهندسة والمشتريات إلى البناء والتشغيل والصيانة - تقدم مجموعة البحر العربي حلولاً آمنة وعالية الجودة لمرافق النفط والغاز والبتروكيماويات والطاقة وتحلية المياه.",
+                btn_quote_long: "طلب عرض سعر",
+                btn_explore: "استكشف خدماتنا",
+                stat_1: "سنة من الخبرة",
+                stat_2: "متر مربع مرفق التصنيع",
+                stat_3: "قدرات الخدمة",
+                stat_4: "نظم إدارة معتمدة",
+                ov_pill: "نظرة عامة على الخدمات",
+                ov_title: "قدرات صناعية شاملة",
+                ov_sub: "اثنا عشر خط خدمة متكامل يدعم كل مرحلة من دورة حياة مرفقك.",
+                s1_t: "مقاولات EPC",
+                s1_d: "هندسة ومشتريات وبناء متكاملة مع مسؤولية نقطة واحدة.",
+                s2_t: "الخزانات والمحطات",
+                s2_d: "خزانات التخزين والمحطات المبنية وفقاً لمعايير API و ASME.",
+                s3_t: "الأنابيب وخطوط الأنابيب",
+                s3_d: "تصنيع وتركيب واختبار أنابيب العمليات وخطوط الأنابيب.",
+                s4_t: "تصنيع الهياكل الفولاذية",
+                s4_d: "تصنيع داخلي في مرفق الحمرية بمساحة 20,000 متر مربع.",
+                s5_t: "الهندسة البحرية",
+                s5_d: "الهياكل البحرية وإصلاح السفن وخدمات دعم الأوفشور.",
+                s6_t: "الأعمال الكهربائية والميكانيكية",
+                s6_d: "الأنظمة الكهربائية والميكانيكية للمرافق الصناعية والطاقة.",
+                s7_t: "الأعمال المدنية والإنشائية",
+                s7_d: "الأساسات والمباني والبنية التحتية للمصانع الصناعية.",
+                s8_t: "الصيانة والإيقاف",
+                s8_d: "صيانة مخططة وخدمات إيقاف التشغيل لتقليل وقت التوقف.",
+                s9_t: "الفحص والاختبار",
+                s9_d: "فحص الجودة والاختبارات غير التدميرية وفقاً للمعايير الدولية.",
+                s10_t: "المشتريات والتوريد",
+                s10_d: "تأمين استراتيجي مدعوم بـ 100+ شراكة مع الموردين.",
+                s11_t: "مرافق البتروكيماويات",
+                s11_d: "مصانع العمليات والتخزين والخلط المصممة للعمليات الكيميائية.",
+                s12_t: "الطاقة وتحلية المياه",
+                s12_d: "أعمال الأنابيب والصلب والمدنية لمحطات الطاقة وتحلية المياه.",
+                learn_more: "تعرف على المزيد",
+                dt_pill: "القدرات الأساسية",
+                dt_title: "الأولويات التفصيلية للخدمات",
+                d1_pill: "01 — مقاولات EPC",
+                d1_title: "المسؤولية الكاملة من التصميم إلى التشغيل",
+                d1_p: "بصفتنا مقاول EPC رائد، نحن ندير دورة حياة المشروع بالكامل، مما يقلل من نقاط التداخل ويضمن الجداول الزمنية والتكاليف والجودة لعملاء الطاقة والعمليات.",
+                d1_l1: "إدارة الهندسة والتصميم التفصيلي",
+                d1_l2: "تنسيق المشتريات والخدمات اللوجستية العالمية",
+                d1_l3: "البناء والتشغيل والتسليم",
+                d2_pill: "02 — الخزانات والمحطات",
+                d2_title: "بنية تحتية للتخزين مبنية وفق المعايير الدولية",
+                d2_p: "نقوم بتصميم وتصنيع وتركيب خزانات التخزين ومحطات التخزين ومرافق المحطات لعملاء النفط والغاز والبتروكيماويات، وفقاً لأكواد API و ASME.",
+                d2_l1: "خزانات التخزين الجوية والضغط",
+                d2_l2: "أنظمة الأنابيب والضخ والتحميل في محطات الخزانات",
+                d2_l3: "مرافق المحطات ومصانع التكرير",
+                d3_pill: "03 — الأنابيب وخطوط الأنابيب",
+                d3_title: "أنظمة أنابيب دقيقة للعمليات الحرجة",
+                d3_p: "يقدم عمال اللحام المعتمدون وفرق التصنيع لدينا حلول أنابيب العمليات وأنظمة خطوط الأنابيب مع فحص واختبار صارم في كل مرحلة.",
+                d3_l1: "تصنيع الأنابيب في الورشة والموقع",
+                d3_l2: "تركيب خطوط الأنابيب والربط والاختبار الهيدروليكي",
+                d3_l3: "تأهيل إجراءات اللحام والاختبارات غير التدميرية",
+                d4_pill: "04 — تصنيع الهياكل الفولاذية",
+                d4_title: "تصنيع داخلي مع ضمان الجدول الزمني",
+                d4_p: "يتيح مرفقنا الذي تبلغ مساحته 20,000 متر مربع في منطقة الحمرية الحرة التحكم الكامل في الجودة والتسليم للهياكل الفولاذية والمعدات.",
+                d4_l1: "الهياكل الفولاذية ورفوف الأنابيب والمنصات",
+                d4_l2: "أوعية الضغط والوحدات النمطية",
+                d4_l3: "اللفح والطلاء وحماية الأسطح",
+                d5_pill: "05 — الصيانة والإيقاف",
+                d5_title: "الحفاظ على تشغيل مرافقك بأمان",
+                d5_p: "نحن ندعم المشغلين بالصيانة المخططة وعمليات الإيقاف والتشغيل التي يتم تسليمها بواسطة مشرفين ذوي خبرة وقوى عاملة تضع السلامة أولاً.",
+                d5_l1: "تخطيط وتنفيذ عمليات الإيقاف والتشغيل",
+                d5_l2: "الصيانة الميكانيكية والأنابيب والكهرباء",
+                d5_l3: "أعمال الإصلاح والتعديل والتجديد",
+                pr_pill: "تسليم المشروع",
+                pr_title: "عملية تسليم المشروع لدينا",
+                pr_sub: "دورة حياة منظمة تحافظ على سلامة كل مشروع وجدوله الزمني ومواصفاته.",
+                p1_t: "الاستشارة",
+                p1_d: "فهم النطاق والمتطلبات والقيود.",
+                p2_t: "الهندسة",
+                p2_d: "التصميم التفصيلي والتخطيط الفني.",
+                p3_t: "المشتريات",
+                p3_d: "تأمين المواد والمعدات عالمياً.",
+                p4_t: "التصنيع",
+                p4_d: "التصنيع الداخلي تحت رقابة جودة صارمة.",
+                p5_t: "البناء",
+                p5_d: "التركيب في الموقع بإشراف تقوده معايير الصحة والسلامة.",
+                p6_t: "التشغيل",
+                p6_d: "الاختبار والتسليم والدعم المستمر.",
+                q_pill: "الجودة والسلامة والالتزام",
+                q_title: "مبني على السلامة والجودة والثقة",
+                q_sub: "تضمن أنظمة الإدارة لدينا وثقافة 'الإنسان أولاً' أن كل مشروع يلبي أعلى المعايير الدولية.",
+                q1_t: "معتمد من ISO",
+                q1_d: "أنظمة إدارة متكاملة معتمدة وفقاً لمعايير ISO 9001 و 14001 و 45001.",
+                q2_t: "الصحة والسلامة أولاً",
+                q2_d: "ثقافة 'لا ضرر' مع ضوابط صارمة للصحة والسلامة والأمن والبيئة.",
+                q3_t: "رقابة الجودة",
+                q3_d: "التفتيش والاختبارات غير التدميرية في كل مرحلة، بما يتماشى مع مواصفات API و ASME والعملاء.",
+                q4_t: "قوى عاملة ماهرة",
+                q4_d: "مهندسون ولحامون ومشرفون معتمدون ملتزمون بالتميز في التنفيذ.",
+                cta_pill: "تواصل معنا",
+                cta_title: "جاهز لبدء مشروعك القادم؟",
+                cta_p: "شارك متطلباتك مع فريقنا واحصل على عرض مخصص لمرفقك."
+            }
+        });
+
+        // Re-apply current language once strings are registered
+        if (typeof SiteLang !== 'undefined') {
+            SiteLang.set(SiteLang.get());
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Careers - Al Bahr Al Arabi Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'corporate-blue': '#0A2647',
+                        'steel-grey': '#455A64',
+                        'light-grey': '#ECEFF1',
+                        'accent-blue': '#1976D2',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'arabic': ['Cairo', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        [dir="rtl"] .font-sans { font-family: 'Cairo', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(10,38,71,0.95) 0%, rgba(25,118,210,0.85) 100%);
+        }
+        .transition-all { transition: all 0.3s ease; }
+        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+        .subnav-chip.active {
+            background-color: #0A2647 !important;
+            color: #ffffff !important;
+            border-color: #0A2647 !important;
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        .faq-item.open .faq-answer {
+            max-height: 300px;
+        }
+        .faq-item.open .faq-icon {
+            transform: rotate(180deg);
+        }
+        .faq-icon {
+            transition: transform 0.3s ease;
+        }
+        .benefits-panel {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+        .benefits-panel.open {
+            max-height: 260px;
+        }
+        .dropzone.dragover {
+            border-color: #1976D2;
+            background: #E3F2FD;
+        }
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23455A64' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.1em;
+            padding-right: 2.5rem;
+        }
+    </style>
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/site-i18n.js"></script>
+    <script src="assets/js/layout.js"></script>
+</head>
+<body class="font-sans text-steel-grey bg-white overflow-x-hidden">
+    <div id="site-header"></div><script>SiteLayout.mountHeader('site-header')</script>
+
+            <!-- Sticky Sub-Navigation Chips -->
+        <nav class="sticky top-20 z-40 bg-white/95 backdrop-blur border-b border-gray-200 shadow-sm overflow-x-auto py-3">
+            <div class="container mx-auto px-4 flex gap-2 sm:gap-3 whitespace-nowrap min-w-max">
+                <a href="#why-join" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_why">Why Join Us</a>
+                <a href="#openings" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_openings">Open Positions</a>
+                <a href="#apply" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_apply">Apply Now</a>
+                <a href="#faqs" class="subnav-chip px-4 py-1.5 rounded-full text-xs font-semibold border border-gray-300 text-steel-grey hover:border-corporate-blue hover:text-corporate-blue transition-all" data-i18n="chip_faqs">FAQs</a>
+            </div>
+        </nav>
+
+    <main id="main">
+<!-- Page Banner -->
+    <section id="careers-hero"
+      class="relative overflow-hidden flex items-center py-24 lg:py-32">
+      <div class="absolute inset-0 z-0"><img
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_c482c5754f_ceae8a86e495b818.png"
+          alt="oil refinery at dusk with steel towers and piping, industrial skyline, wide cinematic photograph"
+          class="w-full h-full object-cover">
+        <div class="absolute inset-0 hero-overlay"></div>
+      </div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <nav aria-label="Breadcrumb"
+          class="text-blue-100 text-xs font-semibold uppercase tracking-widest mb-6 flex items-center gap-2">
+          <a href="index.html" data-i18n="menu_home"
+            class="hover:text-white">Home</a><i class="fa-solid fa-chevron-right text-[8px]"></i><span data-i18n="menu_careers"
+            class="text-white">Careers</span></nav><span
+          data-i18n="hero_eyebrow"
+          class="inline-block text-blue-100 text-xs font-bold uppercase tracking-[0.2em] mb-4 border-b border-blue-300/50 pb-1">Careers
+          at Al Bahr Al Arabi</span>
+        <h1 data-i18n="hero_title"
+          class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl">
+          Build Your Career with a Leading Industrial Group</h1>
+        <p data-i18n="hero_sub"
+          class="text-blue-50 text-lg sm:text-xl max-w-3xl leading-relaxed mb-10">
+          Join a team of engineers, fabricators and project professionals
+          delivering oil &amp; gas, marine and EPC projects across the UAE and
+          MENA region.</p>
+        <div class="flex flex-col sm:flex-row gap-4"><a href="#openings"
+            data-i18n="btn_view"
+            class="bg-accent-blue text-white px-8 py-4 rounded font-bold hover:bg-white hover:text-corporate-blue transition-all text-center uppercase text-sm tracking-wider">View
+            Open Positions</a><a href="#apply" data-i18n="btn_apply_now"
+            class="border-2 border-white text-white px-8 py-4 rounded font-bold hover:bg-white hover:text-corporate-blue transition-all text-center uppercase text-sm tracking-wider">Apply
+            Now</a></div>
+      </div>
+    </section><!-- Sticky In-page Nav -->
+    <!-- Career Opportunities / Why Join -->
+    <section id="why-join" class="scroll-mt-28 py-20 bg-light-grey">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-14"><span data-i18n="why_pill"
+            class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Why
+            Join Us</span>
+          <h2 data-i18n="why_title"
+            class="text-4xl font-bold text-corporate-blue mb-4">Career
+            Opportunities</h2>
+          <p data-i18n="why_sub" class="max-w-2xl mx-auto text-lg">A
+            professional, safety-first environment where your skills grow
+            alongside landmark industrial projects.</p>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <article id="why-card-1"
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-7">
+            <div
+              class="w-14 h-14 rounded-lg bg-blue-50 text-accent-blue flex items-center justify-center text-2xl mb-5">
+              <i class="fa-solid fa-arrow-trend-up"></i></div>
+            <h3 data-i18n="why1_t"
+              class="text-lg font-bold text-corporate-blue mb-2">Career Growth
+            </h3>
+            <p data-i18n="why1_d" class="text-sm leading-relaxed">Structured
+              development paths and exposure to large-scale EPC projects.</p>
+          </article>
+          <article id="why-card-2"
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-7">
+            <div
+              class="w-14 h-14 rounded-lg bg-blue-50 text-accent-blue flex items-center justify-center text-2xl mb-5">
+              <i class="fa-solid fa-helmet-safety"></i></div>
+            <h3 data-i18n="why2_t"
+              class="text-lg font-bold text-corporate-blue mb-2">Safety First
+            </h3>
+            <p data-i18n="why2_d" class="text-sm leading-relaxed">Certified HSE
+              systems protect every team member on every site.</p>
+          </article>
+          <article id="why-card-3"
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-7">
+            <div
+              class="w-14 h-14 rounded-lg bg-blue-50 text-accent-blue flex items-center justify-center text-2xl mb-5">
+              <i class="fa-solid fa-earth-africa"></i></div>
+            <h3 data-i18n="why3_t"
+              class="text-lg font-bold text-corporate-blue mb-2">Regional Reach
+            </h3>
+            <p data-i18n="why3_d" class="text-sm leading-relaxed">Work across
+              UAE, MENA and Africa with multicultural teams.</p>
+          </article>
+          <article id="why-card-4"
+            class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-7">
+            <div
+              class="w-14 h-14 rounded-lg bg-blue-50 text-accent-blue flex items-center justify-center text-2xl mb-5">
+              <i class="fa-solid fa-scale-balanced"></i></div>
+            <h3 data-i18n="why4_t"
+              class="text-lg font-bold text-corporate-blue mb-2">Equal
+              Opportunity</h3>
+            <p data-i18n="why4_d" class="text-sm leading-relaxed">We hire and
+              promote on merit, valuing diversity and inclusion.</p>
+          </article>
+        </div><!-- Our Teams chips -->
+        <div id="our-teams" class="mt-14 text-center">
+          <p data-i18n="teams_label"
+            class="text-xs font-bold uppercase tracking-[0.2em] text-steel-grey mb-5">
+            Our Teams</p>
+          <div class="flex flex-wrap justify-center gap-3"><span
+              class="bg-white border border-gray-200 text-corporate-blue text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full"><i class="fa-solid fa-gears text-accent-blue mr-2"></i>Engineering</span><span
+              class="bg-white border border-gray-200 text-corporate-blue text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full"><i class="fa-solid fa-industry text-accent-blue mr-2"></i>Fabrication</span><span
+              class="bg-white border border-gray-200 text-corporate-blue text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full"><i class="fa-solid fa-diagram-project text-accent-blue mr-2"></i>Projects</span><span
+              class="bg-white border border-gray-200 text-corporate-blue text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full"><i class="fa-solid fa-shield-halved text-accent-blue mr-2"></i>HSE &amp; Quality</span><span
+              class="bg-white border border-gray-200 text-corporate-blue text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full"><i class="fa-solid fa-cart-shopping text-accent-blue mr-2"></i>Procurement</span><span
+              class="bg-white border border-gray-200 text-corporate-blue text-xs font-semibold uppercase tracking-wider px-5 py-2.5 rounded-full"><i class="fa-solid fa-briefcase text-accent-blue mr-2"></i>Business Support</span></div>
+        </div>
+      </div>
+    </section><!-- Stats Band -->
+    <section id="stats-band" class="bg-corporate-blue py-14">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+          <div>
+            <p class="text-4xl lg:text-5xl font-bold text-white mb-2">2,500+</p>
+            <p data-i18n="stat1"
+              class="text-blue-200 text-xs font-semibold uppercase tracking-widest">
+              Personnel</p>
+          </div>
+          <div>
+            <p class="text-4xl lg:text-5xl font-bold text-white mb-2">9</p>
+            <p data-i18n="stat2"
+              class="text-blue-200 text-xs font-semibold uppercase tracking-widest">
+              Group Companies</p>
+          </div>
+          <div>
+            <p class="text-4xl lg:text-5xl font-bold text-white mb-2">12+</p>
+            <p data-i18n="stat3"
+              class="text-blue-200 text-xs font-semibold uppercase tracking-widest">
+              Countries of Operation</p>
+          </div>
+          <div>
+            <p class="text-4xl lg:text-5xl font-bold text-white mb-2">25+</p>
+            <p data-i18n="stat4"
+              class="text-blue-200 text-xs font-semibold uppercase tracking-widest">
+              Years of Experience</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- Current Openings -->
+    <section id="openings" class="scroll-mt-28 py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12"><span
+            class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Open
+            Positions</span>
+          <h2 class="text-4xl font-bold text-corporate-blue mb-4">Current Openings
+          </h2>
+          <p class="max-w-2xl mx-auto text-lg">Filter by
+            department, location, type and experience to find your next role.
+          </p>
+        </div><!-- Filter bar -->
+        <form id="filter-bar" onsubmit="return false;"
+          class="bg-light-grey rounded-xl p-6 mb-8 border border-gray-200">
+          <div
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mb-5">
+            <div><label for="f-dept"
+                class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Department</label><select
+                id="f-dept"
+                class="w-full h-12 px-4 rounded border border-gray-300 bg-white text-sm">
+                <option value="all">All Departments</option>
+                <option>Engineering</option>
+                <option>Fabrication</option>
+                <option>Projects</option>
+                <option>HSE &amp; Quality</option>
+              </select></div>
+            <div><label for="f-loc"
+                class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Location</label><select
+                id="f-loc"
+                class="w-full h-12 px-4 rounded border border-gray-300 bg-white text-sm">
+                <option value="all">All Locations</option>
+                <option>Sharjah, UAE</option>
+                <option>Abu Dhabi, UAE</option>
+                <option>Doha, Qatar</option>
+              </select></div>
+            <div><label for="f-type"
+                class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Job
+                Type</label><select id="f-type"
+                class="w-full h-12 px-4 rounded border border-gray-300 bg-white text-sm">
+                <option value="all">All Types</option>
+                <option>Full-time</option>
+                <option>Contract</option>
+              </select></div>
+            <div><label for="f-exp"
+                class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Experience</label><select
+                id="f-exp"
+                class="w-full h-12 px-4 rounded border border-gray-300 bg-white text-sm">
+                <option value="all">Any Experience</option>
+                <option value="junior">0-3 Years</option>
+                <option value="mid">4-7 Years</option>
+                <option value="senior">8+ Years</option>
+              </select></div>
+          </div>
+          <div
+            class="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+            <p id="results-count" aria-live="polite"
+              class="text-sm font-semibold text-corporate-blue">Showing 5 open
+              positions</p>
+            <div class="flex gap-3"><button type="button" id="btn-filter"
+                class="bg-accent-blue text-white px-6 h-11 rounded font-bold hover:bg-corporate-blue transition-all uppercase text-xs tracking-wider"><i class="fa-solid fa-filter mr-2"></i><span>Filter</span></button><button
+                type="button" id="btn-clear"
+                class="border border-gray-300 text-steel-grey px-6 h-11 rounded font-bold hover:border-accent-blue hover:text-accent-blue transition-all uppercase text-xs tracking-wider bg-white"><i class="fa-solid fa-rotate-left mr-2"></i><span>Clear
+                  Filters</span></button></div>
+          </div>
+        </form><!-- Job list -->
+        <div id="job-list" class="space-y-6">
+          <article id="job-1" data-dept="Engineering" data-loc="Sharjah, UAE"
+            data-type="Full-time" data-exp="senior"
+            data-title="Senior Piping Engineer"
+            class="job-card bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all p-6 lg:p-8">
+            <div
+              class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+              <div class="flex-1">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                  <h3
+                    class="text-xl lg:text-2xl font-bold text-corporate-blue uppercase">
+                    Senior Piping Engineer</h3><span
+                    class="bg-blue-50 text-accent-blue text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">8+
+                    Years</span>
+                </div>
+                <div
+                  class="flex flex-wrap gap-x-6 gap-y-2 text-xs font-semibold text-steel-grey mb-4">
+                  <span><i class="fa-solid fa-building text-accent-blue mr-1.5"></i>Engineering</span><span><i class="fa-solid fa-location-dot text-accent-blue mr-1.5"></i>Sharjah, UAE</span><span><i class="fa-solid fa-clock text-accent-blue mr-1.5"></i>Full-time</span></div>
+                <p class="text-sm leading-relaxed mb-4">Lead piping design,
+                  stress analysis and material selection for tank farm and
+                  terminal EPC projects.</p>
+                <ul class="text-sm space-y-1.5 mb-4">
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>B.Eng. in Mechanical Engineering</li>
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>Proficiency in CAESAR II and PDS/PDMS</li>
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>Oil &amp; gas storage project experience</li>
+                </ul><button type="button" aria-expanded="false"
+                  class="benefits-toggle text-xs font-bold uppercase tracking-wider text-accent-blue hover:text-corporate-blue transition-all min-h-[44px]"><i class="fa-solid fa-gift mr-2"></i><span data-i18n="btn_benefits">Benefits</span><i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i></button>
+                <div class="benefits-panel">
+                  <div class="flex flex-wrap gap-2 pt-2"><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Health
+                      Insurance</span><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Annual
+                      Air Ticket</span><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Accommodation</span><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Training
+                      Allowance</span></div>
+                </div>
+              </div>
+              <div class="lg:pt-1"><button type="button"
+                  class="apply-btn w-full lg:w-auto bg-accent-blue text-white px-8 h-12 rounded font-bold hover:bg-corporate-blue transition-all uppercase text-xs tracking-wider"><span
+                    data-i18n="btn_apply">Apply</span></button></div>
+            </div>
+          </article>
+          <article id="job-2" data-dept="Fabrication" data-loc="Sharjah, UAE"
+            data-type="Full-time" data-exp="mid"
+            data-title="Pipe Fabrication Supervisor"
+            class="job-card bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all p-6 lg:p-8">
+            <div
+              class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+              <div class="flex-1">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                  <h3
+                    class="text-xl lg:text-2xl font-bold text-corporate-blue uppercase">
+                    Pipe Fabrication Supervisor</h3><span
+                    class="bg-blue-50 text-accent-blue text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">4-7
+                    Years</span>
+                </div>
+                <div
+                  class="flex flex-wrap gap-x-6 gap-y-2 text-xs font-semibold text-steel-grey mb-4">
+                  <span><i class="fa-solid fa-building text-accent-blue mr-1.5"></i>Fabrication</span><span><i class="fa-solid fa-location-dot text-accent-blue mr-1.5"></i>Sharjah, UAE</span><span><i class="fa-solid fa-clock text-accent-blue mr-1.5"></i>Full-time</span></div>
+                <p class="text-sm leading-relaxed mb-4">Supervise daily spool
+                  fabrication, welding quality and workshop productivity at the
+                  Hamriyah facility.</p>
+                <ul class="text-sm space-y-1.5 mb-4">
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>Diploma or degree in Mechanical / Welding</li>
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>Knowledge of ASME B31.3 and WPS/PQR</li>
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>Team leadership in a workshop environment</li>
+                </ul><button type="button" aria-expanded="false"
+                  class="benefits-toggle text-xs font-bold uppercase tracking-wider text-accent-blue hover:text-corporate-blue transition-all min-h-[44px]"><i class="fa-solid fa-gift mr-2"></i><span>Benefits</span><i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i></button>
+                <div class="benefits-panel">
+                  <div class="flex flex-wrap gap-2 pt-2"><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Health
+                      Insurance</span><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Transport</span><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Accommodation</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:pt-1"><button type="button"
+                  class="apply-btn w-full lg:w-auto bg-accent-blue text-white px-8 h-12 rounded font-bold hover:bg-corporate-blue transition-all uppercase text-xs tracking-wider"><span>Apply</span></button>
+              </div>
+            </div>
+          </article>
+          <article id="job-3" data-dept="Projects" data-loc="Abu Dhabi, UAE"
+            data-type="Full-time" data-exp="senior"
+            data-title="Project Manager - Tank Farms"
+            class="job-card bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all p-6 lg:p-8">
+            <div
+              class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+              <div class="flex-1">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                  <h3
+                    class="text-xl lg:text-2xl font-bold text-corporate-blue uppercase">
+                    Project Manager - Tank Farms</h3><span
+                    class="bg-blue-50 text-accent-blue text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">8+
+                    Years</span>
+                </div>
+                <div
+                  class="flex flex-wrap gap-x-6 gap-y-2 text-xs font-semibold text-steel-grey mb-4">
+                  <span><i class="fa-solid fa-building text-accent-blue mr-1.5"></i>Projects</span><span><i class="fa-solid fa-location-dot text-accent-blue mr-1.5"></i>Abu Dhabi, UAE</span><span><i class="fa-solid fa-clock text-accent-blue mr-1.5"></i>Full-time</span></div>
+                <p class="text-sm leading-relaxed mb-4">Own delivery of bulk
+                  storage terminals, from planning and cost control to client
+                  handover.</p>
+                <ul class="text-sm space-y-1.5 mb-4">
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>10+ years in EPC project management</li>
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>PMP certification preferred</li>
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>Strong stakeholder and contractor management
+                  </li>
+                </ul><button type="button" aria-expanded="false"
+                  class="benefits-toggle text-xs font-bold uppercase tracking-wider text-accent-blue hover:text-corporate-blue transition-all min-h-[44px]"><i class="fa-solid fa-gift mr-2"></i><span>Benefits</span><i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i></button>
+                <div class="benefits-panel">
+                  <div class="flex flex-wrap gap-2 pt-2"><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Health
+                      Insurance</span><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Company
+                      Vehicle</span><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Performance
+                      Bonus</span></div>
+                </div>
+              </div>
+              <div class="lg:pt-1"><button type="button"
+                  class="apply-btn w-full lg:w-auto bg-accent-blue text-white px-8 h-12 rounded font-bold hover:bg-corporate-blue transition-all uppercase text-xs tracking-wider"><span>Apply</span></button>
+              </div>
+            </div>
+          </article>
+          <article id="job-4" data-dept="HSE &amp; Quality"
+            data-loc="Doha, Qatar" data-type="Contract" data-exp="mid"
+            data-title="HSE Officer"
+            class="job-card bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all p-6 lg:p-8">
+            <div
+              class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+              <div class="flex-1">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                  <h3
+                    class="text-xl lg:text-2xl font-bold text-corporate-blue uppercase">
+                    HSE Officer</h3><span
+                    class="bg-blue-50 text-accent-blue text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">4-7
+                    Years</span>
+                </div>
+                <div
+                  class="flex flex-wrap gap-x-6 gap-y-2 text-xs font-semibold text-steel-grey mb-4">
+                  <span><i class="fa-solid fa-building text-accent-blue mr-1.5"></i>HSE &amp; Quality</span><span><i class="fa-solid fa-location-dot text-accent-blue mr-1.5"></i>Doha, Qatar</span><span><i class="fa-solid fa-clock text-accent-blue mr-1.5"></i>Contract</span></div>
+                <p class="text-sm leading-relaxed mb-4">Implement site safety
+                  plans, conduct inspections and drive incident-free operations
+                  on oilfield projects.</p>
+                <ul class="text-sm space-y-1.5 mb-4">
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>NEBOSH or IOSH certification</li>
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>Oil &amp; gas site experience</li>
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>Strong reporting and communication skills</li>
+                </ul><button type="button" aria-expanded="false"
+                  class="benefits-toggle text-xs font-bold uppercase tracking-wider text-accent-blue hover:text-corporate-blue transition-all min-h-[44px]"><i class="fa-solid fa-gift mr-2"></i><span>Benefits</span><i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i></button>
+                <div class="benefits-panel">
+                  <div class="flex flex-wrap gap-2 pt-2"><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Health
+                      Insurance</span><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Site
+                      Allowance</span><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Accommodation</span>
+                  </div>
+                </div>
+              </div>
+              <div class="lg:pt-1"><button type="button"
+                  class="apply-btn w-full lg:w-auto bg-accent-blue text-white px-8 h-12 rounded font-bold hover:bg-corporate-blue transition-all uppercase text-xs tracking-wider"><span>Apply</span></button>
+              </div>
+            </div>
+          </article>
+          <article id="job-5" data-dept="Engineering" data-loc="Sharjah, UAE"
+            data-type="Full-time" data-exp="junior"
+            data-title="Junior Mechanical Engineer"
+            class="job-card bg-white rounded-xl border border-gray-200 shadow-sm hover:shadow-lg transition-all p-6 lg:p-8">
+            <div
+              class="flex flex-col lg:flex-row lg:items-start justify-between gap-6">
+              <div class="flex-1">
+                <div class="flex flex-wrap items-center gap-3 mb-3">
+                  <h3
+                    class="text-xl lg:text-2xl font-bold text-corporate-blue uppercase">
+                    Junior Mechanical Engineer</h3><span
+                    class="bg-blue-50 text-accent-blue text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">0-3
+                    Years</span>
+                </div>
+                <div
+                  class="flex flex-wrap gap-x-6 gap-y-2 text-xs font-semibold text-steel-grey mb-4">
+                  <span><i class="fa-solid fa-building text-accent-blue mr-1.5"></i>Engineering</span><span><i class="fa-solid fa-location-dot text-accent-blue mr-1.5"></i>Sharjah, UAE</span><span><i class="fa-solid fa-clock text-accent-blue mr-1.5"></i>Full-time</span></div>
+                <p class="text-sm leading-relaxed mb-4">Support design, drafting
+                  and technical documentation for tanks, piping and mechanical
+                  packages.</p>
+                <ul class="text-sm space-y-1.5 mb-4">
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>B.Eng. in Mechanical Engineering</li>
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>AutoCAD proficiency</li>
+                  <li><i class="fa-solid fa-check text-accent-blue mr-2"></i>Eagerness to learn in a fast-paced environment
+                  </li>
+                </ul><button type="button" aria-expanded="false"
+                  class="benefits-toggle text-xs font-bold uppercase tracking-wider text-accent-blue hover:text-corporate-blue transition-all min-h-[44px]"><i class="fa-solid fa-gift mr-2"></i><span>Benefits</span><i class="fa-solid fa-chevron-down ml-2 text-[10px]"></i></button>
+                <div class="benefits-panel">
+                  <div class="flex flex-wrap gap-2 pt-2"><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Health
+                      Insurance</span><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Mentorship
+                      Program</span><span
+                      class="bg-light-grey text-corporate-blue text-xs font-semibold px-3 py-1.5 rounded-full">Training
+                      Allowance</span></div>
+                </div>
+              </div>
+              <div class="lg:pt-1"><button type="button"
+                  class="apply-btn w-full lg:w-auto bg-accent-blue text-white px-8 h-12 rounded font-bold hover:bg-corporate-blue transition-all uppercase text-xs tracking-wider"><span>Apply</span></button>
+              </div>
+            </div>
+          </article>
+        </div><!-- Empty state -->
+        <div id="empty-state"
+          class="hidden text-center py-16 bg-light-grey rounded-xl border border-dashed border-gray-300">
+          <div
+            class="w-16 h-16 mx-auto rounded-full bg-white text-accent-blue flex items-center justify-center text-2xl mb-4">
+            <i class="fa-solid fa-magnifying-glass"></i></div>
+          <h3 data-i18n="empty_t"
+            class="text-xl font-bold text-corporate-blue mb-2">No positions
+            match your filters</h3>
+          <p data-i18n="empty_d" class="text-sm">Try clearing filters or submit
+            a general application below.</p>
+        </div>
+      </div>
+    </section><!-- Application Form -->
+    <section id="apply" class="scroll-mt-28 py-20 bg-light-grey">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12"><span>Apply</span>
+          <h2 class="text-4xl font-bold text-corporate-blue mb-4">Submit Your
+            Application</h2>
+          <p class="max-w-2xl mx-auto text-lg">Fill in your
+            details and upload your resume. Our HR team reviews every
+            application.</p>
+        </div>
+        <div
+          class="max-w-4xl mx-auto bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-10">
+          <form id="apply-form" novalidate="">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+              <div><label for="a-name"
+                  class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Full
+                  Name <span class="text-red-600">*</span></label><input
+                  id="a-name" type="text" required=""
+                  placeholder="Your full name"
+                  class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+                <p aria-live="polite"
+                  class="err text-xs text-red-600 mt-1 hidden">Please enter your
+                  full name.</p>
+              </div>
+              <div><label for="a-email"
+                  class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Email
+                  <span class="text-red-600">*</span></label><input id="a-email"
+                  type="email" required="" placeholder="name@email.com"
+                  class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+                <p aria-live="polite"
+                  class="err text-xs text-red-600 mt-1 hidden">Please enter a
+                  valid email address.</p>
+              </div>
+              <div><label for="a-phone"
+                  class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Phone
+                  <span
+                    class="text-steel-grey/60 normal-case font-medium">(optional)</span></label><input
+                  id="a-phone" type="tel" placeholder="+971 5X XXX XXXX"
+                  class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+              </div>
+              <div><label for="a-loc"
+                  class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Current
+                  Location <span class="text-red-600">*</span></label><input
+                  id="a-loc" type="text" required="" placeholder="City, Country"
+                  class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+                <p aria-live="polite"
+                  class="err text-xs text-red-600 mt-1 hidden">Please enter your
+                  current location.</p>
+              </div>
+              <div><label for="a-pos"
+                  class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Position
+                  of Interest</label><input id="a-pos" type="text" readonly=""
+                  placeholder="Select a position above"
+                  class="w-full h-12 px-4 rounded border border-gray-200 bg-light-grey text-sm">
+              </div>
+              <div><label for="a-work"
+                  class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Working
+                  Location</label><input id="a-work" type="text" readonly=""
+                  placeholder="Auto-filled from selected position"
+                  class="w-full h-12 px-4 rounded border border-gray-200 bg-light-grey text-sm">
+              </div>
+              <div class="md:col-span-2"><label for="a-msg"
+                  class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Cover
+                  Note <span
+                    class="text-steel-grey/60 normal-case font-medium">(optional)</span></label><textarea id="a-msg" rows="4" placeholder="Tell us briefly about your experience and why you would like to join us" class="w-full px-4 py-3 rounded border border-gray-300 text-sm"></textarea>
+              </div>
+              <div class="md:col-span-2"><label
+                  class="block text-[11px] font-bold uppercase tracking-wider text-corporate-blue mb-2">Resume
+                  / CV <span class="text-red-600">*</span></label>
+                <div id="dropzone"
+                  class="dropzone border-2 border-dashed border-gray-300 rounded-xl p-8 text-center bg-light-grey transition-all">
+                  <div
+                    class="w-14 h-14 mx-auto rounded-full bg-white text-accent-blue flex items-center justify-center text-xl mb-3">
+                    <i class="fa-solid fa-cloud-arrow-up"></i></div>
+                  <p class="text-sm font-semibold text-corporate-blue mb-1">Drag
+                    &amp; drop your resume here</p>
+                  <p class="text-xs mb-4">PDF, DOC or DOCX · Max 5 MB</p><label
+                    for="a-file"
+                    class="inline-flex items-center justify-center bg-white border border-gray-300 text-corporate-blue px-6 h-11 rounded font-bold hover:border-accent-blue hover:text-accent-blue transition-all uppercase text-xs tracking-wider cursor-pointer">Browse
+                    Files</label><input id="a-file" type="file"
+                    accept=".pdf,.doc,.docx" class="sr-only">
+                  <p id="file-name"
+                    class="text-sm font-semibold text-accent-blue mt-4 hidden">
+                  </p>
+                </div>
+                <p aria-live="polite"
+                  class="err text-xs text-red-600 mt-1 hidden">Please upload
+                  your resume.</p>
+              </div>
+              <div class="md:col-span-2"><label
+                  class="flex items-start gap-3 text-sm cursor-pointer"><input
+                    id="a-consent" type="checkbox"
+                    class="mt-1 w-5 h-5 accent-accent-blue"><span id="i9d30g">I
+                    consent to Al Bahr Al Arabi storing my personal data for
+                    recruitment purposes. <span
+                      class="text-red-600">*</span></span></label>
+                <p aria-live="polite"
+                  class="err text-xs text-red-600 mt-1 hidden">Please accept the
+                  consent to continue.</p>
+              </div>
+            </div>
+            <div
+              class="mt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+              <p class="text-xs"><span class="text-red-600">*</span> Required
+                fields</p><button type="submit" id="submit-btn"
+                class="w-full sm:w-auto bg-accent-blue text-white px-10 h-12 rounded font-bold hover:bg-corporate-blue transition-all uppercase text-xs tracking-wider"><i class="fa-solid fa-paper-plane mr-2"></i>Submit Application</button>
+            </div>
+            <div id="form-success" role="status"
+              class="hidden mt-6 bg-green-50 border border-green-200 text-green-800 rounded-lg p-4 text-sm font-semibold">
+              <i class="fa-solid fa-circle-check mr-2"></i>Thank you! Your application has been received. Our HR
+              team will contact you shortly.</div>
+          </form>
+        </div>
+      </div>
+    </section><!-- FAQs -->
+    <section id="faqs" class="scroll-mt-28 py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12"><span
+            class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">FAQs</span>
+          <h2 class="text-4xl font-bold text-corporate-blue mb-4">Frequently
+            Asked Questions</h2>
+          <p class="max-w-2xl mx-auto text-lg">Answers to common questions about
+            working and applying at Al Bahr Al Arabi.</p>
+        </div>
+        <div class="max-w-3xl mx-auto space-y-4">
+          <div class="faq-item bg-light-grey rounded-xl border border-gray-200">
+            <button type="button" aria-expanded="false"
+              class="faq-q w-full flex items-center justify-between text-left p-5 min-h-[56px]"><span
+                class="font-bold text-corporate-blue">How long does the
+                recruitment process take?</span><i class="fa-solid fa-chevron-down faq-icon text-accent-blue ml-4"></i></button>
+            <div class="faq-answer">
+              <p class="px-5 pb-5 text-sm leading-relaxed">Typically 2 to 4
+                weeks from application to offer, including a screening call,
+                technical interview and final discussion with the hiring
+                manager.</p>
+            </div>
+          </div>
+          <div class="faq-item bg-light-grey rounded-xl border border-gray-200">
+            <button type="button" aria-expanded="false"
+              class="faq-q w-full flex items-center justify-between text-left p-5 min-h-[56px]"><span
+                class="font-bold text-corporate-blue">Can I apply for more than
+                one position?</span><i class="fa-solid fa-chevron-down faq-icon text-accent-blue ml-4"></i></button>
+            <div class="faq-answer">
+              <p class="px-5 pb-5 text-sm leading-relaxed">Yes. You may submit
+                separate applications for each role that matches your skills and
+                experience.</p>
+            </div>
+          </div>
+          <div class="faq-item bg-light-grey rounded-xl border border-gray-200">
+            <button type="button" aria-expanded="false"
+              class="faq-q w-full flex items-center justify-between text-left p-5 min-h-[56px]"><span
+                class="font-bold text-corporate-blue">Do you sponsor visas for
+                new hires?</span><i class="fa-solid fa-chevron-down faq-icon text-accent-blue ml-4"></i></button>
+            <div class="faq-answer">
+              <p class="px-5 pb-5 text-sm leading-relaxed">Yes. For eligible
+                full-time roles in the UAE, the company arranges employment
+                visas and related documentation.</p>
+            </div>
+          </div>
+          <div class="faq-item bg-light-grey rounded-xl border border-gray-200">
+            <button type="button" aria-expanded="false"
+              class="faq-q w-full flex items-center justify-between text-left p-5 min-h-[56px]"><span
+                class="font-bold text-corporate-blue">What if there is no
+                suitable opening right now?</span><i class="fa-solid fa-chevron-down faq-icon text-accent-blue ml-4"></i></button>
+            <div class="faq-answer">
+              <p class="px-5 pb-5 text-sm leading-relaxed">Send a general
+                application with your resume. We keep profiles on file and
+                contact candidates when matching roles open.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- Footer -->
+    </main>
+
+    <div id="site-footer"></div><script>SiteLayout.mountFooter('site-footer')</script>
+
+    <!-- Page Scripts -->
+    <script>
+        SiteLang.register({
+            en: {
+                hero_eyebrow: "Careers at Al Bahr Al Arabi",
+                hero_title: "Build Your Career with an Industry-Leading Group",
+                hero_sub: "Join a team of engineers, fabricators, and project specialists delivering landmark Oil & Gas, Marine, and EPC projects across the UAE and MENA region.",
+                btn_view: "View Open Positions",
+                btn_apply_now: "Apply Now",
+                chip_why: "Why Join Us",
+                chip_openings: "Open Positions",
+                chip_apply: "Apply Now",
+                chip_faqs: "FAQs",
+                why_pill: "Why Join Us",
+                why_title: "Career Opportunities",
+                why_sub: "A professional, safety-first environment where your skills grow alongside landmark industrial projects.",
+                why1_t: "Professional Growth",
+                why1_d: "Structured development pathways and exposure to large-scale EPC projects.",
+                why2_t: "Safety First",
+                why2_d: "Certified HSSE systems protecting every team member at every work site.",
+                why3_t: "Regional Reach",
+                why3_d: "Work across UAE, MENA, and Africa with multicultural teams.",
+                why4_t: "Equal Opportunity",
+                why4_d: "We hire and promote on merit, valuing diversity and inclusion.",
+                teams_label: "Our Teams",
+                stat1: "Employees",
+                stat2: "Group Companies",
+                stat3: "Operating Countries",
+                stat4: "Years of Experience",
+                faq_pill: "FAQs",
+                faq_title: "Frequently Asked Questions",
+                faq_sub: "Answers to common questions about working and applying at Al Bahr Al Arabi.",
+                faq1_q: "How long does the hiring process take?",
+                faq1_a: "Typically 2 to 4 weeks from application to offer, including screening call, technical interview, and final discussion with the hiring manager.",
+                faq2_q: "Can I apply for more than one position?",
+                faq2_a: "Yes. You can submit separate applications for each role matching your skills and experience.",
+                faq3_q: "Do you sponsor visas for new hires?",
+                faq3_a: "Yes. For eligible full-time UAE roles, the company arranges employment visas and related documentation.",
+                faq4_q: "What if there is no suitable vacancy currently?",
+                faq4_a: "Submit a general application with your CV. We maintain active talent pools and reach out when matching roles open."
+            },
+            ar: {
+                hero_eyebrow: 'الوظائف في البحر العربي',
+                hero_title: 'ابنِ مسيرتك المهنية مع مجموعة صناعية رائدة',
+                hero_sub: 'انضم إلى فريق من المهندسين والمصنعين ومتخصصي المشاريع الذين يقدمون مشاريع النفط والغاز والبحرية والهندسة والمشتريات والبناء في جميع أنحاء الإمارات العربية المتحدة ومنطقة الشرق الأوسط وشمال إفريقيا.',
+                btn_view: 'عرض الوظائف الشاغرة',
+                btn_apply_now: 'قدّم الآن',
+                chip_why: 'لماذا تنضم إلينا',
+                chip_openings: 'الوظائف الشاغرة',
+                chip_apply: 'قدّم الآن',
+                chip_faqs: 'الأسئلة الشائعة',
+                why_pill: 'لماذا تنضم إلينا',
+                why_title: 'الفرص الوظيفية',
+                why_sub: 'بيئة احترافية تهتم بالسلامة أولاً حيث تنمو مهاراتك جنباً إلى جنب مع المشاريع الصناعية المعلمية.',
+                why1_t: 'النمو المهني',
+                why1_d: 'مسارات تطوير منظمة والتعرف على مشاريع الهندسة والمشتريات والبناء واسعة النطاق.',
+                why2_t: 'السلامة أولاً',
+                why2_d: 'أنظمة الصحة والسلامة والبيئة المعتمدة تحمي كل عضو في الفريق في كل موقع.',
+                why3_t: 'الانتشار الإقليمي',
+                why3_d: 'اعمل في الإمارات ومنطقة الشرق الأوسط وشمال إفريقيا وأفريقيا مع فرق متعددة الثقافات.',
+                why4_t: 'تكافؤ الفرص',
+                why4_d: 'نحن نوظف ونرقي بناءً على الجدارة، ونقدر التنوع والشمول.',
+                teams_label: 'فرقنا',
+                stat1: 'موظف',
+                stat2: 'شركات المجموعة',
+                stat3: 'دول العمليات',
+                stat4: 'سنوات الخبرة',
+                faq_pill: 'الأسئلة الشائعة',
+                faq_title: 'الأسئلة الشائعة',
+                faq_sub: 'إجابات على الأسئلة الشائعة حول العمل والتقديم في البحر العربي.',
+                faq1_q: 'كم من الوقت تستغرق عملية التوظيف؟',
+                faq1_a: 'عادة ما تستغرق من أسبوعين إلى 4 أسابيع من التقديم إلى العرض، بما في ذلك مكالمة فحص ومقابلة فنية ومناقشة نهائية مع مدير التوظيف.',
+                faq2_q: 'هل يمكنني التقدم لأكثر من وظيفة؟',
+                faq2_a: 'نعم. يمكنك تقديم طلبات منفصلة لكل دور يتناسب مع مهاراتك وخبراتك.',
+                faq3_q: 'هل ترعون التأشيرات للموظفين الجدد؟',
+                faq3_a: 'نعم. للأدوار المؤهلة بدوام كامل في الإمارات، تقوم الشركة بترتيب تأشيرات العمل والوثائق ذات الصلة.',
+                faq4_q: 'ماذا لو لم يكن هناك وظيفة شاغرة مناسبة حالياً؟',
+                faq4_a: 'أرسل طلباً عاماً مع سيرتك الذاتية. نحن نحتفظ بالملفات ونتصل بالمرشحين عندما تفتح أدوار مطابقة.'
+            }
+        });
+
+        (function() {
+            // Sub-nav active state
+            var chips = document.querySelectorAll('.subnav-chip');
+            var sections = ['why-join', 'openings', 'apply', 'faqs'].map(function(id) {
+                return document.getElementById(id);
+            });
+
+            function setActive() {
+                var pos = window.scrollY + 200;
+                var current = 0;
+                sections.forEach(function(s, i) {
+                    if (s && s.offsetTop <= pos) current = i;
+                });
+                chips.forEach(function(c, i) {
+                    c.classList.toggle('active', i === current);
+                });
+            }
+            window.addEventListener('scroll', setActive, { passive: true });
+            setActive();
+
+            // Benefits toggles
+            document.querySelectorAll('.benefits-toggle').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var panel = btn.nextElementSibling;
+                    var open = panel.classList.toggle('open');
+                    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+                });
+            });
+
+            // Filters
+            var cards = Array.prototype.slice.call(document.querySelectorAll('.job-card'));
+            var fDept = document.getElementById('f-dept');
+            var fLoc = document.getElementById('f-loc');
+            var fType = document.getElementById('f-type');
+            var fExp = document.getElementById('f-exp');
+            var count = document.getElementById('results-count');
+            var empty = document.getElementById('empty-state');
+
+            function applyFilters() {
+                var shown = 0;
+                cards.forEach(function(c) {
+                    var ok = (!fDept || fDept.value === 'all' || c.dataset.dept === fDept.value) &&
+                             (!fLoc || fLoc.value === 'all' || c.dataset.loc === fLoc.value) &&
+                             (!fType || fType.value === 'all' || c.dataset.type === fType.value) &&
+                             (!fExp || fExp.value === 'all' || c.dataset.exp === fExp.value);
+                    c.classList.toggle('hidden', !ok);
+                    if (ok) shown++;
+                });
+                if (count) {
+                    var isAr = SiteLang.get() === 'ar';
+                    count.textContent = isAr ? 
+                        ('عرض ' + shown + ' وظيفة شاغرة') : 
+                        ('Showing ' + shown + ' open position' + (shown === 1 ? '' : 's'));
+                }
+                if (empty) {
+                    empty.classList.toggle('hidden', shown !== 0);
+                }
+            }
+
+            var filterBtn = document.getElementById('btn-filter');
+            if (filterBtn) filterBtn.addEventListener('click', applyFilters);
+            [fDept, fLoc, fType, fExp].forEach(function(s) {
+                if (s) s.addEventListener('change', applyFilters);
+            });
+            var clearBtn = document.getElementById('btn-clear');
+            if (clearBtn) {
+                clearBtn.addEventListener('click', function() {
+                    [fDept, fLoc, fType, fExp].forEach(function(s) {
+                        if (s) s.value = 'all';
+                    });
+                    applyFilters();
+                });
+            }
+
+            // Re-apply filters on language change
+            document.addEventListener('languagechange', function() {
+                applyFilters();
+            });
+
+            // Apply buttons prefill form
+            document.querySelectorAll('.apply-btn').forEach(function(btn) {
+                btn.addEventListener('click', function() {
+                    var card = btn.closest('.job-card');
+                    var posInput = document.getElementById('a-pos');
+                    var workInput = document.getElementById('a-work');
+                    if (card) {
+                        if (posInput && card.dataset.title) posInput.value = card.dataset.title;
+                        if (workInput && card.dataset.loc) workInput.value = card.dataset.loc;
+                    }
+                    var applySection = document.getElementById('apply');
+                    if (applySection) {
+                        applySection.scrollIntoView({ behavior: 'smooth' });
+                    }
+                });
+            });
+
+            // FAQ accordion
+            document.querySelectorAll('.faq-q').forEach(function(q) {
+                q.addEventListener('click', function() {
+                    var item = q.closest('.faq-item');
+                    if (item) {
+                        var open = item.classList.toggle('open');
+                        q.setAttribute('aria-expanded', open ? 'true' : 'false');
+                    }
+                });
+            });
+
+            // Dropzone
+            var dz = document.getElementById('dropzone');
+            var fileInput = document.getElementById('a-file');
+            var fileName = document.getElementById('file-name');
+
+            function showFile(f) {
+                if (f && fileName) {
+                    fileName.textContent = f.name;
+                    fileName.classList.remove('hidden');
+                    var err = dz ? dz.parentElement.querySelector('.err') : null;
+                    if (err) err.classList.add('hidden');
+                }
+            }
+
+            if (dz && fileInput) {
+                ['dragenter', 'dragover'].forEach(function(ev) {
+                    dz.addEventListener(ev, function(e) {
+                        e.preventDefault();
+                        dz.classList.add('dragover');
+                    });
+                });
+                ['dragleave', 'drop'].forEach(function(ev) {
+                    dz.addEventListener(ev, function(e) {
+                        e.preventDefault();
+                        dz.classList.remove('dragover');
+                    });
+                });
+                dz.addEventListener('drop', function(e) {
+                    if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                        try {
+                            fileInput.files = e.dataTransfer.files;
+                        } catch (err) {}
+                        showFile(e.dataTransfer.files[0]);
+                    }
+                });
+                fileInput.addEventListener('change', function() {
+                    if (fileInput.files && fileInput.files[0]) {
+                        showFile(fileInput.files[0]);
+                    }
+                });
+            }
+
+            // Form validation
+            var form = document.getElementById('apply-form');
+            function setErr(el, bad) {
+                if (!el) return;
+                var parent = el.closest('div');
+                var err = parent ? parent.querySelector('.err') : null;
+                if (err) err.classList.toggle('hidden', !bad);
+                el.classList.toggle('border-red-500', bad);
+            }
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var name = document.getElementById('a-name');
+                    var email = document.getElementById('a-email');
+                    var loc = document.getElementById('a-loc');
+                    var consent = document.getElementById('a-consent');
+                    
+                    var badName = !name || !name.value.trim();
+                    var badEmail = !email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim());
+                    var badLoc = !loc || !loc.value.trim();
+                    var badFile = !fileInput || !fileInput.files || !fileInput.files.length;
+                    var badConsent = !consent || !consent.checked;
+
+                    setErr(name, badName);
+                    setErr(email, badEmail);
+                    setErr(loc, badLoc);
+                    if (dz) {
+                        var dzErr = dz.parentElement.querySelector('.err');
+                        if (dzErr) dzErr.classList.toggle('hidden', !badFile);
+                    }
+                    if (consent) {
+                        var consentErr = consent.closest('div') ? consent.closest('div').querySelector('.err') : null;
+                        if (consentErr) consentErr.classList.toggle('hidden', !badConsent);
+                    }
+
+                    var valid = !(badName || badEmail || badLoc || badFile || badConsent);
+                    if (valid) {
+                        var success = document.getElementById('form-success');
+                        if (success) success.classList.remove('hidden');
+                        form.reset();
+                        if (fileName) fileName.classList.add('hidden');
+                    }
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

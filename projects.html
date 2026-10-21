@@ -1,0 +1,1300 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects - Al Bahr Al Arabi Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'corporate-blue': '#0A2647',
+                        'steel-grey': '#455A64',
+                        'light-grey': '#ECEFF1',
+                        'accent-blue': '#1976D2',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'arabic': ['Cairo', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        [dir="rtl"] .font-sans { font-family: 'Cairo', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(10,38,71,0.95) 0%, rgba(25,118,210,0.85) 100%);
+        }
+        .transition-all { transition: all 0.3s ease; }
+        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+        .filter-btn.active {
+            background-color: #0A2647 !important;
+            color: #ffffff !important;
+            border-color: #0A2647 !important;
+        }
+        .modal-panel {
+            transform: translateY(20px) scale(0.98);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .modal-open .modal-panel {
+            transform: translateY(0) scale(1);
+            opacity: 1;
+        }
+        .modal-backdrop {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .modal-open .modal-backdrop {
+            opacity: 1;
+        }
+    </style>
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/site-i18n.js"></script>
+    <script src="assets/js/layout.js"></script>
+</head>
+<body class="font-sans text-steel-grey bg-white overflow-x-hidden">
+    <div id="site-header"></div><script>SiteLayout.mountHeader('site-header')</script>
+
+    <main id="main">
+<!-- Hero -->
+    <section id="projects-hero"
+      class="relative h-[560px] overflow-hidden flex items-center">
+      <div class="absolute inset-0 z-0"><img
+          src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_71c6a99505_01504caa6d9891e3.png"
+          alt="aerial view of a large oil and gas refinery complex with storage tanks, flare stack and piping at go"
+          class="w-full h-full object-cover">
+        <div class="absolute inset-0 hero-gradient"></div>
+      </div>
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <nav
+          class="text-blue-100 text-xs font-semibold uppercase tracking-widest mb-5 flex items-center gap-2">
+          <a href="index.html" data-i18n="menu_home"
+            class="hover:text-white">Home</a><i class="fa-solid fa-chevron-right text-[8px] rtl-flip"></i><span data-i18n="menu_projects"
+            class="text-white">Projects</span></nav><span
+          data-i18n="hero_eyebrow"
+          class="inline-block text-blue-100 text-xs font-bold uppercase tracking-[0.2em] mb-4 border-b border-blue-300/50 pb-1">Our
+          Portfolio</span>
+        <h1 data-i18n="hero_title"
+          class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl">
+          Engineering Excellence, Delivered Across the Region</h1>
+        <p data-i18n="hero_sub"
+          class="text-blue-50 text-lg sm:text-xl max-w-3xl leading-relaxed mb-10">
+          Explore our portfolio of turnkey EPC projects across Oil &amp; Gas,
+          Petrochemical, Marine, Power and Desalination sectors throughout the
+          UAE and MENA region.</p>
+        <div class="flex flex-col sm:flex-row gap-4"><a href="#portfolio"
+            data-i18n="btn_browse"
+            class="bg-accent-blue text-white px-8 py-4 rounded font-bold hover:bg-white hover:text-corporate-blue transition-all text-center uppercase text-sm tracking-wider">Browse
+            Projects</a><button id="hero-brochure-btn"
+            data-i18n="btn_brochure_hero"
+            class="border-2 border-white text-white px-8 py-4 rounded font-bold hover:bg-white hover:text-corporate-blue transition-all text-center uppercase text-sm tracking-wider">Download
+            Brochure</button></div>
+      </div>
+    </section><!-- Stats Strip -->
+    <section id="stats-strip" class="scroll-mt-28 bg-corporate-blue">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 text-center">
+          <div>
+            <p class="text-3xl font-bold text-white"><span data-target="150"
+                class="counter">0</span>+</p>
+            <p data-i18n="stat_1"
+              class="text-blue-300 text-xs font-semibold uppercase tracking-widest mt-1">
+              Projects Completed</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold text-white"><span data-target="25"
+                class="counter">0</span>+</p>
+            <p data-i18n="stat_2"
+              class="text-blue-300 text-xs font-semibold uppercase tracking-widest mt-1">
+              Years of Experience</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold text-white"><span data-target="20000"
+                class="counter">0</span></p>
+            <p data-i18n="stat_3"
+              class="text-blue-300 text-xs font-semibold uppercase tracking-widest mt-1">
+              Sqm Fabrication Facility</p>
+          </div>
+          <div>
+            <p class="text-3xl font-bold text-white"><span data-target="100"
+                class="counter">0</span>+</p>
+            <p data-i18n="stat_4"
+              class="text-blue-300 text-xs font-semibold uppercase tracking-widest mt-1">
+              Supplier Partnerships</p>
+          </div>
+        </div>
+      </div>
+    </section><!-- Portfolio -->
+    <section id="portfolio" class="scroll-mt-28 py-20 bg-light-grey">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-12"><span data-i18n="pf_pill"
+            class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Project
+            Portfolio</span>
+          <h2 data-i18n="pf_title"
+            class="text-4xl font-bold text-corporate-blue mb-4">Featured
+            Projects</h2>
+          <p data-i18n="pf_sub" class="max-w-2xl mx-auto text-lg">A selection of
+            landmark projects demonstrating our technical expertise and delivery
+            capability.</p>
+        </div><!-- Filters -->
+        <div id="project-filters"
+          class="flex flex-wrap justify-center gap-3 mb-12"><button
+            data-filter="all" data-i18n="f_all"
+            class="filter-btn active px-5 py-2 rounded-full border border-gray-300 bg-white text-xs font-bold uppercase tracking-wider hover:border-accent-blue transition-all">All
+            Projects</button><button data-filter="tanks" data-i18n="f_tanks"
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 bg-white text-xs font-bold uppercase tracking-wider hover:border-accent-blue transition-all">Tanks
+            &amp; Terminals</button><button data-filter="piping"
+            data-i18n="f_piping"
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 bg-white text-xs font-bold uppercase tracking-wider hover:border-accent-blue transition-all">Piping
+            &amp; Pipelines</button><button data-filter="marine"
+            data-i18n="f_marine"
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 bg-white text-xs font-bold uppercase tracking-wider hover:border-accent-blue transition-all">Marine</button><button
+            data-filter="petrochem" data-i18n="f_petro"
+            class="filter-btn px-5 py-2 rounded-full border border-gray-300 bg-white text-xs font-bold uppercase tracking-wider hover:border-accent-blue transition-all">Petrochemical</button>
+        </div><!-- Grid -->
+        <div id="projects-grid"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fd2aa53ebe_7b71fb7ab7e65f6b.png"
+                alt="Gulf Stream Energy FZC"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Sharjah, UAE</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Gulf Stream
+                Energy FZC</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of tank
+                farms (108,016 CBM), dehydration tank (500 KLD), distillation
+                tank (1,500 KLD), and associated works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_b3371f702f_48274cbae93387b1.png"
+                alt="Petro Deniz FZE"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Petro Deniz
+                FZE</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of bulk
+                oil storage tank farm (163,475 CBM) and other facilities.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_7199cb53ba_4fdee74eef781f2c.png"
+                alt="Greonex Oil FZC"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Greonex Oil
+                FZC</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of
+                storage tank farm and distillation plant (500 KLD).</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_ba4b58adcd_10b6cc2c14866ff1.png"
+                alt="FBB Petroleum LLC"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">FBB
+                Petroleum LLC</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of
+                storage tank and distillation plant (500 KLD).</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6404bbbf72_70de2f03019050b6.png"
+                alt="Infinite &amp; Mining Energy FZE"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Infinite
+                &amp; Mining Energy FZE</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of
+                storage tank and distillation plant (1,000 KLD).</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_69c980956e_ee284306d866b605.png"
+                alt="ABM Group"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">ABM Group
+              </h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of
+                storage tank and distillation plant (1,000 KLD).</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fd2aa53ebe_7b71fb7ab7e65f6b.png"
+                alt="International Energy Chemicals LLC"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Kampala, Uganda</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">
+                International Energy Chemicals LLC</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of tank
+                farm (352,198 CBM), lubricant plant, and associated works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_b3371f702f_48274cbae93387b1.png"
+                alt="Private Owner"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Private
+                Owner</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of bulk
+                oil storage tank farm with distillation unit (1,500 KLD) and
+                other facilities.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6404bbbf72_70de2f03019050b6.png"
+                alt="Ayso Oil and Grease"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Sharjah, UAE</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Ayso Oil
+                and Grease</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">Proposed tank
+                farm and associated services.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_69c980956e_ee284306d866b605.png"
+                alt="Orchid Petrochem FZE"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">undefined</span><span
+                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Orchid
+                Petrochem FZE</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of bulk
+                oil storage terminal (198,781 CBM) and associated works; tank
+                dimensions 24m x 26m.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_7887efd43c_045496cf79ce61bb.png"
+                alt="Mahamud Osman General Trading LLC"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Africa, Somalia</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Mahamud
+                Osman General Trading LLC</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of
+                diesel storage tank farm (85,000 CBM) and associated works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fd2aa53ebe_7b71fb7ab7e65f6b.png"
+                alt="Petrolecom Oil Services"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Petrolecom
+                Oil Services</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (43,200 CBM), office, jetty line, harbour
+                works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_399bf24535_f0d40aca0b4f12b9.png"
+                alt="NT Petroleum FZE"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">NT
+                Petroleum FZE</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (120,155 CBM), office, jetty line, harbour
+                works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6404bbbf72_70de2f03019050b6.png"
+                alt="Arzoo International FZE"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Arzoo
+                International FZE</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (92,148 CBM), office, jetty line, harbour
+                works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_69c980956e_ee284306d866b605.png"
+                alt="ATS Terminals FZE"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">ATS
+                Terminals FZE</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">Expansion 1:
+                EPCC of oil storage terminal (29,250 CBM), office, service
+                buildings.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_605c871c12_68a7ddac13522157.png"
+                alt="ABS Marine Engineering Services FZC"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Marine</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">ABS Marine
+                Engineering Services FZC</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (68,000 CBM), office, jetty line, harbour
+                works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fd2aa53ebe_7b71fb7ab7e65f6b.png"
+                alt="Gulf Petroleum FZC"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Gulf
+                Petroleum FZC</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (88,600 CBM), office, jetty line, harbour
+                works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_b3371f702f_48274cbae93387b1.png"
+                alt="Regal Petro Trading FZE"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Regal Petro
+                Trading FZE</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (96,342 CBM), office, jetty line, harbour
+                works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_7199cb53ba_4fdee74eef781f2c.png"
+                alt="International FZC"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">
+                International FZC</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (48,925 CBM), office, jetty line, harbour
+                works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_ba4b58adcd_10b6cc2c14866ff1.png"
+                alt="Berge International Energy FZE"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Berge
+                International Energy FZE</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of tank
+                farm, office building, covered and open sheds.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6404bbbf72_70de2f03019050b6.png"
+                alt="Crystal Petroleum"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Crystal
+                Petroleum</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (85,000 CBM), office, jetty line, harbour
+                works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fd2aa53ebe_7b71fb7ab7e65f6b.png"
+                alt="Greenol FZE"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Greenol FZE
+              </h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (110,000 CBM), office, jetty line, harbour
+                works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_399bf24535_f0d40aca0b4f12b9.png"
+                alt="Alaska International FZE"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Alaska
+                International FZE</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (123,000 CBM), office, jetty line, harbour
+                works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_69c980956e_ee284306d866b605.png"
+                alt="AXCL Gulf FZC"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Tanks
+                &amp; Terminals</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">AXCL Gulf
+                FZC</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (32,000 CBM), office, jetty line, harbour
+                works.</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_67daa92b48_b58282d66cd2f25d.png"
+                alt="Vesmein Petroleum LLC"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Piping
+                &amp; Pipelines</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Abu Dhabi, UAE</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Vesmein
+                Petroleum LLC</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of bulk
+                oil storage tank terminal (235,000 CBM) and associated jetty
+                lines (4.8 km).</p>
+            </div>
+          </article>
+          <article
+            class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+            <div class="h-56 overflow-hidden relative"><img
+                src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6acc8431e1_a261d4cc15b3f67a.png"
+                alt="Green Spring FZE"
+                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"><span
+                class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">undefined</span><span
+                class="absolute top-4 right-4 bg-green-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+            </div>
+            <div class="p-7">
+              <div
+                class="flex items-center text-xs text-accent-blue font-semibold mb-3">
+                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span></div>
+              <h3 class="text-xl font-bold text-corporate-blue mb-3">Green
+                Spring FZE</h3>
+              <p class="text-sm leading-relaxed mb-5 line-clamp-3">EPCC of oil
+                storage terminal (96,325 CBM), refinery, and other facilities.
+              </p>
+            </div>
+          </article>
+        </div>
+        <div id="no-results" class="hidden text-center py-16 text-steel-grey"><i class="fa-solid fa-folder-open text-4xl text-accent-blue mb-4"></i>
+          <p data-i18n="no_results" class="text-lg">No projects found in this
+            category.</p>
+        </div>
+      </div>
+    </section><!-- Final CTA -->
+    <section id="final-cta" class="scroll-mt-28 py-20 bg-white">
+      <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center"><span
+          data-i18n="cta_pill"
+          class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Get
+          in Touch</span>
+        <h2 data-i18n="cta_title"
+          class="text-4xl font-bold text-corporate-blue mb-4">Have a Project in
+          Mind?</h2>
+        <p data-i18n="cta_p"
+          class="max-w-2xl mx-auto text-lg mb-10 text-steel-grey">Share your
+          requirements with our team and receive a tailored proposal for your
+          facility.</p>
+        <div class="flex flex-col sm:flex-row justify-center gap-4"><a
+            href="contact.html?topic=quote#contact-form-el" data-i18n="cta_consult"
+            class="bg-accent-blue text-white px-8 py-4 rounded font-bold hover:bg-corporate-blue transition-all uppercase text-sm tracking-wider">Request
+            a Consultation</a><a href="tel:+97165260602"
+            class="border-2 border-corporate-blue text-corporate-blue px-8 py-4 rounded font-bold hover:bg-corporate-blue hover:text-white transition-all uppercase text-sm tracking-wider"><i class="fa-solid fa-phone mr-2"></i><span data-i18n="cta_call">Call Us</span></a></div>
+      </div>
+    </section><!-- Footer -->
+    </main>
+
+<!-- Brochure Modal -->
+    <div id="brochure-modal" role="dialog" aria-modal="true"
+      aria-labelledby="modal-title"
+      class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+      <div id="modal-backdrop"
+        class="modal-backdrop absolute inset-0 bg-corporate-blue/80"></div>
+      <div
+        class="modal-panel relative bg-white rounded-2xl shadow-2xl w-full max-w-lg p-8">
+        <button id="close-brochure-modal" aria-label="Close"
+          class="absolute top-4 right-4 w-9 h-9 rounded-full text-steel-grey hover:bg-light-grey transition-all"><i class="fa-solid fa-xmark"></i></button>
+        <h3 id="modal-title" data-i18n="md_title"
+          class="text-2xl font-bold text-corporate-blue mb-2">Download Brochure
+        </h3>
+        <p data-i18n="md_sub" class="text-sm mb-6">Please enter your details to
+          receive our corporate brochure.</p>
+        <form id="brochure-form" class="space-y-4">
+          <div><label for="bf-name" data-i18n="md_name"
+              class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-1">Full
+              Name</label><input id="bf-name" type="text" required=""
+              class="w-full border border-gray-300 rounded px-4 py-3 text-sm">
+          </div>
+          <div><label for="bf-email" data-i18n="md_email"
+              class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-1">Email
+              Address</label><input id="bf-email" type="email" required=""
+              class="w-full border border-gray-300 rounded px-4 py-3 text-sm">
+          </div>
+          <div><label for="bf-company" data-i18n="md_company"
+              class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-1">Company</label><input
+              id="bf-company" type="text"
+              class="w-full border border-gray-300 rounded px-4 py-3 text-sm">
+          </div><button type="submit" data-i18n="md_submit"
+            class="w-full bg-accent-blue text-white py-3 rounded font-bold hover:bg-corporate-blue transition-all uppercase text-sm tracking-wider">Submit
+            &amp; Download</button>
+        </form>
+        <p id="form-success"
+          class="hidden mt-4 text-sm text-green-700 font-semibold text-center">
+          <i class="fa-solid fa-circle-check mr-2"></i><span data-i18n="md_success">Thank you! Your download will
+            begin shortly.</span></p>
+      </div>
+    </div>
+
+    <div id="site-footer"></div><script>SiteLayout.mountFooter('site-footer')</script>
+
+    <!-- Page Scripts -->
+    <script>
+    const projects = [
+      {
+        id: 1,
+        cat: 'tanks',
+        client: 'Gulf Stream Energy FZC',
+        loc: 'Sharjah, UAE',
+        detail: 'EPCC of tank farms (108,016 CBM), dehydration tank (500 KLD), distillation tank (1,500 KLD), and associated works.',
+        status: 'Ongoing',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fd2aa53ebe_7b71fb7ab7e65f6b.png'
+      },
+      {
+        id: 2,
+        cat: 'tanks',
+        client: 'Petro Deniz FZE',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of bulk oil storage tank farm (163,475 CBM) and other facilities.',
+        status: 'Ongoing',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_b3371f702f_48274cbae93387b1.png'
+      },
+      {
+        id: 3,
+        cat: 'tanks',
+        client: 'Greonex Oil FZC',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of storage tank farm and distillation plant (500 KLD).',
+        status: 'Ongoing',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_7199cb53ba_4fdee74eef781f2c.png'
+      },
+      {
+        id: 4,
+        cat: 'tanks',
+        client: 'FBB Petroleum LLC',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of storage tank and distillation plant (500 KLD).',
+        status: 'Ongoing',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_ba4b58adcd_10b6cc2c14866ff1.png'
+      },
+      {
+        id: 5,
+        cat: 'tanks',
+        client: 'Infinite & Mining Energy FZE',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of storage tank and distillation plant (1,000 KLD).',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6404bbbf72_70de2f03019050b6.png'
+      },
+      {
+        id: 6,
+        cat: 'tanks',
+        client: 'ABM Group',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of storage tank and distillation plant (1,000 KLD).',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_69c980956e_ee284306d866b605.png'
+      },
+      {
+        id: 7,
+        cat: 'tanks',
+        client: 'International Energy Chemicals LLC',
+        loc: 'Kampala, Uganda',
+        detail: 'EPCC of tank farm (352,198 CBM), lubricant plant, and associated works.',
+        status: 'Ongoing',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fd2aa53ebe_7b71fb7ab7e65f6b.png'
+      },
+      {
+        id: 8,
+        cat: 'tanks',
+        client: 'Private Owner',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of bulk oil storage tank farm with distillation unit (1,500 KLD) and other facilities.',
+        status: 'Ongoing',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_b3371f702f_48274cbae93387b1.png'
+      },
+      {
+        id: 9,
+        cat: 'tanks',
+        client: 'Ayso Oil and Grease',
+        loc: 'Sharjah, UAE',
+        detail: 'Proposed tank farm and associated services.',
+        status: 'Ongoing',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6404bbbf72_70de2f03019050b6.png'
+      },
+      {
+        id: 10,
+        cat: 'petrochem',
+        client: 'Orchid Petrochem FZE',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of bulk oil storage terminal (198,781 CBM) and associated works; tank dimensions 24m x 26m.',
+        status: 'Ongoing',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_69c980956e_ee284306d866b605.png'
+      },
+      {
+        id: 11,
+        cat: 'tanks',
+        client: 'Mahamud Osman General Trading LLC',
+        loc: 'Africa, Somalia',
+        detail: 'EPCC of diesel storage tank farm (85,000 CBM) and associated works.',
+        status: 'Ongoing',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_7887efd43c_045496cf79ce61bb.png'
+      },
+      {
+        id: 12,
+        cat: 'tanks',
+        client: 'Petrolecom Oil Services',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (43,200 CBM), office, jetty line, harbour works.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fd2aa53ebe_7b71fb7ab7e65f6b.png'
+      },
+      {
+        id: 13,
+        cat: 'tanks',
+        client: 'NT Petroleum FZE',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (120,155 CBM), office, jetty line, harbour works.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_399bf24535_f0d40aca0b4f12b9.png'
+      },
+      {
+        id: 14,
+        cat: 'tanks',
+        client: 'Arzoo International FZE',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (92,148 CBM), office, jetty line, harbour works.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6404bbbf72_70de2f03019050b6.png'
+      },
+      {
+        id: 15,
+        cat: 'tanks',
+        client: 'ATS Terminals FZE',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'Expansion 1: EPCC of oil storage terminal (29,250 CBM), office, service buildings.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_69c980956e_ee284306d866b605.png'
+      },
+      {
+        id: 16,
+        cat: 'marine',
+        client: 'ABS Marine Engineering Services FZC',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (68,000 CBM), office, jetty line, harbour works.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_605c871c12_68a7ddac13522157.png'
+      },
+      {
+        id: 17,
+        cat: 'tanks',
+        client: 'Gulf Petroleum FZC',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (88,600 CBM), office, jetty line, harbour works.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fd2aa53ebe_7b71fb7ab7e65f6b.png'
+      },
+      {
+        id: 18,
+        cat: 'tanks',
+        client: 'Regal Petro Trading FZE',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (96,342 CBM), office, jetty line, harbour works.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_b3371f702f_48274cbae93387b1.png'
+      },
+      {
+        id: 19,
+        cat: 'tanks',
+        client: 'International FZC',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (48,925 CBM), office, jetty line, harbour works.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_7199cb53ba_4fdee74eef781f2c.png'
+      },
+      {
+        id: 20,
+        cat: 'tanks',
+        client: 'Berge International Energy FZE',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of tank farm, office building, covered and open sheds.',
+        status: 'Ongoing',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_ba4b58adcd_10b6cc2c14866ff1.png'
+      },
+      {
+        id: 21,
+        cat: 'tanks',
+        client: 'Crystal Petroleum',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (85,000 CBM), office, jetty line, harbour works.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6404bbbf72_70de2f03019050b6.png'
+      },
+      {
+        id: 22,
+        cat: 'tanks',
+        client: 'Greenol FZE',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (110,000 CBM), office, jetty line, harbour works.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fd2aa53ebe_7b71fb7ab7e65f6b.png'
+      },
+      {
+        id: 23,
+        cat: 'tanks',
+        client: 'Alaska International FZE',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (123,000 CBM), office, jetty line, harbour works.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_399bf24535_f0d40aca0b4f12b9.png'
+      },
+      {
+        id: 24,
+        cat: 'tanks',
+        client: 'AXCL Gulf FZC',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (32,000 CBM), office, jetty line, harbour works.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_69c980956e_ee284306d866b605.png'
+      },
+      {
+        id: 25,
+        cat: 'piping',
+        client: 'Vesmein Petroleum LLC',
+        loc: 'Abu Dhabi, UAE',
+        detail: 'EPCC of bulk oil storage tank terminal (235,000 CBM) and associated jetty lines (4.8 km).',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_67daa92b48_b58282d66cd2f25d.png'
+      },
+      {
+        id: 26,
+        cat: 'petrochem',
+        client: 'Green Spring FZE',
+        loc: 'Hamriyah, Sharjah',
+        detail: 'EPCC of oil storage terminal (96,325 CBM), refinery, and other facilities.',
+        status: 'Completed',
+        img: 'https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_6acc8431e1_a261d4cc15b3f67a.png'
+      }];
+
+    
+        SiteLang.register({
+            en: {
+                hero_eyebrow: "Our Portfolio",
+                hero_pill: "Project Portfolio",
+                hero_title: "Proven Track Record Across Key Energy Sectors",
+                hero_sub: "Explore our EPC, tank storage, piping, and marine projects delivered across the UAE and international markets.",
+                btn_browse: "Browse Projects",
+                btn_brochure_hero: "Download Brochure",
+                stat_1: "Projects Completed",
+                stat_2: "Years of Experience",
+                stat_3: "Sqm Fabrication Facility",
+                stat_4: "Supplier Partnerships",
+                pf_pill: "Project Portfolio",
+                pf_title: "Featured Projects",
+                pf_sub: "A selection of landmark projects demonstrating our technical expertise and delivery capability.",
+                f_all: "All Projects",
+                f_tanks: "Tanks & Terminals",
+                f_piping: "Piping & Pipelines",
+                f_marine: "Marine & Offshore",
+                f_petro: "Petrochemical & Process",
+                cat_tanks: "Tanks & Terminals",
+                cat_piping: "Piping & Pipelines",
+                cat_steel: "Steel Fabrication",
+                cat_marine: "Marine & Offshore",
+                cat_petrochem: "Petrochemical",
+                cat_power: "Power & Desalination",
+                status_ongoing: "Ongoing",
+                status_completed: "Completed",
+                view_project: "View Project",
+                no_results: "No projects found in this category.",
+                btn_viewall: "View All Projects",
+                cta_pill: "Get in Touch",
+                cta_title: "Have a Project in Mind?",
+                cta_p: "Share your requirements with our team and receive a tailored proposal for your facility.",
+                cta_consult: "Request a Consultation",
+                cta_call: "Call Us",
+                md_title: "Download Brochure",
+                md_sub: "Please enter your details to receive our corporate brochure.",
+                md_name: "Full Name",
+                md_email: "Email Address",
+                md_company: "Company",
+                md_submit: "Submit & Download",
+                md_success: "Thank you! Your download will begin shortly."
+            },
+            ar: {
+                hero_eyebrow: "سجل أعمالنا",
+                hero_pill: "سجل المشاريع",
+                hero_title: "سجل حافل ومثبت عبر قطاعات الطاقة الرئيسية",
+                hero_sub: "استكشف مشاريع الهندسة والتوريد والإنشاء، وتخزين الخزانات، والأنابيب، والمشاريع البحرية المنجزة عبر الإمارات والأسواق الدولية.",
+                btn_browse: "تصفح المشاريع",
+                btn_brochure_hero: "تحميل الكتيب",
+                stat_1: "مشاريع مكتملة",
+                stat_2: "سنوات الخبرة",
+                stat_3: "متر مربع من مرافق التصنيع",
+                stat_4: "شراكة مع الموردين",
+                pf_pill: "سجل المشاريع",
+                pf_title: "مشاريع بارزة",
+                pf_sub: "مجموعة مختارة من المشاريع البارزة التي تبرهن على خبرتنا التقنية وقدراتنا التنفيذية.",
+                f_all: "جميع المشاريع",
+                f_tanks: "الخزانات والمحطات",
+                f_piping: "الأنابيب وخطوط الأنابيب",
+                f_marine: "البحرية والساحلية",
+                f_petro: "البتروكيماويات والعمليات",
+                cat_tanks: "الخزانات والمحطات",
+                cat_piping: "الأنابيب وخطوط الأنابيب",
+                cat_steel: "تصنيع الفولاذ",
+                cat_marine: "البحرية والساحلية",
+                cat_petrochem: "البتروكيماويات",
+                cat_power: "الطاقة وتحلية المياه",
+                loc_sharjah: "الشارقة، الإمارات",
+                loc_jebelali: "جبل علي، دبي، الإمارات",
+                loc_ras: "رأس الخيمة، الإمارات",
+                loc_doha: "راس لفان، قطر",
+                loc_ruwais: "الرويس، الإمارات",
+                loc_uganda: "كامبالا، أوغندا",
+                loc_somalia: "أفريقيا، الصومال",
+                status_ongoing: "قيد التنفيذ",
+                status_completed: "مكتمل",
+                view_project: "عرض المشروع",
+                no_results: "لا توجد مشاريع في هذه الفئة.",
+                btn_viewall: "عرض جميع المشاريع",
+                cta_pill: "تواصل معنا",
+                cta_title: "هل لديك مشروع في ذهنك؟",
+                cta_p: "شارك متطلباتك مع فريقنا واحصل على عرض مخصص لمرفقك.",
+                cta_consult: "اطلب استشارة",
+                cta_call: "اتصل بنا",
+                md_title: "تحميل الكتيب",
+                md_sub: "يرجى إدخال بياناتك لاستلام كتيب الشركة التعريفي.",
+                md_name: "الاسم الكامل",
+                md_email: "البريد الإلكتروني",
+                md_company: "الشركة",
+                md_submit: "إرسال وتحميل",
+                md_success: "شكراً لك! سيبدأ التحميل قريباً.",
+                // Project translations
+                pj1_t: "جلف ستريم إنرجي - الشارقة، الإمارات",
+                pj1_d: "هندسة وتوريد وبناء محطات الخزانات (108,016 متر مكعب)، خزان نزع المياه، خزان التقطير والأعمال المرتبطة.",
+                pj2_t: "بترو دينيز - الحمرية، الشارقة",
+                pj2_d: "هندسة وتوريد وبناء محطة تخزين النفط السائب (163,475 متر مكعب) ومرافق أخرى.",
+                pj3_t: "جريونيكس للنفط - الحمرية، الشارقة",
+                pj3_d: "هندسة وتوريد وبناء محطة تخزين الخزانات ومصنع التقطير (500 كيلولتر يومياً).",
+                pj4_t: "اف بي بي بتروليوم - الحمرية، الشارقة",
+                pj4_d: "هندسة وتوريد وبناء خزان التخزين ومصنع التقطير (500 كيلولتر يومياً).",
+                pj5_t: "إنفينيت آند ماينينج إنرجي - الحمرية، الشارقة",
+                pj5_d: "هندسة وتوريد وبناء خزان التخزين ومصنع التقطير (1,000 كيلولتر يومياً).",
+                pj6_t: "مجموعة ايه بي ام - الحمرية، الشارقة",
+                pj6_d: "هندسة وتوريد وبناء خزان التخزين ومصنع التقطير (1,000 كيلولتر يومياً).",
+                pj7_t: "إنترناشيونال إنرجي كيميكالز - كامبالا، أوغندا",
+                pj7_d: "هندسة وتوريد وبناء محطة خزانات (352,198 متر مكعب)، مصنع زيوت التشحيم والأعمال المرتبطة.",
+                pj8_t: "مالك خاص - الحمرية، الشارقة",
+                pj8_d: "هندسة وتوريد وبناء محطة تخزين النفط السائب مع وحدة تقطير ومرافق أخرى.",
+                pj9_t: "آيسو للزيوت والشحوم",
+                pj9_d: "محطة خزانات مقترحة والخدمات المرتبطة بها.",
+                pj10_t: "أوركيد للبتروكيماويات - الحمرية، الشارقة",
+                pj10_d: "هندسة وتوريد وبناء محطة تخزين النفط السائب (198,781 متر مكعب) والأعمال المرتبطة.",
+                pj11_t: "محمود عثمان للتجارة العامة - أفريقيا، الصومال",
+                pj11_d: "هندسة وتوريد وبناء محطة تخزين ديزل (85,000 متر مكعب) والأعمال المرتبطة.",
+                pj12_t: "بترولكوم للخدمات النفطية - الحمرية، الشارقة",
+                pj12_d: "هندسة وتوريد وبناء محطة تخزين نفط (43,200 متر مكعب)، مكاتب، خط رصيف، وأعمال الميناء.",
+                pj13_t: "إن تي بتروليوم - الحمرية، الشارقة",
+                pj13_d: "هندسة وتوريد وبناء محطة تخزين نفط (120,155 متر مكعب)، مكاتب مكاتب وخدمات، وأعمال الميناء.",
+                pj14_t: "آرزو الدولية - الحمرية، الشارقة",
+                pj14_d: "هندسة وتوريد وبناء محطة تخزين نفط (92,148 متر مكعب)، مكاتب مكاتب وخدمات، وأعمال الميناء.",
+                pj15_t: "ايه تي اس للمحطات - الحمرية، الشارقة",
+                pj15_d: "توسعة 1: هندسة وتوريد وبناء محطة تخزين نفط (29,250 متر مكعب)، مكاتب ومباني خدمات.",
+                pj16_t: "ايه بي اس للخدمات البحرية والهندسية - الحمرية، الشارقة",
+                pj16_d: "هندسة وتوريد وبناء محطة تخزين نفط (68,000 متر مكعب)، مكاتب، خط رصيف، وأعمال الميناء.",
+                pj17_t: "جلف بتروليوم - الحمرية، الشارقة",
+                pj17_d: "هندسة وتوريد وبناء محطة تخزين نفط (88,600 متر مكعب)، مباني مكاتب وخدمات، وأعمال الميناء.",
+                pj18_t: "ريجال بترو للتجارة - الحمرية، الشارقة",
+                pj18_d: "هندسة وتوريد وبناء محطة تخزين نفط (96,342 متر مكعب)، مكاتب وخطوط رصيف وأعمال ميناء.",
+                pj19_t: "إنترناشيونال - الحمرية، الشارقة",
+                pj19_d: "هندسة وتوريد وبناء محطة تخزين نفط (48,925 متر مكعب)، مكاتب وخطوط رصيف وأعمال ميناء.",
+                pj20_t: "بيرجي الدولية للطاقة - الحمرية، الشارقة",
+                pj20_d: "هندسة وتوريد وبناء محطة خزانات، مكاتب مكاتب، ومظلات مغطاة ومفتوحة.",
+                pj21_t: "كريستال بتروليوم - الحمرية، الشارقة",
+                pj21_d: "هندسة وتوريد وبناء محطة تخزين نفط (85,000 متر مكعب)، مكاتب مكاتب وخدمات وأعمال ميناء.",
+                pj22_t: "جرينول - الحمرية، الشارقة",
+                pj22_d: "هندسة وتوريد وبناء محطة تخزين نفط (110,000 متر مكعب)، مكاتب وخطوط رصيف وأعمال ميناء.",
+                pj23_t: "ألاسكا الدولية - الحمرية، الشارقة",
+                pj23_d: "هندسة وتوريد وبناء محطة تخزين نفط (123,000 متر مكعب)، مكاتب وخطوط رصيف وأعمال ميناء.",
+                pj24_t: "ايه اكس سي ال جلف - الحمرية، الشارقة",
+                pj24_d: "هندسة وتوريد وبناء محطة تخزين نفط (32,000 متر مكعب)، مكاتب مكاتب وخدمات وأعمال ميناء.",
+                pj25_t: "فيزمين بتروليوم - أبوظبي، الإمارات",
+                pj25_d: "هندسة وتوريد وبناء محطة تخزين نفط سائب (235,000 متر مكعب) وخطوط رصيف بطول 4.8 كم.",
+                pj26_t: "جرين سبرينج - الحمرية، الشارقة",
+                pj26_d: "هندسة وتوريد وبناء محطة تخزين نفط (96,325 متر مكعب)، مصفاة، ومرافق أخرى."
+            }
+        });
+
+
+    // Dynamic Project Rendering
+    function renderProjects() {
+        const grid = document.getElementById('projects-grid');
+        if (!grid) return;
+        const activeBtn = document.querySelector('.filter-btn.active');
+        const activeFilter = activeBtn ? activeBtn.getAttribute('data-filter') : 'all';
+        grid.innerHTML = '';
+
+        const filtered = projects.filter(p => activeFilter === 'all' || p.cat === activeFilter);
+
+        const noRes = document.getElementById('no-results');
+        if (noRes) {
+            if (filtered.length === 0) noRes.classList.remove('hidden');
+            else noRes.classList.add('hidden');
+        }
+
+        const currentLang = SiteLang.get();
+        filtered.forEach(p => {
+            const title = currentLang === 'ar' ? (SiteLang.t('pj' + p.id + '_t') || p.client) : p.client;
+            const desc = currentLang === 'ar' ? (SiteLang.t('pj' + p.id + '_d') || p.detail) : p.detail;
+            const catLabel = SiteLang.t('cat_' + p.cat) || p.cat;
+            const statusKey = 'status_' + p.status.toLowerCase();
+            const statusLabel = SiteLang.t(statusKey) || p.status;
+
+            const card = `
+            <article class="project-card bg-white rounded-xl shadow-sm hover:shadow-xl transition-all border border-gray-100 overflow-hidden group">
+              <div class="h-56 overflow-hidden relative">
+                <img class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105" src="${p.img}" alt="${title}" />
+                <span class="absolute top-4 left-4 bg-corporate-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">${catLabel}</span>
+                <span class="absolute top-4 right-4 ${p.status === 'Completed' ? 'bg-green-500' : 'bg-orange-500'} text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">${statusLabel}</span>
+              </div>
+              <div class="p-7">
+                <div class="flex items-center text-xs text-accent-blue font-semibold mb-3"><i class="fa-solid fa-location-dot mr-2"></i><span>${p.loc}</span></div>
+                <h3 class="text-xl font-bold text-corporate-blue mb-3">${title}</h3>
+                <p class="text-sm leading-relaxed mb-2 line-clamp-3">${desc}</p>
+              </div>
+            </article>
+            `;
+            grid.insertAdjacentHTML('beforeend', card);
+        });
+    }
+
+    // Filter Button listeners
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+        btn.addEventListener('click', function() {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            renderProjects();
+        });
+    });
+
+    // Language Change Listener
+    document.addEventListener('languagechange', function() {
+        renderProjects();
+    });
+
+    // Initial render
+    renderProjects();
+
+    // Brochure Modal Logic
+    (function() {
+        const modal = document.getElementById('brochure-modal');
+        const openBtn = document.getElementById('hero-brochure-btn');
+        const closeBtn = document.getElementById('close-brochure-modal');
+        const backdrop = document.getElementById('modal-backdrop');
+        const form = document.getElementById('brochure-form');
+        const successMsg = document.getElementById('form-success');
+
+        function openModal() {
+            if (!modal) return;
+            modal.classList.remove('hidden');
+            document.body.classList.add('modal-open');
+        }
+        function closeModal() {
+            if (!modal) return;
+            modal.classList.add('hidden');
+            document.body.classList.remove('modal-open');
+        }
+
+        if (openBtn) openBtn.addEventListener('click', openModal);
+        if (closeBtn) closeBtn.addEventListener('click', closeModal);
+        if (backdrop) backdrop.addEventListener('click', closeModal);
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && modal && !modal.classList.contains('hidden')) {
+                closeModal();
+            }
+        });
+
+        if (form) {
+            form.addEventListener('submit', function(e) {
+                e.preventDefault();
+                if (successMsg) successMsg.classList.remove('hidden');
+                const link = document.createElement('a');
+                link.href = 'assets/albahralarabi-company-profile.pdf';
+                link.download = 'AlBahr_AlArabi_Brochure.pdf';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+                setTimeout(function() {
+                    form.reset();
+                    if (successMsg) successMsg.classList.add('hidden');
+                    closeModal();
+                }, 3000);
+            });
+        }
+    })();
+
+    // Stats counter animation
+    (function() {
+        const counters = document.querySelectorAll('.counter');
+        if (!counters.length) return;
+        let animated = false;
+        function runCounters() {
+            if (animated) return;
+            const rect = counters[0].getBoundingClientRect();
+            if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+                animated = true;
+                counters.forEach(c => {
+                    const target = parseInt(c.getAttribute('data-target'), 10) || 0;
+                    const duration = 1500;
+                    const start = performance.now();
+                    function step(now) {
+                        const elapsed = now - start;
+                        const progress = Math.min(elapsed / duration, 1);
+                        const ease = 1 - Math.pow(1 - progress, 3);
+                        c.textContent = Math.floor(ease * target).toLocaleString();
+                        if (progress < 1) requestAnimationFrame(step);
+                        else c.textContent = target.toLocaleString();
+                    }
+                    requestAnimationFrame(step);
+                });
+            }
+        }
+        window.addEventListener('scroll', runCounters, { passive: true });
+        runCounters();
+    })();
+    </script>
+</body>
+</html>

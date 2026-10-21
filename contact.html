@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Al Bahr Al Arabi Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'corporate-blue': '#0A2647',
+                        'steel-grey': '#455A64',
+                        'light-grey': '#ECEFF1',
+                        'accent-blue': '#1976D2',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'arabic': ['Cairo', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        [dir="rtl"] .font-sans { font-family: 'Cairo', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(10,38,71,0.95) 0%, rgba(25,118,210,0.85) 100%);
+        }
+        .transition-all { transition: all 0.3s ease; }
+        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+
+        /* Page-specific styles */
+        ::-webkit-scrollbar {
+            display: none;
+        }
+
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible,
+        select:focus-visible {
+            outline: 3px solid #1976D2;
+            outline-offset: 2px;
+        }
+
+        .hero-overlay {
+            background: linear-gradient(135deg, rgba(10, 38, 71, 0.92) 0%, rgba(10, 38, 71, 0.75) 100%);
+        }
+
+        select {
+            appearance: none;
+            background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23455A64' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+            background-repeat: no-repeat;
+            background-position: right 0.75rem center;
+            background-size: 1.1em;
+            padding-right: 2.5rem;
+        }
+
+        .field-error {
+            border-color: #dc2626 !important;
+        }
+
+        #modal-brochure.open {
+            display: flex;
+        }
+
+        /* Arabic font only, layout stays LTR */
+        body.font-arabic,
+        body.font-arabic input,
+        body.font-arabic select,
+        body.font-arabic textarea,
+        body.font-arabic button {
+            font-family: 'Cairo', sans-serif;
+        }
+    </style>
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/site-i18n.js"></script>
+    <script src="assets/js/layout.js"></script>
+</head>
+
+<body class="font-sans text-steel-grey bg-white overflow-x-hidden">
+    <div id="site-header"></div><script>SiteLayout.mountHeader('site-header')</script>
+
+    <main id="main">
+        <!-- Page Banner -->
+        <section id="contact-hero" class="relative overflow-hidden flex items-center min-h-[340px] py-20">
+            <div class="absolute inset-0 z-0">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_c482c5754f_07cc2d2c84002a83.png"
+                     alt="oil refinery at dusk with steel towers and piping, industrial skyline, wide cinematic photograph"
+                     class="w-full h-full object-cover">
+                <div class="absolute inset-0 hero-overlay"></div>
+            </div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <nav aria-label="Breadcrumb" class="text-blue-100 text-xs font-semibold uppercase tracking-widest mb-6 flex items-center gap-2">
+                    <a href="index.html" data-i18n="menu_home" class="hover:text-white transition-all">Home</a>
+                    <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                    <span data-i18n="menu_contact" class="text-white">Contact Us</span>
+                </nav>
+                <h1 data-i18n="hero_title" class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-5 max-w-4xl">
+                    Contact Us
+                </h1>
+                <p data-i18n="hero_sub" class="text-blue-50 text-lg sm:text-xl max-w-3xl leading-relaxed">
+                    Get in touch with our team for project consultation, quotations and general enquiries across oil &amp; gas, marine and EPC services.
+                </p>
+            </div>
+        </section>
+
+        <!-- Quick Contact Cards -->
+        <section id="quick-contact" class="py-16 bg-light-grey">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <article id="qc-office" class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-7">
+                        <div class="w-14 h-14 rounded-lg bg-blue-50 text-accent-blue flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-building"></i>
+                        </div>
+                        <h3 data-i18n="qc1_t" class="text-lg font-bold text-corporate-blue mb-2">Head Office</h3>
+                        <p data-i18n="qc1_d" class="text-sm leading-relaxed">FF3P+WFG Al Hamriyah Free Zone, Sharjah, United Arab Emirates</p>
+                    </article>
+
+                    <article id="qc-phone" class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-7">
+                        <div class="w-14 h-14 rounded-lg bg-blue-50 text-accent-blue flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-phone"></i>
+                        </div>
+                        <h3 data-i18n="qc2_t" class="text-lg font-bold text-corporate-blue mb-2">Phone</h3>
+                        <a href="tel:+97165260602" class="text-sm font-semibold text-accent-blue hover:text-corporate-blue transition-all">+971 65260602</a>
+                    </article>
+
+                    <article id="qc-email" class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-7">
+                        <div class="w-14 h-14 rounded-lg bg-blue-50 text-accent-blue flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <h3 data-i18n="qc3_t" class="text-lg font-bold text-corporate-blue mb-2">Email</h3>
+                        <a href="mailto:info@albahralarabi.com" class="text-sm font-semibold text-accent-blue hover:text-corporate-blue transition-all break-all">info@albahralarabi.com</a>
+                    </article>
+
+                    <article id="qc-whatsapp" class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 p-7">
+                        <div class="w-14 h-14 rounded-lg bg-green-50 text-green-500 flex items-center justify-center text-2xl mb-5">
+                            <i class="fa-brands fa-whatsapp"></i>
+                        </div>
+                        <h3 data-i18n="qc4_t" class="text-lg font-bold text-corporate-blue mb-2">WhatsApp</h3>
+                        <a href="https://wa.me/97165260602" target="_blank" rel="noopener noreferrer" data-i18n="qc4_btn"
+                           class="inline-flex items-center justify-center bg-green-500 text-white px-5 h-11 rounded font-bold hover:bg-green-600 transition-all text-xs uppercase tracking-wider">
+                            Chat Now
+                        </a>
+                    </article>
+                </div>
+
+                <div id="hours-strip" class="mt-8 bg-corporate-blue rounded-xl px-6 py-5 flex flex-col md:flex-row items-center justify-center gap-3 md:gap-10 text-white text-sm">
+                    <span class="flex items-center">
+                        <i class="fa-solid fa-clock text-blue-200 mr-2"></i>
+                        <strong data-i18n="hours_t" class="uppercase tracking-wider text-xs">Business Hours</strong>
+                    </span>
+                    <span data-i18n="hours_1">Sunday – Thursday: 8:00 AM – 5:00 PM</span>
+                    <span data-i18n="hours_2" class="text-blue-200">Friday – Saturday: Closed</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Form + Side Info -->
+        <section id="contact-form" class="py-20 bg-white scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <span data-i18n="form_pill" class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">
+                        Send a Message
+                    </span>
+                    <h2 data-i18n="form_title" class="text-4xl font-bold text-corporate-blue mb-4">
+                        Let's Discuss Your Project
+                    </h2>
+                    <p data-i18n="form_sub" class="max-w-2xl mx-auto text-lg">
+                        Complete the form below and our team will respond within one business day.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                    <div class="lg:col-span-2 bg-white rounded-xl shadow-sm border border-gray-200 p-6 sm:p-10">
+                        <form id="contact-form-el" novalidate class="scroll-mt-28">
+                            <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" class="hidden">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="c-first" class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-2">
+                                        <span data-i18n="lbl_first">First Name</span> <span class="text-red-600">*</span>
+                                    </label>
+                                    <input id="c-first" type="text" required placeholder="John" data-ph-en="John" data-i18n-placeholder="ph_first"
+                                           class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+                                    <p aria-live="polite" data-i18n="err_first" class="err text-xs text-red-600 mt-1 hidden">
+                                        Please enter your first name.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <label for="c-last" class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-2">
+                                        <span data-i18n="lbl_last">Last Name</span> <span class="text-red-600">*</span>
+                                    </label>
+                                    <input id="c-last" type="text" required placeholder="Smith" data-ph-en="Smith" data-i18n-placeholder="ph_last"
+                                           class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+                                    <p aria-live="polite" data-i18n="err_last" class="err text-xs text-red-600 mt-1 hidden">
+                                        Please enter your last name.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <label for="c-email" class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-2">
+                                        <span data-i18n="lbl_email">Email Address</span> <span class="text-red-600">*</span>
+                                    </label>
+                                    <input id="c-email" type="email" required placeholder="name@company.com"
+                                           class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+                                    <p aria-live="polite" data-i18n="err_email" class="err text-xs text-red-600 mt-1 hidden">
+                                        Please enter a valid email address.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <label for="c-phone" class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-2">
+                                        <span data-i18n="lbl_phone">Phone Number</span> <span class="text-red-600">*</span>
+                                    </label>
+                                    <input id="c-phone" type="tel" required placeholder="+971 5X XXX XXXX"
+                                           class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+                                    <p aria-live="polite" data-i18n="err_phone" class="err text-xs text-red-600 mt-1 hidden">
+                                        Please enter a valid phone number.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <label for="c-company" data-i18n="lbl_company" class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-2">
+                                        Company Name
+                                    </label>
+                                    <input id="c-company" type="text" placeholder="Your company" data-ph-en="Your company" data-i18n-placeholder="ph_company"
+                                           class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+                                </div>
+
+                                <div>
+                                    <label for="c-job" data-i18n="lbl_job" class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-2">
+                                        Job Title
+                                    </label>
+                                    <input id="c-job" type="text" placeholder="Your position" data-ph-en="Your position" data-i18n-placeholder="ph_job"
+                                           class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+                                </div>
+
+                                <div class="md:col-span-2">
+                                    <label for="c-service" class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-2">
+                                        <span data-i18n="lbl_service">Service Interest</span> <span class="text-red-600">*</span>
+                                    </label>
+                                    <select id="c-service" required class="w-full h-12 px-4 rounded border border-gray-300 bg-white text-sm">
+                                        <option value="" data-i18n="opt_service">Select a Service</option>
+                                        <option value="quote" data-i18n="opt_s1">Request a Quote / General Inquiry</option>
+                                        <option value="epc" data-i18n="opt_s2">EPC &amp; Industrial Construction</option>
+                                        <option value="tank" data-i18n="opt_s3">Tank Farms &amp; Storage Terminals</option>
+                                        <option value="fab" data-i18n="opt_s4">Pipe Fabrication</option>
+                                        <option value="marine" data-i18n="opt_s5">Marine Engineering</option>
+                                        <option value="other" data-i18n="opt_s6">Other</option>
+                                    </select>
+                                    <p aria-live="polite" data-i18n="err_service" class="err text-xs text-red-600 mt-1 hidden">
+                                        Please select a service.
+                                    </p>
+                                </div>
+
+                                <div>
+                                    <label for="c-budget" data-i18n="lbl_budget" class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-2">
+                                        Project Budget Range
+                                    </label>
+                                    <select id="c-budget" class="w-full h-12 px-4 rounded border border-gray-300 bg-white text-sm">
+                                        <option value="" data-i18n="opt_budget">Select a Budget Range</option>
+                                        <option value="Under $100K" data-i18n="opt_b1">Under $100K</option>
+                                        <option value="$100K – $500K" data-i18n="opt_b2">$100K – $500K</option>
+                                        <option value="$500K – $2M" data-i18n="opt_b3">$500K – $2M</option>
+                                        <option value="$2M+" data-i18n="opt_b4">$2M+</option>
+                                    </select>
+                                </div>
+
+                                <div>
+                                    <label for="c-timeline" data-i18n="lbl_timeline" class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-2">
+                                        Project Timeline
+                                    </label>
+                                    <select id="c-timeline" class="w-full h-12 px-4 rounded border border-gray-300 bg-white text-sm">
+                                        <option value="" data-i18n="opt_timeline">Select a Timeline</option>
+                                        <option value="Immediate" data-i18n="opt_t1">Immediate</option>
+                                        <option value="1 – 3 Months" data-i18n="opt_t2">1 – 3 Months</option>
+                                        <option value="3 – 6 Months" data-i18n="opt_t3">3 – 6 Months</option>
+                                        <option value="6+ Months" data-i18n="opt_t4">6+ Months</option>
+                                    </select>
+                                </div>
+
+                                <div class="md:col-span-2">
+                                    <label for="c-msg" class="block text-xs font-bold uppercase tracking-wider text-corporate-blue mb-2">
+                                        <span data-i18n="lbl_msg">Message</span> <span class="text-red-600">*</span>
+                                    </label>
+                                    <textarea id="c-msg" rows="5" required placeholder="Tell us about your project requirements" data-ph-en="Tell us about your project requirements" data-i18n-placeholder="ph_msg" class="w-full px-4 py-3 rounded border border-gray-300 text-sm"></textarea>
+                                    <p aria-live="polite" data-i18n="err_msg" class="err text-xs text-red-600 mt-1 hidden">
+                                        Please enter at least 10 characters.
+                                    </p>
+                                </div>
+
+                                <div class="md:col-span-2 space-y-4">
+                                    <label class="flex items-start gap-3 text-sm cursor-pointer">
+                                        <input id="c-opt" type="checkbox" class="mt-1 w-5 h-5 accent-accent-blue">
+                                        <span data-i18n="chk_marketing">I would like to receive news and updates from Al Bahr Al Arabi Group.</span>
+                                    </label>
+
+                                    <div>
+                                        <label class="flex items-start gap-3 text-sm cursor-pointer">
+                                            <input id="c-terms" type="checkbox" class="mt-1 w-5 h-5 accent-accent-blue">
+                                            <span>
+                                                <span data-i18n="chk_terms">I accept the</span>
+                                                <!-- TODO: add Privacy Policy page -->
+                                                <a href="#" data-i18n="lnk_privacy" class="text-accent-blue font-semibold hover:underline">Privacy Policy</a>
+                                                <span data-i18n="chk_and">and</span>
+                                                <!-- TODO: add Terms of Service page -->
+                                                <a href="#" data-i18n="lnk_terms" class="text-accent-blue font-semibold hover:underline">Terms of Service</a>.
+                                                <span class="text-red-600">*</span>
+                                            </span>
+                                        </label>
+                                        <p aria-live="polite" data-i18n="err_terms" class="err text-xs text-red-600 mt-1 hidden">
+                                            Please accept the terms to continue.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="mt-8">
+                                <button type="submit" class="w-full bg-accent-blue text-white px-10 h-12 rounded font-bold hover:bg-corporate-blue transition-all uppercase text-xs tracking-wider flex items-center justify-center">
+                                    <i class="fa-solid fa-paper-plane mr-2"></i>
+                                    <span data-i18n="btn_send">Send Message</span>
+                                </button>
+                            </div>
+
+                            <div id="form-success" role="status" class="hidden mt-6 bg-green-50 border border-green-200 text-green-800 rounded-lg p-4 text-sm font-semibold flex items-center">
+                                <i class="fa-solid fa-circle-check mr-2 text-base flex-shrink-0"></i>
+                                <span data-i18n="form_ok">Thank you! Your message has been sent. Our team will contact you shortly.</span>
+                            </div>
+                        </form>
+                    </div>
+
+                    <aside class="space-y-6">
+                        <div id="side-hours" class="bg-light-grey rounded-xl border border-gray-200 p-7 hover:shadow-lg transition-all">
+                            <h3 class="text-lg font-bold text-corporate-blue mb-4 flex items-center">
+                                <i class="fa-solid fa-clock text-accent-blue mr-3"></i>
+                                <span data-i18n="hours_t2">Business Hours</span>
+                            </h3>
+                            <ul class="text-sm space-y-2">
+                                <li class="flex justify-between">
+                                    <span data-i18n="day1">Sun – Thu</span>
+                                    <span class="font-semibold text-corporate-blue">8:00 – 17:00</span>
+                                </li>
+                                <li class="flex justify-between">
+                                    <span data-i18n="day2">Fri – Sat</span>
+                                    <span data-i18n="closed" class="font-semibold text-corporate-blue">Closed</span>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="side-websites" class="bg-light-grey rounded-xl border border-gray-200 p-7 hover:shadow-lg transition-all">
+                            <h3 class="text-lg font-bold text-corporate-blue mb-4 flex items-center">
+                                <i class="fa-solid fa-globe text-accent-blue mr-3"></i>
+                                <span data-i18n="web_t">Group Websites</span>
+                            </h3>
+                            <ul class="text-sm space-y-2">
+                                <li>
+                                    <a href="https://www.crystal-petroleum.com" target="_blank" rel="noopener noreferrer"
+                                       class="text-accent-blue font-semibold hover:text-corporate-blue transition-all" data-i18n="company_4_short">
+                                        Crystal Petroleum FZE
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto:info@gulftechenergy.com"
+                                       class="text-accent-blue font-semibold hover:text-corporate-blue transition-all" data-i18n="company_3_short">
+                                        Gulf Tech Energy Contracting
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="index.html#company-8"
+                                       class="text-accent-blue font-semibold hover:text-corporate-blue transition-all" data-i18n="company_8_short">
+                                        Meecon LTD
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div id="side-social" class="bg-light-grey rounded-xl border border-gray-200 p-7 hover:shadow-lg transition-all">
+                            <h3 class="text-lg font-bold text-corporate-blue mb-4 flex items-center">
+                                <i class="fa-solid fa-share-nodes text-accent-blue mr-3"></i>
+                                <span data-i18n="soc_t">Follow Us</span>
+                            </h3>
+                            <div class="flex gap-3">
+                                <!-- TODO: add real social URLs in site-config.js -->
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"
+                                   class="w-11 h-11 rounded-full bg-corporate-blue text-white hover:bg-accent-blue flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-linkedin-in"></i>
+                                </a>
+                                <!-- TODO: add real social URLs in site-config.js -->
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="X"
+                                   class="w-11 h-11 rounded-full bg-corporate-blue text-white hover:bg-accent-blue flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-x-twitter"></i>
+                                </a>
+                                <!-- TODO: add real social URLs in site-config.js -->
+                                <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram"
+                                   class="w-11 h-11 rounded-full bg-corporate-blue text-white hover:bg-accent-blue flex items-center justify-center transition-all">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </aside>
+                </div>
+            </div>
+        </section>
+
+        <!-- Office Locations -->
+        <section id="locations" class="py-20 bg-light-grey scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <span data-i18n="loc_pill" class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">
+                        Our Offices
+                    </span>
+                    <h2 data-i18n="loc_title" class="text-4xl font-bold text-corporate-blue mb-4">
+                        Office Locations
+                    </h2>
+                    <p data-i18n="loc_sub" class="max-w-2xl mx-auto text-lg">
+                        Group offices serving clients across the UAE and international markets.
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <article id="office-head" class="bg-white rounded-xl border-2 border-accent-blue shadow-sm hover:shadow-lg transition-all p-7 relative">
+                        <span data-i18n="loc_head" class="absolute -top-3 left-6 bg-accent-blue text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">
+                            Head Office
+                        </span>
+                        <h3 data-i18n="off_1_t" class="text-lg font-bold text-corporate-blue mb-3 mt-2">
+                            Al Bahr Al Arabi Group – Sharjah
+                        </h3>
+                        <p class="text-sm leading-relaxed mb-2 flex items-start">
+                            <i class="fa-solid fa-location-dot text-accent-blue mr-2 mt-1 flex-shrink-0"></i>
+                            <span data-i18n="off_1_a">Al Hamriyah Free Zone, Sharjah, UAE</span>
+                        </p>
+                        <p class="text-sm mb-4 flex items-center">
+                            <i class="fa-solid fa-phone text-accent-blue mr-2 flex-shrink-0"></i>
+                            <a href="tel:+97165260602" class="hover:text-accent-blue transition-all">+971 65260602</a>
+                        </p>
+                    </article>
+
+                    <article id="office-2" class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all p-7">
+                        <h3 data-i18n="off_2_t" class="text-lg font-bold text-corporate-blue mb-3">
+                            Gulf Tech Energy Contracting LLC
+                        </h3>
+                        <p class="text-sm leading-relaxed mb-2 flex items-start">
+                            <i class="fa-solid fa-location-dot text-accent-blue mr-2 mt-1 flex-shrink-0"></i>
+                            <span data-i18n="off_2_a">Abu Dhabi, UAE</span>
+                        </p>
+                        <p class="text-sm mb-4 flex items-center">
+                            <i class="fa-solid fa-envelope text-accent-blue mr-2 flex-shrink-0"></i>
+                            <a href="mailto:info@albahralarabi.com" class="hover:text-accent-blue transition-all">info@albahralarabi.com</a>
+                        </p>
+                    </article>
+
+                    <article id="office-3" class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all p-7">
+                        <h3 data-i18n="off_3_t" class="text-lg font-bold text-corporate-blue mb-3">
+                            Crystal Oilfield Constr &amp; Cont. LLC
+                        </h3>
+                        <p class="text-sm leading-relaxed mb-2 flex items-start">
+                            <i class="fa-solid fa-location-dot text-accent-blue mr-2 mt-1 flex-shrink-0"></i>
+                            <span data-i18n="off_3_a">Doha, Qatar</span>
+                        </p>
+                        <p class="text-sm mb-4 flex items-center">
+                            <i class="fa-solid fa-envelope text-accent-blue mr-2 flex-shrink-0"></i>
+                            <a href="mailto:info@albahralarabi.com" class="hover:text-accent-blue transition-all">info@albahralarabi.com</a>
+                        </p>
+                    </article>
+
+                    <article id="office-4" class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all p-7">
+                        <h3 data-i18n="off_4_t" class="text-lg font-bold text-corporate-blue mb-3">
+                            Crystal Care Ltd
+                        </h3>
+                        <p class="text-sm leading-relaxed mb-2 flex items-start">
+                            <i class="fa-solid fa-location-dot text-accent-blue mr-2 mt-1 flex-shrink-0"></i>
+                            <span data-i18n="off_4_a">Kingdom of Saudi Arabia</span>
+                        </p>
+                        <p class="text-sm mb-4 flex items-center">
+                            <i class="fa-solid fa-envelope text-accent-blue mr-2 flex-shrink-0"></i>
+                            <a href="mailto:info@albahralarabi.com" class="hover:text-accent-blue transition-all">info@albahralarabi.com</a>
+                        </p>
+                    </article>
+
+                    <article id="office-5" class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all p-7">
+                        <h3 data-i18n="off_5_t" class="text-lg font-bold text-corporate-blue mb-3">
+                            Crystal Petrokimya
+                        </h3>
+                        <p class="text-sm leading-relaxed mb-2 flex items-start">
+                            <i class="fa-solid fa-location-dot text-accent-blue mr-2 mt-1 flex-shrink-0"></i>
+                            <span data-i18n="off_5_a">Turkey</span>
+                        </p>
+                        <p class="text-sm mb-4 flex items-center">
+                            <i class="fa-solid fa-envelope text-accent-blue mr-2 flex-shrink-0"></i>
+                            <a href="mailto:info@albahralarabi.com" class="hover:text-accent-blue transition-all">info@albahralarabi.com</a>
+                        </p>
+                    </article>
+
+                    <article id="office-6" class="bg-white rounded-xl border border-gray-100 shadow-sm hover:shadow-lg transition-all p-7">
+                        <h3 data-i18n="off_6_t" class="text-lg font-bold text-corporate-blue mb-3">
+                            Meecon LTD
+                        </h3>
+                        <p class="text-sm leading-relaxed mb-2 flex items-start">
+                            <i class="fa-solid fa-location-dot text-accent-blue mr-2 mt-1 flex-shrink-0"></i>
+                            <span data-i18n="off_6_a">United Kingdom</span>
+                        </p>
+                        <p class="text-sm mb-4 flex items-center">
+                            <i class="fa-solid fa-envelope text-accent-blue mr-2 flex-shrink-0"></i>
+                            <a href="mailto:info@albahralarabi.com" class="hover:text-accent-blue transition-all">info@albahralarabi.com</a>
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Map Section -->
+        <section id="map-section" class="py-20 bg-white scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <span data-i18n="map_pill" class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">
+                        Find Us
+                    </span>
+                    <h2 data-i18n="map_title" class="text-4xl font-bold text-corporate-blue mb-4">
+                        Visit Our Head Office
+                    </h2>
+                </div>
+                <div class="relative rounded-xl overflow-hidden border border-gray-200 shadow-sm">
+                    <iframe frameborder="0" title="Al Bahr Al Arabi Group head office map"
+                            loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                            src="https://www.google.com/maps?q=Al+Hamriyah+Free+Zone+Sharjah&amp;output=embed"
+                            class="w-full h-[480px] border-0"></iframe>
+                </div>
+            </div>
+        </section>
+
+        <!-- Lead Modal -->
+        <div id="modal-brochure" role="dialog" aria-modal="true" aria-labelledby="modal-title"
+             class="hidden fixed inset-0 z-[60] bg-corporate-blue/80 items-center justify-center p-4">
+            <div class="bg-white rounded-xl max-w-md w-full p-8 relative">
+                <button type="button" id="modal-close" aria-label="Close"
+                        class="absolute top-4 right-4 w-11 h-11 text-steel-grey hover:text-accent-blue text-xl flex items-center justify-center focus:outline-none focus:ring-2 focus:ring-accent-blue rounded">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <h3 id="modal-title" data-i18n="mod_t" class="text-2xl font-bold text-corporate-blue mb-2">
+                    Download Brochure
+                </h3>
+                <p data-i18n="mod_d" class="text-sm mb-6">
+                    Please share your details to receive the download.
+                </p>
+                <form id="modal-form" novalidate class="space-y-4">
+                    <input id="m-name" type="text" placeholder="Full Name" data-ph-en="Full Name" data-i18n-placeholder="ph_name"
+                           class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+                    <input id="m-email" type="email" placeholder="Email Address" data-ph-en="Email Address" data-i18n-placeholder="ph_email"
+                           class="w-full h-12 px-4 rounded border border-gray-300 text-sm">
+                    <button type="submit"
+                            class="w-full bg-accent-blue text-white h-12 rounded font-bold hover:bg-corporate-blue transition-all text-xs uppercase tracking-wider flex items-center justify-center">
+                        <i class="fa-solid fa-download mr-2"></i>
+                        <span data-i18n="btn_dl">Download</span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <div id="site-footer"></div><script>SiteLayout.mountFooter('site-footer')</script>
+
+    <!-- Page Scripts -->
+    <script>
+        (function() {
+            // Register page-specific translations (shared keys are maintained in site-i18n.js)
+            SiteLang.register({
+                en: {
+                    hero_title: 'Contact Us',
+                    hero_sub: 'Get in touch with our team for project consultation, quotations and general enquiries across oil & gas, marine and EPC services.',
+                    qc1_t: 'Head Office',
+                    qc1_d: 'FF3P+WFG Al Hamriyah Free Zone, Sharjah, United Arab Emirates',
+                    qc2_t: 'Phone',
+                    qc3_t: 'Email',
+                    qc4_t: 'WhatsApp',
+                    qc4_btn: 'Chat Now',
+                    hours_t: 'Business Hours',
+                    hours_1: 'Sunday – Thursday: 8:00 AM – 5:00 PM',
+                    hours_2: 'Friday – Saturday: Closed',
+                    form_pill: 'Send a Message',
+                    form_title: "Let's Discuss Your Project",
+                    form_sub: 'Complete the form below and our team will respond within one business day.',
+                    lbl_first: 'First Name',
+                    lbl_last: 'Last Name',
+                    lbl_email: 'Email Address',
+                    lbl_phone: 'Phone Number',
+                    lbl_company: 'Company Name',
+                    lbl_job: 'Job Title',
+                    lbl_service: 'Service Interest',
+                    lbl_budget: 'Project Budget Range',
+                    lbl_timeline: 'Project Timeline',
+                    lbl_msg: 'Message',
+                    opt_service: 'Select a Service',
+                    opt_s1: 'Request a Quote / General Inquiry',
+                    opt_s2: 'EPC & Industrial Construction',
+                    opt_s3: 'Tank Farms & Storage Terminals',
+                    opt_s4: 'Pipe Fabrication',
+                    opt_s5: 'Marine Engineering',
+                    opt_s6: 'Other',
+                    opt_budget: 'Select a Budget Range',
+                    opt_b1: 'Under $100K',
+                    opt_b2: '$100K – $500K',
+                    opt_b3: '$500K – $2M',
+                    opt_b4: '$2M+',
+                    opt_timeline: 'Select a Timeline',
+                    opt_t1: 'Immediate',
+                    opt_t2: '1 – 3 Months',
+                    opt_t3: '3 – 6 Months',
+                    opt_t4: '6+ Months',
+                    chk_marketing: 'I would like to receive news and updates from Al Bahr Al Arabi Group.',
+                    chk_terms: 'I accept the',
+                    lnk_privacy: 'Privacy Policy',
+                    chk_and: 'and',
+                    lnk_terms: 'Terms of Service',
+                    btn_send: 'Send Message',
+                    form_ok: 'Thank you! Your message has been sent. Our team will contact you shortly.',
+                    err_first: 'Please enter your first name.',
+                    err_last: 'Please enter your last name.',
+                    err_email: 'Please enter a valid email address.',
+                    err_phone: 'Please enter a valid phone number.',
+                    err_service: 'Please select a service.',
+                    err_msg: 'Please enter at least 10 characters.',
+                    err_terms: 'Please accept the terms to continue.',
+                    hours_t2: 'Business Hours',
+                    day1: 'Sun – Thu',
+                    day2: 'Fri – Sat',
+                    closed: 'Closed',
+                    web_t: 'Group Websites',
+                    company_4_short: 'Crystal Petroleum FZE',
+                    company_3_short: 'Gulf Tech Energy Contracting',
+                    company_8_short: 'Meecon LTD',
+                    soc_t: 'Follow Us',
+                    loc_pill: 'Our Offices',
+                    loc_title: 'Office Locations',
+                    loc_sub: 'Group offices serving clients across the UAE and international markets.',
+                    loc_head: 'Head Office',
+                    off_1_t: 'Al Bahr Al Arabi Group – Sharjah',
+                    off_1_a: 'Al Hamriyah Free Zone, Sharjah, UAE',
+                    off_2_t: 'Gulf Tech Energy Contracting LLC',
+                    off_2_a: 'Abu Dhabi, UAE',
+                    off_3_t: 'Crystal Oilfield Constr & Cont. LLC',
+                    off_3_a: 'Doha, Qatar',
+                    off_4_t: 'Crystal Care Ltd',
+                    off_4_a: 'Kingdom of Saudi Arabia',
+                    off_5_t: 'Crystal Petrokimya',
+                    off_5_a: 'Turkey',
+                    off_6_t: 'Meecon LTD',
+                    off_6_a: 'United Kingdom',
+                    map_pill: 'Find Us',
+                    map_title: 'Visit Our Head Office',
+                    mod_t: 'Download Brochure',
+                    mod_d: 'Please share your details to receive the download.',
+                    btn_dl: 'Download',
+                    ph_first: 'John',
+                    ph_last: 'Smith',
+                    ph_company: 'Your company',
+                    ph_job: 'Your position',
+                    ph_msg: 'Tell us about your project requirements',
+                    ph_name: 'Full Name',
+                    ph_email: 'Email Address'
+                },
+                ar: {
+                    hero_title: 'اتصل بنا',
+                    hero_sub: 'تواصل مع فريقنا للاستشارات والعروض والاستفسارات العامة في مجالات النفط والغاز والهندسة البحرية وخدمات الهندسة والتوريد والإنشاء.',
+                    qc1_t: 'المكتب الرئيسي',
+                    qc1_d: 'FF3P+WFG المنطقة الحرة بالحمرية، الشارقة، الإمارات العربية المتحدة',
+                    qc2_t: 'الهاتف',
+                    qc3_t: 'البريد الإلكتروني',
+                    qc4_t: 'واتساب',
+                    qc4_btn: 'تحدث الآن',
+                    hours_t: 'ساعات العمل',
+                    hours_1: 'الأحد – الخميس: 8:00 ص – 5:00 م',
+                    hours_2: 'الجمعة – السبت: مغلق',
+                    form_pill: 'أرسل رسالة',
+                    form_title: 'دعنا نناقش مشروعك',
+                    form_sub: 'أكمل النموذج أدناه وسيرد عليك فريقنا خلال يوم عمل واحد.',
+                    lbl_first: 'الاسم الأول',
+                    lbl_last: 'اسم العائلة',
+                    lbl_email: 'البريد الإلكتروني',
+                    lbl_phone: 'رقم الهاتف',
+                    lbl_company: 'اسم الشركة',
+                    lbl_job: 'المسمى الوظيفي',
+                    lbl_service: 'الخدمة المطلوبة',
+                    lbl_budget: 'نطاق ميزانية المشروع',
+                    lbl_timeline: 'الجدول الزمني للمشروع',
+                    lbl_msg: 'الرسالة',
+                    opt_service: 'اختر الخدمة',
+                    opt_s1: 'طلب عرض سعر / استفسار عام',
+                    opt_s2: 'الهندسة والتوريد والإنشاء الصناعي',
+                    opt_s3: 'مزارع الخزانات ومحطات التخزين',
+                    opt_s4: 'تصنيع الأنابيب',
+                    opt_s5: 'الهندسة البحرية',
+                    opt_s6: 'أخرى',
+                    opt_budget: 'اختر نطاق الميزانية',
+                    opt_b1: 'أقل من 100 ألف دولار',
+                    opt_b2: '100 ألف – 500 ألف دولار',
+                    opt_b3: '500 ألف – 2 مليون دولار',
+                    opt_b4: 'أكثر من 2 مليون دولار',
+                    opt_timeline: 'اختر الجدول الزمني',
+                    opt_t1: 'فوري',
+                    opt_t2: '1 – 3 أشهر',
+                    opt_t3: '3 – 6 أشهر',
+                    opt_t4: 'أكثر من 6 أشهر',
+                    chk_marketing: 'أرغب في تلقي الأخبار والتحديثات من مجموعة البحر العربي.',
+                    chk_terms: 'أوافق على',
+                    lnk_privacy: 'سياسة الخصوصية',
+                    chk_and: 'و',
+                    lnk_terms: 'شروط الخدمة',
+                    btn_send: 'إرسال الرسالة',
+                    form_ok: 'شكراً لك! تم إرسال رسالتك. سيتواصل معك فريقنا قريباً.',
+                    err_first: 'يرجى إدخال الاسم الأول.',
+                    err_last: 'يرجى إدخال اسم العائلة.',
+                    err_email: 'يرجى إدخال بريد إلكتروني صحيح.',
+                    err_phone: 'يرجى إدخال رقم هاتف صحيح.',
+                    err_service: 'يرجى اختيار خدمة.',
+                    err_msg: 'يرجى إدخال 10 أحرف على الأقل.',
+                    err_terms: 'يرجى الموافقة على الشروط للمتابعة.',
+                    hours_t2: 'ساعات العمل',
+                    day1: 'الأحد – الخميس',
+                    day2: 'الجمعة – السبت',
+                    closed: 'مغلق',
+                    web_t: 'مواقع المجموعة',
+                    company_4_short: 'كريستال للبترول (م.ح)',
+                    company_3_short: 'جلف تيك للمقاولات الطاقية',
+                    company_8_short: 'ميكون المحدودة',
+                    soc_t: 'تابعنا',
+                    loc_pill: 'مكاتبنا',
+                    loc_title: 'مواقع المكاتب',
+                    loc_sub: 'مكاتب المجموعة تخدم العملاء في الإمارات والأسواق الدولية.',
+                    loc_head: 'المكتب الرئيسي',
+                    off_1_t: 'مجموعة البحر العربي – الشارقة',
+                    off_1_a: 'المنطقة الحرة بالحمرية، الشارقة، الإمارات',
+                    off_2_t: 'جلف تيك للمقاولات الطاقية ذ.م.م',
+                    off_2_a: 'أبوظبي، الإمارات',
+                    off_3_t: 'كريستال لمقاولات حقول النفط ذ.م.م',
+                    off_3_a: 'الدوحة، قطر',
+                    off_4_t: 'كريستال كير المحدودة',
+                    off_4_a: 'المملكة العربية السعودية',
+                    off_5_t: 'كريستال بتروكيميا',
+                    off_5_a: 'تركيا',
+                    off_6_t: 'ميكون المحدودة',
+                    off_6_a: 'المملكة المتحدة',
+                    map_pill: 'موقعنا',
+                    map_title: 'زر مكتبنا الرئيسي',
+                    mod_t: 'تحميل الكتيب',
+                    mod_d: 'يرجى مشاركة بياناتك لتلقي رابط التحميل.',
+                    btn_dl: 'تحميل',
+                    ph_first: 'الاسم الأول',
+                    ph_last: 'اسم العائلة',
+                    ph_company: 'اسم شركتك',
+                    ph_job: 'منصبك',
+                    ph_msg: 'أخبرنا عن متطلبات مشروعك',
+                    ph_name: 'الاسم الكامل',
+                    ph_email: 'البريد الإلكتروني'
+                }
+            });
+
+            // Re-render dynamic content on language change
+            function updateDynamicContent() {
+                var lang = SiteLang.get();
+
+                // 1. Re-render select options while preserving selected values
+                var selectIds = ['c-service', 'c-budget', 'c-timeline'];
+                selectIds.forEach(function(id) {
+                    var sel = document.getElementById(id);
+                    if (!sel) return;
+                    for (var i = 0; i < sel.options.length; i++) {
+                        var opt = sel.options[i];
+                        var key = opt.getAttribute('data-i18n');
+                        if (key) {
+                            var val = SiteLang.t(key);
+                            if (val) opt.textContent = val;
+                        }
+                    }
+                });
+
+                // 2. Re-render placeholders
+                document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+                    var key = el.getAttribute('data-i18n-placeholder');
+                    var val = SiteLang.t(key);
+                    if (val) el.placeholder = val;
+                });
+
+                // 3. Re-render visible error messages
+                document.querySelectorAll('.err').forEach(function(el) {
+                    var key = el.getAttribute('data-i18n');
+                    if (key) {
+                        var val = SiteLang.t(key);
+                        if (val) el.textContent = val;
+                    }
+                });
+
+                // 4. Re-render success message
+                var succSpan = document.querySelector('#form-success [data-i18n="form_ok"]');
+                if (succSpan) {
+                    var val = SiteLang.t('form_ok');
+                    if (val) succSpan.textContent = val;
+                }
+            }
+
+            document.addEventListener('languagechange', function() {
+                updateDynamicContent();
+            });
+
+            // Initial check: if preferred language was AR, re-render dynamic content
+            if (SiteLang.get() === 'ar') {
+                updateDynamicContent();
+            }
+
+            // Sync social links with SITE_CONFIG if defined
+            if (window.SITE_CONFIG && window.SITE_CONFIG.social) {
+                var soc = window.SITE_CONFIG.social;
+                var sideSoc = document.getElementById('side-social');
+                if (sideSoc) {
+                    var li = sideSoc.querySelector('[aria-label="LinkedIn"]');
+                    if (li && soc.linkedin) li.href = soc.linkedin;
+                    var tw = sideSoc.querySelector('[aria-label="X"]');
+                    if (tw && soc.twitter) tw.href = soc.twitter;
+                    var ig = sideSoc.querySelector('[aria-label="Instagram"]');
+                    if (ig && soc.instagram) ig.href = soc.instagram;
+                }
+            }
+
+            // Form validation and submission
+            var form = document.getElementById('contact-form-el');
+            var okBox = document.getElementById('form-success');
+
+            function showErr(input, show) {
+                var wrap = input.closest('div');
+                var err = wrap ? wrap.querySelector('.err') : null;
+                if (err) err.classList.toggle('hidden', !show);
+                if (input.type !== 'checkbox') {
+                    input.classList.toggle('field-error', show);
+                }
+            }
+
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var honey = form.querySelector('input[name="website"]');
+                    if (honey && honey.value) return; // bot detection
+
+                    var first = document.getElementById('c-first');
+                    var last = document.getElementById('c-last');
+                    var email = document.getElementById('c-email');
+                    var phone = document.getElementById('c-phone');
+                    var service = document.getElementById('c-service');
+                    var msg = document.getElementById('c-msg');
+                    var terms = document.getElementById('c-terms');
+                    var valid = true;
+
+                    var checks = [
+                        [first, first && first.value.trim().length > 0],
+                        [last, last && last.value.trim().length > 0],
+                        [email, email && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.value.trim())],
+                        [phone, phone && /^[+\d][\d\s\-()]{6,}$/.test(phone.value.trim())],
+                        [service, service && service.value !== ''],
+                        [msg, msg && msg.value.trim().length >= 10],
+                        [terms, terms && terms.checked]
+                    ];
+
+                    checks.forEach(function(c) {
+                        if (c[0]) showErr(c[0], !c[1]);
+                        if (!c[1]) valid = false;
+                    });
+
+                    if (!valid) {
+                        var firstBad = checks.filter(function(c) { return !c[1]; })[0];
+                        if (firstBad && firstBad[0]) firstBad[0].focus();
+                        if (okBox) okBox.classList.add('hidden');
+                        return;
+                    }
+
+                    if (okBox) {
+                        okBox.classList.remove('hidden');
+                        okBox.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+                    }
+                    form.reset();
+                });
+            }
+
+            // Brochure Modal logic
+            var modal = document.getElementById('modal-brochure');
+
+            function openModal() {
+                if (!modal) return;
+                modal.classList.remove('hidden');
+                modal.classList.add('open');
+                var nameInput = document.getElementById('m-name');
+                if (nameInput) nameInput.focus();
+            }
+
+            function closeModal() {
+                if (!modal) return;
+                modal.classList.remove('open');
+                modal.classList.add('hidden');
+            }
+
+            document.querySelectorAll('.dl-btn').forEach(function(btn) {
+                btn.addEventListener('click', openModal);
+            });
+
+            var modalCloseBtn = document.getElementById('modal-close');
+            if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeModal);
+
+            if (modal) {
+                modal.addEventListener('click', function(e) {
+                    if (e.target === modal) closeModal();
+                });
+            }
+
+            document.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape' && modal && modal.classList.contains('open')) {
+                    closeModal();
+                }
+            });
+
+            var modalForm = document.getElementById('modal-form');
+            if (modalForm) {
+                modalForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    var n = document.getElementById('m-name');
+                    var m = document.getElementById('m-email');
+                    var okName = n && n.value.trim().length > 0;
+                    var okMail = m && /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(m.value.trim());
+
+                    if (n) n.classList.toggle('field-error', !okName);
+                    if (m) m.classList.toggle('field-error', !okMail);
+                    if (!okName || !okMail) return;
+
+                    // Trigger PDF brochure download
+                    var downloadUrl = (window.SITE_CONFIG && window.SITE_CONFIG.brochureUrl) || 'assets/albahralarabi-company-profile.pdf';
+                    var a = document.createElement('a');
+                    a.href = downloadUrl;
+                    a.download = 'albahralarabi-company-profile.pdf';
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+
+                    this.reset();
+                    closeModal();
+                });
+            }
+
+            window.openBrochureModal = openModal;
+        })();
+    </script>
+</body>
+</html>

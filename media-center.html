@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <script>window.FontAwesomeConfig = { autoReplaceSvg: 'nest' };</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/js/all.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media Center - Al Bahr Al Arabi Group</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'corporate-blue': '#0A2647',
+                        'steel-grey': '#455A64',
+                        'light-grey': '#ECEFF1',
+                        'accent-blue': '#1976D2',
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'sans-serif'],
+                        'arabic': ['Cairo', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style>
+        [dir="rtl"] .font-sans { font-family: 'Cairo', sans-serif; }
+        .hero-gradient {
+            background: linear-gradient(135deg, rgba(10,38,71,0.95) 0%, rgba(25,118,210,0.85) 100%);
+        }
+        .transition-all { transition: all 0.3s ease; }
+        html { scroll-behavior: smooth; scroll-padding-top: 7rem; }
+    </style>
+    <style>
+        ::-webkit-scrollbar {
+            display: none;
+        }
+        a:focus-visible,
+        button:focus-visible,
+        input:focus-visible,
+        textarea:focus-visible {
+            outline: 3px solid #1976D2;
+            outline-offset: 2px;
+        }
+        .filter-btn.active {
+            background-color: #0A2647;
+            color: #fff;
+            border-color: #0A2647;
+        }
+        .hero-overlay {
+            background: rgba(10, 38, 71, 0.82);
+        }
+        .lightbox-panel {
+            transform: scale(0.98);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        .lightbox-open .lightbox-panel {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .lightbox-backdrop {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox-open .lightbox-backdrop {
+            opacity: 1;
+        }
+        .gallery-item .overlay {
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .gallery-item:hover .overlay,
+        .gallery-item:focus-visible .overlay {
+            opacity: 1;
+        }
+        .timeline-line::before {
+            content: '';
+            position: absolute;
+            top: 11px;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: #CFD8DC;
+        }
+    </style>
+    <script src="assets/js/site-config.js"></script>
+    <script src="assets/js/site-i18n.js"></script>
+    <script src="assets/js/layout.js"></script>
+</head>
+
+<body class="font-sans text-steel-grey bg-white overflow-x-hidden">
+    <div id="site-header"></div><script>SiteLayout.mountHeader('site-header')</script>
+
+    <main id="main">
+        <!-- Media Center Hero -->
+        <section id="media-hero" class="relative overflow-hidden flex items-center py-24 lg:py-32">
+            <div class="absolute inset-0 z-0">
+                <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_fb2eda50e0_7a205591aa29885d.png"
+                    alt="aerial view of oil storage terminal tank farm at Hamriyah free zone with steel tanks and piping"
+                    class="w-full h-full object-cover">
+                <div class="absolute inset-0 hero-overlay"></div>
+            </div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <nav aria-label="Breadcrumb"
+                    class="text-blue-100 text-xs font-semibold uppercase tracking-widest mb-6 flex items-center gap-2">
+                    <a href="index.html" data-i18n="menu_home" class="hover:text-white">Home</a>
+                    <i class="fa-solid fa-chevron-right text-[8px]"></i>
+                    <span data-i18n="menu_media" class="text-white">Media Center</span>
+                </nav>
+                <span data-i18n="hero_eyebrow"
+                    class="inline-block text-blue-100 text-xs font-bold uppercase tracking-[0.2em] mb-4 border-b border-blue-300/50 pb-1">Media Center</span>
+                <h1 data-i18n="hero_title"
+                    class="text-white text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight mb-6 max-w-4xl">
+                    Corporate Updates, Projects and Publications</h1>
+                <p data-i18n="hero_sub"
+                    class="text-blue-50 text-lg sm:text-xl max-w-3xl leading-relaxed mb-10">
+                    Explore project highlights, our corporate photo gallery, company milestones and official publications from Al Bahr Al Arabi Group.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="#gallery" data-i18n="btn_gallery"
+                        class="bg-accent-blue text-white px-8 py-4 rounded font-bold hover:bg-white hover:text-corporate-blue transition-all text-center uppercase text-sm tracking-wider">Explore Our Gallery</a>
+                    <a href="assets/albahralarabi-company-profile.pdf" download="" data-i18n="btn_profile"
+                        class="border-2 border-white text-white px-8 py-4 rounded font-bold hover:bg-white hover:text-corporate-blue transition-all text-center uppercase text-sm tracking-wider flex items-center justify-center">
+                        <i class="fa-solid fa-file-pdf mr-2"></i>Download Company Profile</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Project Highlights -->
+        <section id="project-highlights" data-section="projects" class="media-section py-20 bg-light-grey scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <span data-i18n="ph_pill"
+                        class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Project Highlights</span>
+                    <h2 data-i18n="ph_title" class="text-4xl font-bold text-corporate-blue mb-4">Featured Projects</h2>
+                    <p data-i18n="ph_sub" class="max-w-2xl mx-auto text-lg">Selected tank farm and terminal developments delivered by our EPC teams.</p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <article id="project-card-1"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 overflow-hidden group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_18b226d159_ce0e938dff3e817a.png"
+                                alt="large bulk oil storage tank farm with steel tanks under construction in Sharjah UAE"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                            <span data-i18n="st_ongoing"
+                                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+                        </div>
+                        <div class="p-7">
+                            <p class="text-xs font-semibold text-steel-grey/80 uppercase tracking-wider mb-2">Gulf Stream Energy FZC</p>
+                            <h3 class="text-xl font-bold text-corporate-blue mb-3">Tank Farm &amp; Distillation Facility</h3>
+                            <p class="text-sm leading-relaxed mb-5">EPCC of tank farms (108,016 CBM), dehydration tank (500 KLD) and distillation tank (1,500 KLD).</p>
+                            <div class="flex items-center text-xs text-accent-blue font-semibold">
+                                <i class="fa-solid fa-location-dot mr-2"></i><span>Sharjah, UAE</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article id="project-card-2"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 overflow-hidden group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_e35a6c0ee5_3ccc46b37ecf9dd1.png"
+                                alt="bulk oil storage terminal with cylindrical tanks and pipe racks near the coast"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                            <span data-i18n="st_ongoing"
+                                class="absolute top-4 right-4 bg-orange-500 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Ongoing</span>
+                        </div>
+                        <div class="p-7">
+                            <p class="text-xs font-semibold text-steel-grey/80 uppercase tracking-wider mb-2">Petro Deniz FZE</p>
+                            <h3 class="text-xl font-bold text-corporate-blue mb-3">Bulk Oil Storage Tank Farm</h3>
+                            <p class="text-sm leading-relaxed mb-5">EPCC of bulk oil storage tank farm (163,475 CBM) and associated facilities.</p>
+                            <div class="flex items-center text-xs text-accent-blue font-semibold">
+                                <i class="fa-solid fa-location-dot mr-2"></i><span>Hamriyah, Sharjah</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article id="project-card-3"
+                        class="bg-white rounded-xl shadow-sm hover:shadow-lg transition-all border border-gray-100 overflow-hidden group">
+                        <div class="h-56 overflow-hidden relative">
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_973fe77beb_2bf3b4b10aaeb493.png"
+                                alt="oil storage terminal with jetty pipelines extending into harbour"
+                                class="w-full h-full object-cover transition-all duration-700 group-hover:scale-105">
+                            <span data-i18n="st_completed"
+                                class="absolute top-4 right-4 bg-green-600 text-white text-[10px] font-bold uppercase tracking-wider px-3 py-1 rounded-full">Completed</span>
+                        </div>
+                        <div class="p-7">
+                            <p class="text-xs font-semibold text-steel-grey/80 uppercase tracking-wider mb-2">Vesmein Petroleum LLC</p>
+                            <h3 class="text-xl font-bold text-corporate-blue mb-3">Terminal &amp; Jetty Lines</h3>
+                            <p class="text-sm leading-relaxed mb-5">EPCC of bulk oil storage terminal (235,000 CBM) with associated jetty lines (4.8 km).</p>
+                            <div class="flex items-center text-xs text-accent-blue font-semibold">
+                                <i class="fa-solid fa-location-dot mr-2"></i><span>Abu Dhabi, UAE</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Corporate Photo Gallery -->
+        <section id="gallery" data-section="gallery" class="media-section py-20 bg-white scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <span data-i18n="gal_pill"
+                        class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Photo Gallery</span>
+                    <h2 data-i18n="gal_title" class="text-4xl font-bold text-corporate-blue mb-4">Corporate Photo Gallery</h2>
+                    <p data-i18n="gal_sub" class="max-w-2xl mx-auto text-lg">A visual record of our facilities, fabrication works and site operations.</p>
+                </div>
+                <div id="gallery-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <button data-index="0" class="gallery-item relative overflow-hidden rounded-lg h-56 lg:h-64 md:col-span-2 text-left">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_0bea8be696_4dd980684dd84f72.png"
+                            alt="aerial view of a tank farm with multiple large steel storage tanks and containment bunds"
+                            class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-corporate-blue/70 flex flex-col justify-end p-4">
+                            <span data-i18n="gal_cat_0" class="text-blue-200 text-[10px] font-bold uppercase tracking-wider">Tank Farms</span>
+                            <span data-i18n="gal_name_0" class="text-white font-semibold text-sm">Storage Tank Farm</span>
+                        </div>
+                    </button>
+                    <button data-index="1" class="gallery-item relative overflow-hidden rounded-lg h-56 lg:h-64 text-left">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_c1b14d27ff_5b0ee7dd878580d2.png"
+                            alt="welder fabricating steel pipe spools in a fabrication workshop, sparks"
+                            class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-corporate-blue/70 flex flex-col justify-end p-4">
+                            <span data-i18n="gal_cat_1" class="text-blue-200 text-[10px] font-bold uppercase tracking-wider">Fabrication</span>
+                            <span data-i18n="gal_name_1" class="text-white font-semibold text-sm">Pipe Fabrication</span>
+                        </div>
+                    </button>
+                    <button data-index="2" class="gallery-item relative overflow-hidden rounded-lg h-56 lg:h-64 text-left">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_10af748934_d285f895eacc272b.png"
+                            alt="complex piping and valves at an oil terminal pump station"
+                            class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-corporate-blue/70 flex flex-col justify-end p-4">
+                            <span data-i18n="gal_cat_2" class="text-blue-200 text-[10px] font-bold uppercase tracking-wider">Piping</span>
+                            <span data-i18n="gal_name_2" class="text-white font-semibold text-sm">Pump Station Piping</span>
+                        </div>
+                    </button>
+                    <button data-index="3" class="gallery-item relative overflow-hidden rounded-lg h-56 lg:h-64 text-left">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_729590c469_8e690a6a8456a748.png"
+                            alt="marine jetty with pipelines running into the sea at an oil terminal at sunset"
+                            class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-corporate-blue/70 flex flex-col justify-end p-4">
+                            <span data-i18n="gal_cat_3" class="text-blue-200 text-[10px] font-bold uppercase tracking-wider">Marine</span>
+                            <span data-i18n="gal_name_3" class="text-white font-semibold text-sm">Jetty &amp; Harbour Works</span>
+                        </div>
+                    </button>
+                    <button data-index="4" class="gallery-item relative overflow-hidden rounded-lg h-56 lg:h-64 text-left">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_f54a53b52b_96c6bde810993e1a.png"
+                            alt="engineers in safety helmets reviewing drawings at an industrial construction site"
+                            class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-corporate-blue/70 flex flex-col justify-end p-4">
+                            <span data-i18n="gal_cat_4" class="text-blue-200 text-[10px] font-bold uppercase tracking-wider">Site Operations</span>
+                            <span data-i18n="gal_name_4" class="text-white font-semibold text-sm">Engineering Supervision</span>
+                        </div>
+                    </button>
+                    <button data-index="5" class="gallery-item relative overflow-hidden rounded-lg h-56 lg:h-64 md:col-span-2 text-left">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_267ead6949_c26d0a04e8e6a25f.png"
+                            alt="large steel fabrication yard with tank shell plates and cranes"
+                            class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-corporate-blue/70 flex flex-col justify-end p-4">
+                            <span data-i18n="gal_cat_5" class="text-blue-200 text-[10px] font-bold uppercase tracking-wider">Fabrication</span>
+                            <span data-i18n="gal_name_5" class="text-white font-semibold text-sm">Fabrication Yard</span>
+                        </div>
+                    </button>
+                    <button data-index="6" class="gallery-item relative overflow-hidden rounded-lg h-56 lg:h-64 text-left">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_97bca210be_e942d99337f54647.png"
+                            alt="floating roof storage tank under construction with scaffolding"
+                            class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-corporate-blue/70 flex flex-col justify-end p-4">
+                            <span data-i18n="gal_cat_6" class="text-blue-200 text-[10px] font-bold uppercase tracking-wider">Tank Farms</span>
+                            <span data-i18n="gal_name_6" class="text-white font-semibold text-sm">Tank Construction</span>
+                        </div>
+                    </button>
+                    <button data-index="7" class="gallery-item relative overflow-hidden rounded-lg h-56 lg:h-64 text-left">
+                        <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_ac685926e4_b3f537465c762301.png"
+                            alt="distillation plant columns and process piping at a refinery facility"
+                            class="w-full h-full object-cover">
+                        <div class="overlay absolute inset-0 bg-corporate-blue/70 flex flex-col justify-end p-4">
+                            <span data-i18n="gal_cat_7" class="text-blue-200 text-[10px] font-bold uppercase tracking-wider">Process</span>
+                            <span data-i18n="gal_name_7" class="text-white font-semibold text-sm">Distillation Unit</span>
+                        </div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Milestones -->
+        <section id="milestones" data-section="gallery" class="media-section py-20 bg-light-grey scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <span data-i18n="ms_pill"
+                        class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Our Journey</span>
+                    <h2 data-i18n="ms_title" class="text-4xl font-bold text-corporate-blue mb-4">Company Milestones</h2>
+                    <p data-i18n="ms_sub" class="max-w-2xl mx-auto text-lg">Key achievements marking our growth across the region.</p>
+                </div>
+                <!-- Desktop horizontal timeline -->
+                <div class="hidden lg:grid grid-cols-4 gap-8 relative timeline-line pt-0">
+                    <div class="relative pt-10">
+                        <span class="absolute top-0 left-0 w-6 h-6 rounded-full bg-accent-blue border-4 border-light-grey"></span>
+                        <p data-i18n="ms_yr_1" class="text-2xl font-bold text-corporate-blue mb-2">Founded</p>
+                        <h3 data-i18n="ms_h_1" class="font-semibold text-steel-grey mb-2">Establishment of the Group</h3>
+                        <p data-i18n="ms_p_1" class="text-sm leading-relaxed">Started operations in Sharjah with a focus on oil &amp; gas storage engineering.</p>
+                    </div>
+                    <div class="relative pt-10">
+                        <span class="absolute top-0 left-0 w-6 h-6 rounded-full bg-accent-blue border-4 border-light-grey"></span>
+                        <p data-i18n="ms_yr_2" class="text-2xl font-bold text-corporate-blue mb-2">Expansion</p>
+                        <h3 data-i18n="ms_h_2" class="font-semibold text-steel-grey mb-2">Fabrication Facility</h3>
+                        <p data-i18n="ms_p_2" class="text-sm leading-relaxed">Commissioned a 20,000 sqm fabrication facility at Hamriyah Free Zone.</p>
+                    </div>
+                    <div class="relative pt-10">
+                        <span class="absolute top-0 left-0 w-6 h-6 rounded-full bg-accent-blue border-4 border-light-grey"></span>
+                        <p data-i18n="ms_yr_3" class="text-2xl font-bold text-corporate-blue mb-2">Growth</p>
+                        <h3 data-i18n="ms_h_3" class="font-semibold text-steel-grey mb-2">Regional Projects</h3>
+                        <p data-i18n="ms_p_3" class="text-sm leading-relaxed">Delivered terminals across the UAE and extended services into MENA and Africa.</p>
+                    </div>
+                    <div class="relative pt-10">
+                        <span class="absolute top-0 left-0 w-6 h-6 rounded-full bg-accent-blue border-4 border-light-grey"></span>
+                        <p data-i18n="ms_yr_4" class="text-2xl font-bold text-corporate-blue mb-2">Today</p>
+                        <h3 data-i18n="ms_h_4" class="font-semibold text-steel-grey mb-2">150+ Projects Completed</h3>
+                        <p data-i18n="ms_p_4" class="text-sm leading-relaxed">A group of companies with over 25 years of engineering experience.</p>
+                    </div>
+                </div>
+                <!-- Mobile vertical timeline -->
+                <div class="lg:hidden border-l-2 border-gray-300 ml-3 space-y-10">
+                    <div class="relative pl-8">
+                        <span class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-accent-blue border-4 border-light-grey"></span>
+                        <p data-i18n="ms_yr_1" class="text-xl font-bold text-corporate-blue mb-1">Founded</p>
+                        <h3 data-i18n="ms_h_1" class="font-semibold mb-1">Establishment of the Group</h3>
+                        <p data-i18n="ms_p_1" class="text-sm leading-relaxed">Started operations in Sharjah with a focus on oil &amp; gas storage engineering.</p>
+                    </div>
+                    <div class="relative pl-8">
+                        <span class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-accent-blue border-4 border-light-grey"></span>
+                        <p data-i18n="ms_yr_2" class="text-xl font-bold text-corporate-blue mb-1">Expansion</p>
+                        <h3 data-i18n="ms_h_2" class="font-semibold mb-1">Fabrication Facility</h3>
+                        <p data-i18n="ms_p_2" class="text-sm leading-relaxed">Commissioned a 20,000 sqm fabrication facility at Hamriyah Free Zone.</p>
+                    </div>
+                    <div class="relative pl-8">
+                        <span class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-accent-blue border-4 border-light-grey"></span>
+                        <p data-i18n="ms_yr_3" class="text-xl font-bold text-corporate-blue mb-1">Growth</p>
+                        <h3 data-i18n="ms_h_3" class="font-semibold mb-1">Regional Projects</h3>
+                        <p data-i18n="ms_p_3" class="text-sm leading-relaxed">Delivered terminals across the UAE and extended services into MENA and Africa.</p>
+                    </div>
+                    <div class="relative pl-8">
+                        <span class="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-accent-blue border-4 border-light-grey"></span>
+                        <p data-i18n="ms_yr_4" class="text-xl font-bold text-corporate-blue mb-1">Today</p>
+                        <h3 data-i18n="ms_h_4" class="font-semibold mb-1">150+ Projects Completed</h3>
+                        <p data-i18n="ms_p_4" class="text-sm leading-relaxed">A group of companies with over 25 years of engineering experience.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Publications & Downloads -->
+        <section id="publications" data-section="publications" class="media-section py-20 bg-white scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-14">
+                    <span data-i18n="pub_pill"
+                        class="bg-blue-50 text-accent-blue px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-wider mb-4 inline-block">Publications</span>
+                    <h2 data-i18n="pub_title" class="text-4xl font-bold text-corporate-blue mb-4">Publications &amp; Downloads</h2>
+                    <p data-i18n="pub_sub" class="max-w-2xl mx-auto text-lg">Official company documents for clients and partners.</p>
+                </div>
+                <article id="featured-document"
+                    class="max-w-5xl mx-auto bg-light-grey border border-gray-200 rounded-xl overflow-hidden grid grid-cols-1 md:grid-cols-5 scroll-mt-28">
+                    <div class="md:col-span-2 bg-corporate-blue p-8 flex items-center justify-center">
+                        <div class="relative w-48 bg-white rounded shadow-lg p-5 aspect-[3/4] flex flex-col justify-between">
+                            <span class="absolute -top-3 -right-3 bg-red-600 text-white text-[10px] font-bold px-2.5 py-1 rounded">PDF</span>
+                            <img src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_745f0de433_ae400837bc0fe4a4.png"
+                                alt="Al Bahr Al Arabi Group"
+                                class="h-10 w-auto object-contain self-start">
+                            <div>
+                                <div class="h-2 bg-corporate-blue w-3/4 mb-2"></div>
+                                <div class="h-2 bg-gray-300 w-full mb-1.5"></div>
+                                <div class="h-2 bg-gray-300 w-5/6 mb-1.5"></div>
+                                <div class="h-2 bg-gray-300 w-2/3"></div>
+                            </div>
+                            <p class="text-[10px] font-bold uppercase tracking-wider text-corporate-blue">Company Profile</p>
+                        </div>
+                    </div>
+                    <div class="md:col-span-3 p-8 lg:p-10 flex flex-col justify-center">
+                        <span data-i18n="doc_eyebrow" class="text-accent-blue text-xs font-bold uppercase tracking-wider mb-3">Featured Document</span>
+                        <h3 data-i18n="doc_title" class="text-2xl font-bold text-corporate-blue mb-3">Al Bahr Al Arabi Company Profile</h3>
+                        <p data-i18n="doc_desc" class="text-sm leading-relaxed mb-6">An overview of our group companies, EPC capabilities, fabrication facilities, quality standards and selected reference projects across the region.</p>
+                        <div class="flex flex-wrap items-center gap-4">
+                            <a href="assets/albahralarabi-company-profile.pdf" download="" data-i18n="btn_download"
+                                class="bg-accent-blue text-white px-6 py-3 rounded font-bold hover:bg-corporate-blue transition-all uppercase text-xs tracking-wider flex items-center">
+                                <i class="fa-solid fa-download mr-2"></i>Download PDF</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Closing CTA -->
+        <section id="final-cta" class="py-20 bg-corporate-blue scroll-mt-28">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 data-i18n="cta_title" class="text-4xl font-bold text-white mb-4">
+                    Partner with Al Bahr Al Arabi Group</h2>
+                <p data-i18n="cta_p" class="max-w-2xl mx-auto text-lg mb-10 text-blue-100">Discuss your storage, piping or terminal project with our engineering team.</p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="services.html" data-i18n="cta_services"
+                        class="bg-accent-blue text-white px-8 py-4 rounded font-bold hover:bg-white hover:text-corporate-blue transition-all uppercase text-sm tracking-wider">Explore Our Services</a>
+                    <a href="contact.html" data-i18n="cta_contact"
+                        class="border-2 border-white text-white px-8 py-4 rounded font-bold hover:bg-white hover:text-corporate-blue transition-all uppercase text-sm tracking-wider">Contact Us</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Gallery Lightbox -->
+    <div id="lightbox" role="dialog" aria-modal="true" aria-label="Photo gallery viewer"
+        class="hidden fixed inset-0 z-[100] flex items-center justify-center p-4">
+        <div id="lightbox-backdrop" class="lightbox-backdrop absolute inset-0 bg-corporate-blue/90"></div>
+        <div class="lightbox-panel relative w-full max-w-4xl">
+            <button id="lb-close" aria-label="Close"
+                class="absolute -top-12 right-0 w-10 h-10 rounded-full text-white hover:bg-white/10 transition-all flex items-center justify-center">
+                <i class="fa-solid fa-xmark text-xl"></i>
+            </button>
+            <div class="bg-white rounded-lg overflow-hidden">
+                <div class="h-[50vh] sm:h-[60vh] bg-light-grey flex items-center justify-center">
+                    <img id="lb-image"
+                        src="https://storage.googleapis.com/uxpilot-auth.appspot.com/gen_0a5a052a1b_89ef5a40a399330f.png"
+                        alt="industrial tank farm gallery preview"
+                        class="w-full h-full object-contain">
+                </div>
+                <div class="p-4 flex items-center justify-between">
+                    <div>
+                        <p id="lb-cat" class="text-accent-blue text-[10px] font-bold uppercase tracking-wider">Category</p>
+                        <p id="lb-title" class="text-corporate-blue font-semibold">Title</p>
+                    </div>
+                    <span id="lb-count" class="text-xs text-steel-grey font-medium">1 / 8</span>
+                </div>
+            </div>
+            <button id="lb-prev" aria-label="Previous image"
+                class="absolute left-2 sm:-left-14 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white text-corporate-blue hover:bg-accent-blue hover:text-white transition-all flex items-center justify-center">
+                <i class="fa-solid fa-chevron-left text-base"></i>
+            </button>
+            <button id="lb-next" aria-label="Next image"
+                class="absolute right-2 sm:-right-14 top-1/2 -translate-y-1/2 w-11 h-11 rounded-full bg-white text-corporate-blue hover:bg-accent-blue hover:text-white transition-all flex items-center justify-center">
+                <i class="fa-solid fa-chevron-right text-base"></i>
+            </button>
+        </div>
+    </div>
+
+    <div id="site-footer"></div><script>SiteLayout.mountFooter('site-footer')</script>
+
+    <!-- Page Specific Script & i18n Registration -->
+    <script>
+        // Register page-level translations with unified i18n engine
+        SiteLang.register({
+            en: {
+                hero_eyebrow: 'Media Center',
+                hero_title: 'Corporate Updates, Projects and Publications',
+                hero_sub: 'Explore project highlights, our corporate photo gallery, company milestones and official publications from Al Bahr Al Arabi Group.',
+                btn_gallery: 'Explore Our Gallery',
+                btn_profile: 'Download Company Profile',
+                ph_pill: 'Project Highlights',
+                ph_title: 'Featured Projects',
+                ph_sub: 'Selected tank farm and terminal developments delivered by our EPC teams.',
+                st_ongoing: 'Ongoing',
+                st_completed: 'Completed',
+                gal_pill: 'Photo Gallery',
+                gal_title: 'Corporate Photo Gallery',
+                gal_sub: 'A visual record of our facilities, fabrication works and site operations.',
+                gal_cat_0: 'Tank Farms',
+                gal_name_0: 'Storage Tank Farm',
+                gal_cat_1: 'Fabrication',
+                gal_name_1: 'Pipe Fabrication',
+                gal_cat_2: 'Piping',
+                gal_name_2: 'Pump Station Piping',
+                gal_cat_3: 'Marine',
+                gal_name_3: 'Jetty & Harbour Works',
+                gal_cat_4: 'Site Operations',
+                gal_name_4: 'Engineering Supervision',
+                gal_cat_5: 'Fabrication',
+                gal_name_5: 'Fabrication Yard',
+                gal_cat_6: 'Tank Farms',
+                gal_name_6: 'Tank Construction',
+                gal_cat_7: 'Process',
+                gal_name_7: 'Distillation Unit',
+                ms_pill: 'Our Journey',
+                ms_title: 'Company Milestones',
+                ms_sub: 'Key achievements marking our growth across the region.',
+                ms_yr_1: 'Founded',
+                ms_h_1: 'Establishment of the Group',
+                ms_p_1: 'Started operations in Sharjah with a focus on oil & gas storage engineering.',
+                ms_yr_2: 'Expansion',
+                ms_h_2: 'Fabrication Facility',
+                ms_p_2: 'Commissioned a 20,000 sqm fabrication facility at Hamriyah Free Zone.',
+                ms_yr_3: 'Growth',
+                ms_h_3: 'Regional Projects',
+                ms_p_3: 'Delivered terminals across the UAE and extended services into MENA and Africa.',
+                ms_yr_4: 'Today',
+                ms_h_4: '150+ Projects Completed',
+                ms_p_4: 'A group of companies with over 25 years of engineering experience.',
+                pub_pill: 'Publications',
+                pub_title: 'Publications & Downloads',
+                pub_sub: 'Official company documents for clients and partners.',
+                doc_eyebrow: 'Featured Document',
+                doc_title: 'Al Bahr Al Arabi Company Profile',
+                doc_desc: 'An overview of our group companies, EPC capabilities, fabrication facilities, quality standards and selected reference projects across the region.',
+                btn_download: 'Download PDF',
+                cta_title: 'Partner with Al Bahr Al Arabi Group',
+                cta_p: 'Discuss your storage, piping or terminal project with our engineering team.',
+                cta_services: 'Explore Our Services',
+                cta_contact: 'Contact Us'
+            },
+            ar: {
+                hero_eyebrow: 'المركز الإعلامي',
+                hero_title: 'أخبار الشركة والمشاريع والإصدارات',
+                hero_sub: 'استكشف أبرز المشاريع ومعرض الصور ومحطات الشركة والإصدارات الرسمية لمجموعة البحر العربي.',
+                btn_gallery: 'استكشف المعرض',
+                btn_profile: 'تحميل ملف الشركة',
+                ph_pill: 'أبرز المشاريع',
+                ph_title: 'مشاريع مميزة',
+                ph_sub: 'مجموعة مختارة من مشاريع الخزانات والمحطات التي نفذتها فرقنا.',
+                st_ongoing: 'قيد التنفيذ',
+                st_completed: 'مكتمل',
+                gal_pill: 'معرض الصور',
+                gal_title: 'معرض صور الشركة',
+                gal_sub: 'سجل بصري لمرافقنا وأعمال التصنيع والعمليات الميدانية.',
+                gal_cat_0: 'محطات الخزانات',
+                gal_name_0: 'محطة خزانات التخزين',
+                gal_cat_1: 'التصنيع',
+                gal_name_1: 'تصنيع الأنابيب',
+                gal_cat_2: 'خطوط الأنابيب',
+                gal_name_2: 'أنابيب محطة الضخ',
+                gal_cat_3: 'الأعمال البحرية',
+                gal_name_3: 'أعمال الرصيف والميناء',
+                gal_cat_4: 'العمليات الميدانية',
+                gal_name_4: 'الإشراف الهندسي',
+                gal_cat_5: 'التصنيع',
+                gal_name_5: 'ساحة التصنيع',
+                gal_cat_6: 'محطات الخزانات',
+                gal_name_6: 'إنشاء الخزانات',
+                gal_cat_7: 'العمليات',
+                gal_name_7: 'وحدة التقطير',
+                ms_pill: 'مسيرتنا',
+                ms_title: 'محطات الشركة',
+                ms_sub: 'أبرز الإنجازات التي رسمت نمونا في المنطقة.',
+                ms_yr_1: 'التأسيس',
+                ms_h_1: 'تأسيس المجموعة',
+                ms_p_1: 'بدء العمليات في الشارقة مع التركيز على هندسة تخزين النفط والغاز.',
+                ms_yr_2: 'التوسع',
+                ms_h_2: 'منشأة التصنيع',
+                ms_p_2: 'تدشين منشأة تصنيع بمساحة 20,000 متر مربع في المنطقة الحرة بالحمرية.',
+                ms_yr_3: 'النمو',
+                ms_h_3: 'مشاريع إقليمية',
+                ms_p_3: 'تنفيذ محطات تخزين في أنحاء الإمارات وتوسيع الخدمات إلى الشرق الأوسط وأفريقيا.',
+                ms_yr_4: 'اليوم',
+                ms_h_4: 'أكثر من 150 مشروعاً منجزاً',
+                ms_p_4: 'مجموعة شركات تتمتع بأكثر من 25 عاماً من الخبرة الهندسية.',
+                pub_pill: 'الإصدارات',
+                pub_title: 'الإصدارات والتنزيلات',
+                pub_sub: 'مستندات الشركة الرسمية للعملاء والشركاء.',
+                doc_eyebrow: 'مستند مميز',
+                doc_title: 'الملف التعريفي لمجموعة البحر العربي',
+                doc_desc: 'نظرة عامة على شركات المجموعة وقدراتنا في الهندسة والتوريد والإنشاء ومرافق التصنيع ومعايير الجودة وأبرز المشاريع.',
+                btn_download: 'تحميل PDF',
+                cta_title: 'شراكة مع مجموعة البحر العربي',
+                cta_p: 'ناقش مشروع التخزين أو الأنابيب أو المحطات مع فريقنا الهندسي.',
+                cta_services: 'استكشف خدماتنا',
+                cta_contact: 'اتصل بنا'
+            }
+        });
+
+        // Gallery Lightbox Controller
+        (function () {
+            var galleryItems = Array.from(document.querySelectorAll('.gallery-item'));
+            var lightbox = document.getElementById('lightbox');
+            var lbImage = document.getElementById('lb-image');
+            var current = 0;
+
+            function showItem(i) {
+                if (!galleryItems.length) return;
+                current = (i + galleryItems.length) % galleryItems.length;
+                var item = galleryItems[current];
+                var img = item ? item.querySelector('img') : null;
+                var src = img ? img.getAttribute('src') : '';
+                if (src && lbImage) lbImage.setAttribute('src', src);
+                if (img && lbImage) lbImage.setAttribute('alt', img.getAttribute('alt') || 'Gallery Image');
+                var spans = item ? item.querySelectorAll('.overlay span') : [];
+                var catEl = document.getElementById('lb-cat');
+                var titleEl = document.getElementById('lb-title');
+                var countEl = document.getElementById('lb-count');
+                if (catEl && spans[0]) catEl.textContent = spans[0].textContent;
+                if (titleEl && spans[1]) titleEl.textContent = spans[1].textContent;
+                if (countEl) countEl.textContent = (current + 1) + ' / ' + galleryItems.length;
+            }
+
+            function openLightbox(i) {
+                if (!lightbox) return;
+                showItem(i);
+                lightbox.classList.remove('hidden');
+                requestAnimationFrame(function () {
+                    lightbox.classList.add('lightbox-open');
+                });
+                var closeBtn = document.getElementById('lb-close');
+                if (closeBtn) closeBtn.focus();
+            }
+
+            function closeLightbox() {
+                if (!lightbox) return;
+                lightbox.classList.remove('lightbox-open');
+                setTimeout(function () {
+                    lightbox.classList.add('hidden');
+                }, 300);
+            }
+
+            galleryItems.forEach(function (item, i) {
+                item.addEventListener('click', function () {
+                    openLightbox(i);
+                });
+            });
+
+            var closeBtn = document.getElementById('lb-close');
+            if (closeBtn) closeBtn.addEventListener('click', closeLightbox);
+
+            var backdrop = document.getElementById('lightbox-backdrop');
+            if (backdrop) backdrop.addEventListener('click', closeLightbox);
+
+            var prevBtn = document.getElementById('lb-prev');
+            if (prevBtn) prevBtn.addEventListener('click', function () {
+                showItem(current - 1);
+            });
+
+            var nextBtn = document.getElementById('lb-next');
+            if (nextBtn) nextBtn.addEventListener('click', function () {
+                showItem(current + 1);
+            });
+
+            document.addEventListener('keydown', function (e) {
+                if (!lightbox || lightbox.classList.contains('hidden')) return;
+                if (e.key === 'Escape') closeLightbox();
+                if (e.key === 'ArrowLeft') showItem(current - 1);
+                if (e.key === 'ArrowRight') showItem(current + 1);
+            });
+
+            // Re-render lightbox text when language changes dynamically
+            document.addEventListener('languagechange', function () {
+                if (lightbox && !lightbox.classList.contains('hidden')) {
+                    showItem(current);
+                }
+            });
+        })();
+
+        // Category filter hook (if category filter buttons are mounted)
+        (function () {
+            var filterBtns = document.querySelectorAll('.filter-btn');
+            var sections = document.querySelectorAll('.media-section');
+            if (filterBtns.length) {
+                filterBtns.forEach(function (btn) {
+                    btn.addEventListener('click', function () {
+                        filterBtns.forEach(function (b) {
+                            b.classList.remove('active');
+                            b.setAttribute('aria-selected', 'false');
+                        });
+                        btn.classList.add('active');
+                        btn.setAttribute('aria-selected', 'true');
+                        var f = btn.getAttribute('data-filter');
+                        sections.forEach(function (s) {
+                            s.classList.toggle('hidden', !(f === 'all' || s.getAttribute('data-section') === f));
+                        });
+                    });
+                });
+            }
+        })();
+    </script>
+</body>
+</html>
